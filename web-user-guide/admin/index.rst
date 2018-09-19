@@ -11,7 +11,7 @@ status
 System Administration
 ~~~~~~~~~~~~~~~~~~~~~
 
-* :doc:`General Administration <general>`
+* :doc:`general`
 * Notifications Administration
 * Style Administration
 * Translations Administration
@@ -19,4 +19,4 @@ System Administration
 * Indexing Administration
 * Application Metrics Administration
 * Logs Administration
-* :doc:`Content Administration <content>`
+* :doc:`content`
