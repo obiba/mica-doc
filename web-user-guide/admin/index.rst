@@ -19,4 +19,4 @@ System Administration
 * Indexing Administration
 * Application Metrics Administration
 * Logs Administration
-* :doc:`content`
+* :doc:`content/index`

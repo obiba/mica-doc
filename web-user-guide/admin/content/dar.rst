@@ -20,6 +20,19 @@ The web application form can be specified both in terms of data structure
 The *Preview* and *Model* tabs are informational only and can be used to
 preview the rendered form and the input data that will be collected.
 
+Under the **Properties** section one can specify the document's *Title Field*
+and it's *Summary Field*.
+
+Under the **PDF Download** one can
+
+Under the **Predefined Action Names** one can manage the
+
+Amendment Form
+**************
+
+Same as the *Application Form*, it uses schemaform to define data structure
+( Schema ) and data display and validation ( Definition ).
+
 Notifications
 *************
 

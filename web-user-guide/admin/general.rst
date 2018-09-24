@@ -36,7 +36,7 @@ This section allows to define all general Mica configuration as
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Participant Privacy Threshold          | No data summary will be returned from Opal if the number of participants is below this threshold.                  |
 +-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|Sections               | Single study enabled                   | If checked, only one study is present in Mica                                                                      |
+|Application Scope      | Single study enabled                   | If checked, only one study is present in Mica                                                                      |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Network section enabled                | If checked, n etwork section is accessible.                                                                        |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -62,8 +62,8 @@ To edit a field, click on "Edit" and edit or modify the content the fields there
   Mica requires Agate to send email notifications, which should be configured in Mica Configuration Files .
 
 
-Roles
------
+Membership Roles
+----------------
 
 Networks and Studies can have a list of members associated with them, which are
 grouped in roles. The list of available roles can be edited and by default the
