@@ -73,11 +73,13 @@ A research project reports information about the work that was conducted thanks 
 Data Access Request
 ~~~~~~~~~~~~~~~~~~~
 
-A data access request is different type of document (compared to the studies, datasets etc.):
+A data access request is an application form that researchers submit in order to gain access to the network/study data. There is a predefined workflow from submission to approval described in more detail in :doc:`web-user-guide/data-access-request`.
 
-* it is created by a final user (usually a researcher having an account on the data web portal),
-* it has its own life cycle (submission, approval etc.),
-* permissions (view and edition) are restricted to the researcher and the data access officer and depend on the state of the request.
+
+Data Access Amendment
+~~~~~~~~~~~~~~~~~~~~~
+
+A data access amendment is an application form that researches submit to amend changes to an already approved data access request. A data access amendment workflow is identical to that of a data access request.
 
 Search
 ------
