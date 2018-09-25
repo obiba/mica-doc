@@ -14,24 +14,37 @@ Definitions
 Application Form
 ****************
 
-The web application form can be specified both in terms of data structure
-( Schema ) and data display and validation ( Definition ). See form `schemaform documentation <https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md>`_ for more details.
+The web application form can be specified both in terms of schema and UI
+definition. See *Angular Schema Form* `documentation <https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md>`_ for more details.
 
 The *Preview* and *Model* tabs are informational only and can be used to
 preview the rendered form and the input data that will be collected.
 
 Under the **Properties** section one can specify the document's *Title Field*
-and it's *Summary Field*.
+and it's *Summary Field* as defined in the custom *Angular Schema Form*.
 
-Under the **PDF Download** one can
+Under the **PDF Download** there are two choices:
+  * PDF Template
+  * Printable Page
 
-Under the **Predefined Action Names** one can manage the
+Selecting the `PDF Template` option, one has to upload a template (one for each
+configured languages) compatible with the custum *Angular Schema Form* model.
+
+The `Printable Page` option makes use of the browser's print capability where
+one may choose to either print the document to PDF or simply print.
+
+Under the **Predefined Action Names** one can manage the of predefined actions
+to be used in a data access request's history. This only defines the action
+key. To translate them: ``data-access-request.action-log.config.label.<action-key>``
 
 Amendment Form
 **************
 
-Same as the *Application Form*, it uses schemaform to define data structure
-( Schema ) and data display and validation ( Definition ).
+Same as the *Application Form*, it uses *Angular Schema Form* to define
+schema and UI definition.
+
+Under the **Properties** section one can specify the document's *Title Field*
+and it's *Summary Field* as defined in the custom *Angular Schema Form*.
 
 Notifications
 *************
@@ -40,6 +53,9 @@ Email notifications can be sent, if configured, to applicant and data access
 officers when an event happens on the data access request. Events can be:
 status changes or comment additions or updates.
 
+These configurations apply to both the data access requests and their
+amendments.
+
 Settings
 ********
 
@@ -47,3 +63,10 @@ The data access request goes through several steps. Some minimum settings can
 be applied to control this workflow, i.e. enabling the *review* stat us and
 making the accepted and rejected status final. Also the pattern to generate
 identifiers for data access requests can be configured.
+
+These configurations apply to both the data access requests and their
+amendments.
+
+Permissions
+***********
+
