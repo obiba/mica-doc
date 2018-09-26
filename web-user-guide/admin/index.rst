@@ -2,6 +2,7 @@ Administration
 ==============
 
 .. toctree::
+   :maxdepth: 2
 
    content/index
    system/index
