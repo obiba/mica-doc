@@ -32,10 +32,11 @@ configured languages) compatible with the custum *Angular Schema Form* model.
 
 The `Printable Page` option makes use of the browser's print capability where
 one may choose to either print the document to PDF or simply print.
-~~~~~~~~~~~~~~~~~~~~~
-Under the **Predefined Acti~~~~~~~~~~~~~~~~~~~~~on Names** one can manage the of predefined actions
-to be used in a data access~~~~~~~~~~~~~~~~~~~~~ request's history. This only defines the action
-key. To translate them: ``d~~~~~~~~~~~~~~~~~~~~~ata-access-request.action-log.config.label.<action-key>``
+
+Under the **Predefined Action Names** one can manage the of predefined actions
+to be used in a data access request's history. This only defines the action
+key. To translate them:
+``data-access-request.action-log.config.label.<action-key>``
 
 Amendment Form
 **************
