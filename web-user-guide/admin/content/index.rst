@@ -1,5 +1,8 @@
 Content Administration
 ======================
 
-* :doc:`document`
-* :doc:`dar`
+.. toctree::
+
+  document
+  dar
+

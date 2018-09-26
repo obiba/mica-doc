@@ -1,5 +1,5 @@
 Data Access Request Administration
-==================================
+##################################
 
 Summary
 -------
@@ -32,10 +32,10 @@ configured languages) compatible with the custum *Angular Schema Form* model.
 
 The `Printable Page` option makes use of the browser's print capability where
 one may choose to either print the document to PDF or simply print.
-
-Under the **Predefined Action Names** one can manage the of predefined actions
-to be used in a data access request's history. This only defines the action
-key. To translate them: ``data-access-request.action-log.config.label.<action-key>``
+~~~~~~~~~~~~~~~~~~~~~
+Under the **Predefined Acti~~~~~~~~~~~~~~~~~~~~~on Names** one can manage the of predefined actions
+to be used in a data access~~~~~~~~~~~~~~~~~~~~~ request's history. This only defines the action
+key. To translate them: ``d~~~~~~~~~~~~~~~~~~~~~ata-access-request.action-log.config.label.<action-key>``
 
 Amendment Form
 **************
@@ -60,7 +60,7 @@ Settings
 ********
 
 The data access request goes through several steps. Some minimum settings can
-be applied to control this workflow, i.e. enabling the *review* stat us and
+be applied to control this workflow, i.e. enabling the *review* status and
 making the accepted and rejected status final. Also the pattern to generate
 identifiers for data access requests can be configured.
 
@@ -69,4 +69,13 @@ amendments.
 
 Permissions
 ***********
+
+.. list-table::
+  :widths: 25 75
+  :header-rows: 1
+
+  * - Role
+    - Description
+  * - Reader
+    - Can view all data access request and their amendments.
 
