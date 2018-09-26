@@ -24,7 +24,7 @@ more information.
 Users with Reviewer permission can publish a document with status Under Review.
 
 *Unpublish*
-**********
+***********
 Users with Reviewer permission can unpublish an already published document.
 
 *Delete*
@@ -184,7 +184,7 @@ Folder Specific Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Folder Creation*
-**************
+*****************
 Folders can added as a single folder ( baseline ) or in form of a path ( baseline/temp ).
 
 Batch Operations
@@ -266,7 +266,7 @@ Access to each publishable :doc:`documents <../documents>` can be controlled. Th
 
 - **permissions** that apply to **draft** documents: only users having a permission on the draft document can see it,
 - **accesses** that apply to **published** documents: by default published documents are open access, i.e. anyone (even a anonymous web
-  portal visitor) can see the publications. This setting ``Open access`` can be changed in the :doc:`../web-user-guide/admin/general`.
+  portal visitor) can see the publications. This setting ``Open access`` can be changed in the :doc:`../web-user-guide/admin/system/general`.
 
 Operations
 ~~~~~~~~~~
