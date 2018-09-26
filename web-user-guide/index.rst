@@ -10,9 +10,8 @@ type of documents that can be edited through this web interface.
 
 The following manuals are available:
 
-* Documents Management: add, edit, publish documents and associated files
-* :doc:`data-access-request`: approve/reject
-  data access requests
+* :doc:`documents-management`: add, edit, publish documents and associated files
+* :doc:`data-access-request`: approve/reject data access requests
 * :doc:`admin/index`: configure server settings and data
   access requests form
 

@@ -29,6 +29,7 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
    :caption: Web User Guide
 
    web-user-guide/index
+   web-user-guide/documents-management
    web-user-guide/data-access-request
 
 .. toctree::
