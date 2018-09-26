@@ -97,6 +97,8 @@ The following diagram describes the various documents that can be published in t
 
 .. image:: images/mica-associations.png
 
+.. _documents-permissions:
+
 Permissions
 -----------
 
