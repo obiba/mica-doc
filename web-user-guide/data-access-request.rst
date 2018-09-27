@@ -116,14 +116,24 @@ The application form is configured by the administrator, who can also define
 the PDF template used to create a printable copy of the form (available by
 clicking on the *Download* button).
 
+Amendments
+~~~~~~~~~~
+
+Once a data access request is approved, researchers can apply for amendments.
+
 Comments
 ~~~~~~~~
 
 At any step, the user and the data access officer can add comments in order to
 collaborate.
 
+Private Comments
+~~~~~~~~~~~~~~~~
+
+This section is only available to administrators, data access officers and users or groups with *Give access to the private comments section* see :ref:`data access request permissions <dar-permissions>`.
+
 History
 ~~~~~~~
 
-A *history* of all actions performed on the request is kept to track its
-status.
+A *history* of all actions performed on the request is kept to track its status. In addition, administrators and data access officers can add custom action logs. These action logs are either :ref:`pre-defined <dar-predefined-action-logs>` or free text along with a date. Users or groups with *Apply the same permission to associated action logs* can only view these action logs.
+

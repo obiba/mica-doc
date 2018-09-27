@@ -26,6 +26,18 @@ Document fields configuration consists of providing the necessary information
 * **Model**: displays the data collected (in the preview ) according to the
   specified schema.
 
+
+.. note::
+
+  Due to the structure of the study type, the form of the study is split in
+  several pieces:
+
+  * study: general definition of the study
+  * population: each study can have one or more populations, this form applies to
+    these only
+  * and in case of individual studies, data collection event : each population
+    can have one or more data collection events, this form applies to these only.
+
 For detailed documentation on how to use schemaform, see the `schemaform documentation <https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md>`_.
 The default schema and definition provided by Mica can also be a good starting
 point for getting into *schemaform* configuration.
@@ -40,18 +52,6 @@ that are members of a study or a network...
 
 It is currently not possible to dynamically integrate *schemaform* addons to
 Mica. Please contact us if you have a specific need.
-
-Study Specific Form
-*******************
-
-Due to the structure of the study type, the form of the study is split in
-several pieces:
-
-* study: general definition of the study
-* population: each study can have one or more populations, this form applies to
-  these only
-* and in case of individual studies, data collection event : each population
-  can have one or more data collection events, this form applies to these only.
 
 Search
 ******
