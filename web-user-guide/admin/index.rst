@@ -1,15 +1,13 @@
 Administration
 ==============
 
+The *Administration* menu is available to users with the role
+``mica-administrator``. This menu gives access to server configuration and
+status listed below:
+
 .. toctree::
    :maxdepth: 2
 
-   content/index
    system/index
-
-Summary
--------
-
-The *Administration* menu is available to users with the role
-``mica-administrator``. This menu gives access to server configuration and
-status
+   content/index
+   data-discovery/index
