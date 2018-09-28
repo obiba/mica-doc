@@ -88,9 +88,14 @@ Permissions
 
 There are also two additional (sub) permissions that can be granted to a *Reader*:
 
-- Apply the same permission to associated action logs
-- Give access to the private comments section.
 
+.. list-table::
+  :widths: 25 75
+
+  * - **Apply the same permission to associated action logs**
+    - This permission grants viewing the action logs.
+  * - **Give access to the private comments section**
+    - This permission grants viewing and editing of private comments.
 
 Customizing Reports
 -------------------
@@ -100,14 +105,14 @@ To customize the data access request and amendment reports these files must be c
 - ``/etc/mica2/config/data-access-form/export-csv-schema.json``
 - ``/etc/mica2/config/data-access-amendment-form/export-csv-schema.json``
 
-Your Mica administrator can get the default report configuration files as a starting point. Below are the required MongoDB queries needed:
+To get the current report configuration files execute these queries in a MongoDB client of your choice:
 
 .. code-block:: bash
 
   - db.getCollection('dataAccessForm').find({}, {csvExportFormat: 1, _id: 0})
   - db.getCollection('dataAccessAmendmentForm').find({}, {csvExportFormat: 1, _id: 0})
 
-Once you have the default configuration JSON files, you can add, remove or change the headers.
+Once you have obtained these files you can go agead and modify the content.
 
 The snippet below shows a report configuration file:
 
@@ -116,8 +121,8 @@ The snippet below shows a report configuration file:
   {
     "headers": {
       "title": {
-        "en": "<Organisation> Access Office",
-        "fr": "<Organisation> Access Office"
+        "en": "<Organization> Access Office",
+        "fr": "<Organisation> Bureau d'accès"
       },
       "subtitle": {
         "en": "Access Requests Report",
@@ -138,8 +143,10 @@ The snippet below shows a report configuration file:
 
 .. note::
 
-  Fields prefixed by *generic.* are internal and not part of data access request or amendment forms.
+  Fields prefixed by *generic.* are internal and not part of the data access request or amendment form schamas.
 
+
+TODO: give an example...
 
 Pre-Defined Data Access Request IDs
 -----------------------------------
@@ -165,3 +172,24 @@ Here is an example of the exclusion file:
     - "LEGACEY_ID_002"
     - "LEGACEY_ID_003"
 
+The process of importing legacy data access requests into Mica must be done manually and preferably via the Mica website UI as it enforces field validations defined in the form schema and definition. The following steps must be followed **before** ID exclusion:
+
+- create a new data access request
+- fill the new form based on the information in your legacy document
+- save the form
+- repeat these steps until all legacy data access requests are added
+- proceed with exluding IDs as described above
+- restart Mica
+
+Use :doc:`Mica Python Client </python-user-guide/other/rest>` to batch import legacy data access requests. The disadvantage of this method is the lack of any data entry validation and any JSON format error block the process. Choose this method if you are comfortable using a terminal and the python client. 
+
+
+- create a new data access request and fill as many field as possible so your template document be complete
+- get the new data access document vi Mica Python Client:
+
+  .. code-block:: bash
+
+    mica rest "/data-access-request/<REUQETS-ID>" -m GET -mk <MICA-SERVER-IP:PORT> -u <USER> -p <PASSWORD> -a application/json > template-dar.json
+
+
+TODO: complete steps
