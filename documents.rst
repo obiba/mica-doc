@@ -79,7 +79,7 @@ A data access request is an application form that researchers submit in order to
 Data Access Amendment
 ~~~~~~~~~~~~~~~~~~~~~
 
-A data access amendment is an application form that researches submit to amend changes to an already approved data access request. A data access amendment workflow is identical to that of a data access request.
+A data access amendment is an application form that researchers submit to request changes to a pre-approved data access request. The data access amendment workflow is identical to that of  data access requests.
 
 Search
 ------

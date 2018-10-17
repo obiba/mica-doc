@@ -119,21 +119,20 @@ clicking on the *Download* button).
 Amendments
 ~~~~~~~~~~
 
-Once a data access request is approved, researchers can apply for amendments.
+Researchers can submit amendments to request changes (e.g. additional data, new research collaborators) to a pre-approved data access request.
 
 Comments
 ~~~~~~~~
 
-At any step, the user and the data access officer can add comments in order to
-collaborate.
+To enhance the collaboration between users and data access officer, each member can add a comment to a data access request. Mica can be configured to send email notifications when a comment is added or updated.
 
 Private Comments
 ~~~~~~~~~~~~~~~~
 
-This section is only available to administrators, data access officers and users or groups with *Give access to the private comments section* see :ref:`data access request permissions <dar-permissions>`.
+Administrators, data access officers and users with proper permissions (see :ref:`data access request permissions <dar-permissions>`) can add private comments while processing a data access request or an amendment.
 
 History
 ~~~~~~~
 
-A *history* of all actions performed on the request is kept to track its status. In addition, administrators and data access officers can add custom action logs. These action logs are either :ref:`pre-defined <dar-predefined-action-logs>` or free text along with a date. Users or groups with *Apply the same permission to associated action logs* can only view these action logs.
+A list of all status changes of a data access request and its amendments. In addition, administrators and data access officers can log actions that they have taken while processing a request or an amendment. These actions are either :ref:`pre-defined <dar-predefined-action-logs>` or free text. Only users or groups with proper permissions (see :ref:`data access request permissions <dar-permissions>`) can view action logs.
 

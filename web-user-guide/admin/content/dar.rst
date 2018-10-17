@@ -1,13 +1,6 @@
 Data Access Request Administration
 ##################################
 
-Summary
--------
-
-The *Administration* menu is available to users with the role
-``mica-administrator``. This menu gives access to server configuration and
-status.
-
 Definitions
 -----------
 
@@ -20,18 +13,28 @@ definition. See *Angular Schema Form* `documentation <https://github.com/json-sc
 The *Preview* and *Model* tabs are informational only and can be used to
 preview the rendered form and the input data that will be collected.
 
-Under the **Properties** section one can specify the document's *Title Field*
-and it's *Summary Field* as defined in the custom *Angular Schema Form*.
+Properties
+**********
 
-Under the **PDF Download** there are two choices:
-  * PDF Template
-  * Printable Page
+.. list-table::
+  :widths: 25 75
 
-Selecting the `PDF Template` option, one has to upload a template (one for each
-configured languages) compatible with the custum *Angular Schema Form* model.
+  * - Title Field
+    - Specifies the field value to be used as the document's title.
+  * - Summary Field
+    - Specifies the field value to be used as the document's summary.
+  * - Enable Amendments
+    - Enables the capability of requesting amendments to an approved data access request. This option is disabled by default.
 
-The `Printable Page` option makes use of the browser's print capability where
-one may choose to either print the document to PDF or simply print.
+Form Download
+*************
+
+The data collected in the form can be downloaded in the following formats:
+
+*PDF Template*, this option requires uploading a template (one for each
+configured languages) compatible with the custom *Angular Schema Form* model.
+
+*Printable Page*, this option renders the form as a printable page in the browser so the user can either save the form as a PDF or send it to a printer.
 
 .. _dar-predefined-action-logs:
 
@@ -143,15 +146,46 @@ The snippet below shows a report configuration file:
 
 .. note::
 
-  Fields prefixed by *generic.* are internal and not part of the data access request or amendment form schamas.
+  Fields prefixed by *generic.* are internal and not part of the data access request or amendment form schemas.
 
 
 TODO: give an example...
 
-Pre-Defined Data Access Request IDs
------------------------------------
+Importing Legacy Data Access Requests
+-------------------------------------
 
-To exclude a pre-defined list of data access request IDs the following steps must be followed:
+Before importing legacy data access requests the following pre-conditions must be satisfied:
+
+- The data access request form schema must be already defined and match the legacy form model. A mismatch will cause data loss upon saving as the legacy form model cannot be mapped to the form schema.
+- To prevent legacy data access form IDs to be re-used, an *ID exclusion file* must be created and placed under Mica config folder.
+
+Importing Legacy Forms
+**********************
+
+The process of importing legacy data access requests into Mica must be done manually and preferably via the Mica website UI as it enforces field validations defined in the form schema and definition. The following steps must be followed **before** `Excluding Legacy IDs`_:
+
+- create a new data access request
+- fill the new form based on the information in your legacy document
+- save the form
+- repeat these steps until all legacy data access requests are added
+- proceed with excluding IDs as described above
+- restart Mica
+
+Use :doc:`Mica Python Client </python-user-guide/other/rest>` to batch import legacy data access requests. The disadvantage of this method is the lack of any data entry validation and any JSON format error block the process. Choose this method if you are comfortable using a terminal and the python client. 
+
+
+- create a new data access request and fill as many field as possible so your template document be complete
+- get the new data access document vi Mica Python Client:
+
+  .. code-block:: bash
+
+    mica rest "/data-access-request/<REUQETS-ID>" -m GET -mk <MICA-SERVER-IP:PORT> -u <USER> -p <PASSWORD> -a application/json > template-dar.json
+
+
+TODO: complete steps
+
+Excluding Legacy IDs
+********************
 
 - create the file ``data-access-request-exclusion-ids-list.yml`` under the folder ``/etc/mica2/config/data-access-form/``.
 - add each ID on a separate line as the example below.
@@ -172,24 +206,3 @@ Here is an example of the exclusion file:
     - "LEGACEY_ID_002"
     - "LEGACEY_ID_003"
 
-The process of importing legacy data access requests into Mica must be done manually and preferably via the Mica website UI as it enforces field validations defined in the form schema and definition. The following steps must be followed **before** ID exclusion:
-
-- create a new data access request
-- fill the new form based on the information in your legacy document
-- save the form
-- repeat these steps until all legacy data access requests are added
-- proceed with exluding IDs as described above
-- restart Mica
-
-Use :doc:`Mica Python Client </python-user-guide/other/rest>` to batch import legacy data access requests. The disadvantage of this method is the lack of any data entry validation and any JSON format error block the process. Choose this method if you are comfortable using a terminal and the python client. 
-
-
-- create a new data access request and fill as many field as possible so your template document be complete
-- get the new data access document vi Mica Python Client:
-
-  .. code-block:: bash
-
-    mica rest "/data-access-request/<REUQETS-ID>" -m GET -mk <MICA-SERVER-IP:PORT> -u <USER> -p <PASSWORD> -a application/json > template-dar.json
-
-
-TODO: complete steps
