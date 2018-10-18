@@ -26,24 +26,34 @@ Properties
   * - Enable Amendments
     - Enables the capability of requesting amendments to an approved data access request. This option is disabled by default.
 
-Form Download
-*************
+PDF Download
+************
 
 The data collected in the form can be downloaded in the following formats:
 
-*PDF Template*, this option requires uploading a template (one for each
+**PDF Template**, this option requires uploading a template (one for each
 configured languages) compatible with the custom *Angular Schema Form* model.
 
-*Printable Page*, this option renders the form as a printable page in the browser so the user can either save the form as a PDF or send it to a printer.
+**Printable Page**, this option renders the form as a printable page in the browser so the user can either save the form as a PDF or send it to a printer.
 
 .. _dar-predefined-action-logs:
 
-Under the **Predefined Action Names** one can manage the name of predefined actions
-to be used in a data access request's history. This name is in fact the action
-translation key as in the example below:
-``data-access-request.action-log.config.label.<action-key>``
+Predefined Action Names
+***********************
 
-  Make sure to precede your key with ``data-access-request.action-log.config.label``.
+*Predefined Action Names* are common actions that *data access officers* perform while processing the data access requests. These actions can then be logged in the data access request :ref:`history section <dar-history>`.
+
+The action names defined here are in fact translation keys that must be created in :doc:`/web-user-guide/admin/system/translation`.
+
+The following steps demonstrate how these names are added:
+
+- add the action names without any spaces or any of these invalid characters: ``. ~ !``
+- save the configuration
+- add the action keys in :doc:`/web-user-guide/admin/system/translation`
+
+.. note::
+
+  An action key is the action name preceded by its translation path: ``data-access-request.action-log.config.label.<action-name>``.
 
 Amendment Form
 **************
@@ -171,7 +181,7 @@ The process of importing legacy data access requests into Mica must be done manu
 - proceed with excluding IDs as described above
 - restart Mica
 
-Use :doc:`Mica Python Client </python-user-guide/other/rest>` to batch import legacy data access requests. The disadvantage of this method is the lack of any data entry validation and any JSON format error block the process. Choose this method if you are comfortable using a terminal and the python client. 
+Use :doc:`Mica Python Client </python-user-guide/other/rest>` to batch import legacy data access requests. The disadvantage of this method is the lack of any data entry validation and any JSON format error block the process. Choose this method if you are comfortable using a terminal and the python client.
 
 
 - create a new data access request and fill as many field as possible so your template document be complete

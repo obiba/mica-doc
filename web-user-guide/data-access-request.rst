@@ -131,6 +131,8 @@ Private Comments
 
 Administrators, data access officers and users with proper permissions (see :ref:`data access request permissions <dar-permissions>`) can add private comments while processing a data access request or an amendment.
 
+.. _dar-history:
+
 History
 ~~~~~~~
 
