@@ -113,19 +113,43 @@ There are also two additional (sub) permissions that can be granted to a *Reader
 Customizing Reports
 -------------------
 
-To customize the data access request and amendment reports these files must be created:
+.. warning::
+  This is an **experimental** functionality, make sure to backup your database beforehand.
 
-- ``/etc/mica2/config/data-access-form/export-csv-schema.json``
-- ``/etc/mica2/config/data-access-amendment-form/export-csv-schema.json``
 
-To get the current report configuration files execute these queries in a MongoDB client of your choice:
 
-.. code-block:: bash
+Follow these steps to customize the data access request and amendment reports:
 
-  - db.getCollection('dataAccessForm').find({}, {csvExportFormat: 1, _id: 0})
-  - db.getCollection('dataAccessAmendmentForm').find({}, {csvExportFormat: 1, _id: 0})
+- stop Mica server
+- get the current report configuration files as templates:
 
-Once you have obtained these files you can go agead and modify the content.
+  .. code-block:: bash
+
+    mongo mica --eval 'db.dataAccessForm.find({}, {csvExportFormat: 1, _id: 0})'
+    mongo mica --eval 'db.dataAccessAmendmentForm.find({}, {csvExportFormat: 1, _id: 0})'
+
+- make sure ``/etc/mica2/config/data-access-form/`` and ``/etc/mica2/config/data-access-amendment-form/``  directories exist
+- copy your templates ``export-csv-schema.json`` under the previously created directories
+
+- clear the `csvExportFormat` field in dataAccessForm and dataAccessAmendmentForm:
+
+  .. code-block:: bash
+
+    mongo mica --eval 'db.dataAccessForm.update({_id: "default"}, {$set: {csvExportFormat: ""}})'
+    mongo mica --eval 'db.dataAccessAmendmentForm.update({_id: "default"}, {$set: {csvExportFormat: ""}})'
+
+- edit your templates:
+
+  - ``/etc/mica2/config/data-access-form/export-csv-schema.json``
+  - ``/etc/mica2/config/data-access-amendment-form/export-csv-schema.json``
+
+- to make sure that these files can be accessed by Mica server run the following shell command:
+
+  .. code-block:: bash
+
+    ``sudo chown -R mica:adm /etc/mica2``
+
+- start Mica server
 
 The snippet below shows a report configuration file:
 
@@ -141,6 +165,9 @@ The snippet below shows a report configuration file:
         "en": "Access Requests Report",
         "fr": "Rapport sur les demandes d'accès"
       },
+
+      ...
+
     },
     "table": {
       "generic.accessRequestId": {
@@ -151,52 +178,32 @@ The snippet below shows a report configuration file:
         "en": "TITLE",
         "fr": "TITRE"
       },
+
+      ...
+
     }
   }
 
+
+Where fields under ``headers`` are fixed (built-in) but their translations can
+be modified. Fields under ``table`` can be fully customized (removed, re-ordered, added, etc).
+
+The ``table`` properties can be inferred from the document's schema. They are
+the fields found in the model.
+
 .. note::
 
-  Fields prefixed by *generic.* are internal and not part of the data access request or amendment form schemas.
+  Properties prefixed by *generic.* are internal and not part of the data access request or amendment form schemas and are considered `built-ins`.
+  They can be removed, however.
 
 
-TODO: give an example...
+Excluding Legacy Data Access Requests IDs
+-----------------------------------------
 
-Importing Legacy Data Access Requests
--------------------------------------
+To exclude data access request ids follow these step:
 
-Before importing legacy data access requests the following pre-conditions must be satisfied:
-
-- The data access request form schema must be already defined and match the legacy form model. A mismatch will cause data loss upon saving as the legacy form model cannot be mapped to the form schema.
-- To prevent legacy data access form IDs to be re-used, an *ID exclusion file* must be created and placed under Mica config folder.
-
-Importing Legacy Forms
-**********************
-
-The process of importing legacy data access requests into Mica must be done manually and preferably via the Mica website UI as it enforces field validations defined in the form schema and definition. The following steps must be followed **before** `Excluding Legacy IDs`_:
-
-- create a new data access request
-- fill the new form based on the information in your legacy document
-- save the form
-- repeat these steps until all legacy data access requests are added
-- proceed with excluding IDs as described above
-- restart Mica
-
-Use :doc:`Mica Python Client </python-user-guide/other/rest>` to batch import legacy data access requests. The disadvantage of this method is the lack of any data entry validation and any JSON format error block the process. Choose this method if you are comfortable using a terminal and the python client.
-
-
-- create a new data access request and fill as many field as possible so your template document be complete
-- get the new data access document vi Mica Python Client:
-
-  .. code-block:: bash
-
-    mica rest "/data-access-request/<REUQETS-ID>" -m GET -mk <MICA-SERVER-IP:PORT> -u <USER> -p <PASSWORD> -a application/json > template-dar.json
-
-
-TODO: complete steps
-
-Excluding Legacy IDs
-********************
-
+- stop Mica server
+- make sure ``/etc/mica2/config/data-access-form/`` exists
 - create the file ``data-access-request-exclusion-ids-list.yml`` under the folder ``/etc/mica2/config/data-access-form/``.
 - add each ID on a separate line as the example below.
 - run the command below to make sure the folder and the file have the proper permission:
