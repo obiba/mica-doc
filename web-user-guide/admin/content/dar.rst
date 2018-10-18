@@ -200,7 +200,7 @@ the fields found in the model.
 Excluding Legacy Data Access Requests IDs
 -----------------------------------------
 
-To exclude data access request ids follow these step:
+To make sure legacy data access request IDs won't be used by Mica follow the following steps:
 
 - stop Mica server
 - make sure ``/etc/mica2/config/data-access-form/`` exists

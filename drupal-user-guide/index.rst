@@ -1,4 +1,4 @@
-Drupal Installation
+Mica Drupal Client
 ===================
 
 `Drupal <http://drupal.org/>`_ is a Content Management System (CMS) allowing to build a web portal with a friendly administration interface and with extensible capabilities. What is referred to Mica Drupal Client in this documentation consists of a set of Drupal modules and theme. These modules/theme will get the published data from the Mica server (through its web services) and will deliver them as Drupal pages. Drupal supports user authentication which is itself extended to use Agate user directory. This way Drupal users can authenticate on Agate and get the Mica pages adapted to their permissions.
@@ -70,7 +70,7 @@ Install Drush via Composer tool:
   # Install Drush and add composer installation directory to your execution path
   composer global require drush/drush:7.*
   echo "export PATH=\$HOME/.composer/vendor/bin:\$PATH" | tee -a $HOME/.bashrc
-  # For CentOS 7 you have to use : 
+  # For CentOS 7 you have to use :
   echo "export PATH=\$HOME/.config/composer/vendor/bin:\$PATH" | tee -a $HOME/.bashrc
   source .bashrc
 
@@ -166,7 +166,7 @@ To enable the mode_rewrite on Debian:
 
   sudo a2enmod rewrite
   sudo service apache2 restart
-  
+
 On CentOS the rewrite_mode is enabled by default.
 
 * Make sure that the apache config on Debian and CentOS allow overriding via .htaccess, to do so make sure the apache config file has the following directive:

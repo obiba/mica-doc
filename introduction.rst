@@ -5,17 +5,27 @@ Mica is an advanced web application designed to create data web portals for larg
 
 Mica is built upon a multi-tier architecture consisting of several RESTful server and client applications. The table below list each application with a brief description:
 
-============================================= ======================================================
-Application                                   Description
-============================================= ======================================================
-Mica Server	                                  Java server providing web services (REST) for managing, storing, searching Mica Domain content and communicating with other servers listed below.
-`Opal Server <http://opaldoc.obiba.org>`_	    Java server providing web services (REST) for importing, transforming and analyzing study variables.
-`Agate Server <http://agatedoc.obiba.org>`_   Java server providing web services (REST) for user management and notifications.
-Mica Web Application                          Front-end to Mica Server providing client interface to manage Mica Domain content as well as to administrate and configure access permissions and secure connections.
-Mica Drupal Client                            Extension of the Drupal Content Management System (CMS) allowing to build a web data portal with Mica's published content.
-Mica Python Client                            Python front-end to Mica server providing services for administrative command-line and automation tasks.
-Mica R Client                                 R front-end to Mica server providing services for Mica content analysis and reporting.
-============================================= ======================================================
+.. list-table::
+  :widths: 30 70
+  :header-rows: 1
+
+  * - Application
+    - Description
+  * - Mica Server
+    - Java server providing web services (REST) for managing, storing, searching Mica Domain content and communicating with other servers listed below.
+  * - `Opal Server <http://opaldoc.obiba.org>`_
+    - Java server providing web services (REST) for importing, transforming and analyzing study variables.
+  * - `Agate Server <http://agatedoc.obiba.org>`_
+    - Java server providing web services (REST) for user management and notifications.
+  * - :doc:`Mica Web Application </web-user-guide/index>`
+    - Front-end to Mica Server providing client interface to manage Mica Domain content as well as to administrate and configure access permissions and secure connections.
+  * - :doc:`Mica Drupal Client </drupal-user-guide/index>`
+    - Extension of the Drupal Content Management System (CMS) allowing to build a web data portal with Mica's published content.
+  * - :doc:`Mica Python Client </python-user-guide/index>`
+    - Python front-end to Mica server providing services for administrative command-line and automation tasks.
+  * - :doc:`Mica R Client </r-user-guide/index>`
+    - R front-end to Mica server providing services for Mica content analysis and reporting.
+
 
 The diagram below illustrates the relationships between the Mica server and the other tiers:
 

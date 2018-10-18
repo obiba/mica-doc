@@ -52,3 +52,9 @@ Mica is to be used with `Agate <http://www.obiba.org/pages/products/agate/>`_, t
    python-user-guide/authz
    python-user-guide/doc
    python-user-guide/other
+
+.. toctree::
+   :maxdepth: 1
+   :caption: R User Guide
+
+   r-user-guide/index

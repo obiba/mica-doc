@@ -13,6 +13,8 @@ Network
 
 A network is a group of epidemiological studies that has specific research interests. It is described using the following fields: name, aims, investigators, contact information and participating studies. It can also be related to other networks.
 
+.. _individual-study-doc:
+
 Individual Study
 ~~~~~~~~~~~~~~~~
 
