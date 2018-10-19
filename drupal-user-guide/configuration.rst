@@ -1,88 +1,82 @@
 Drupal Configuration
 ====================
 
-Drupal is turned into Mica Drupal Client via a set of Drupal modules that can be enabled/disabled in the Modules > OBiBa subsection of Drupal.
+Mica Drupal Client is a set of modules that can be enabled/disabled in Drupal's ``Administration > Modules`` configuration page.
 
 .. note::
-  If you decide to disable one of OBiBa Drupal module make sure you know exactly what it does, disabling an important module can render Mica Client unusable.
+  Before disabling an OBiBa Drupal module make sure you know exactly what it does, disabling an important module can render Mica Client unusable.
 
-The following modules can be considered as extensions and disabling them does not affect the core functionality of Mica Client:
+The following modules can be considered as extensions and disabling them does not affect the core functionality of Mica Drupal Client:
 
-- Obiba Mica Data Access
-- Obiba Mica Analysis
-- Obiba Mica Research Project
-- Obiba Mica Sets
+.. list-table::
+  :widths: 30 70
 
-OBiBa Mica settings
+  * - OBiBa Mica Data Access
+    - Adds data access request and amendments capability (the latter must be enabled in Mica server).
+  * - OBiBa Mica Analysis
+    - Adds entity counts, variable cross-tabulation and statistics capability.
+  * - OBiBa Mica Research Project
+    - Adds research project management capability.
+  * - OBiBa Mica Sets
+    - Adds variable document set capability enabling users to save their search results in an anonymous set (cart).
+
+OBiBa Mica Settings
 -------------------
 
-Here, we will explain how to configure Mica's services. The sections enumerated here reflect the sections present in the section Configuration > OBiBa Mica settings of the administration panel.
+The settings under ``Administration > Configuration > OBiBa Mica`` are required to make Mica Drupal Client communicate with Mica Server and enables the administrator to customize the Mica Drupal interface and module functionality.
 
-OBiBa Study Server (MICA)
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Graphic Settings
+~~~~~~~~~~~~~~~~
 
-This subsection lists various fields that Mica Drupal Client uses to communicate with Mica Server. Here is a succinct description of each fields along with its name:
+Administrators can enable/disable Graphics in Drupal blocks or Mica Drupal pages as well as several interface related settings such as colors and captions.
 
-================================================ ===============================================
-Field                                            Description
-================================================ ===============================================
-Mica address                                     The URL of Mica Server
-Anonymous user name                              The Anonymous user has read permission upon the content that has been published on Mica server. Here, you enter the name of the anonymous user as know by Mica Server.
-Anonymous user password                          Self-explanatory.
-Copyright Notice Text                            A copyright notice to be included if a user download a list of data.
-Number of items per server response page	       Determines the how many items that must be displayed in a server response page. For instance, this parameter affects the number of variables listed in a page.
-Minimum number of items per server response page Determines the minimum number of items that must to be displayed in a server response page. This parameter affects the number of studies, networks or datasets listed on a page.
-================================================ ===============================================
+Settings
+~~~~~~~~
 
-Data Access Request
-~~~~~~~~~~~~~~~~~~~
-Either the name of a field is self-explanatory or the explanation located below that field is sufficient to understand what it is meant for except for the last item:
+The settings listed below are essential to make the communicate between Mica Drupal Client and Mica Server possible:
 
-Access request commenting. If checked, data access request commenting is enabled. For a given Access Request form, there will be a comment tab aside the history tab. By checking on this option, the commenting area can be used for a discussion between the Data Access Officer (DAO) and the user who request access.
+.. list-table::
+  :widths: 30 70
+  :header-rows: 1
 
-Statistics Settings
-~~~~~~~~~~~~~~~~~~~
+  * - Field
+    - Description
+  * - Mica address
+    - The URL of Mica Server
+  * - Anonymous user name
+    - The Anonymous user has read permission upon the content that has been published on Mica server. Here, you enter the name of the anonymous user as know by Mica Server.
+  * - Anonymous user password
+    - Self-explanatory.
+  * - Copyright Notice Text
+    - A copyright notice to be included if a user download a list of data.
+  * - Number of items per server response page
+    - Determines the how many items that must be displayed in a server response page. For instance, this parameter affects the number of variables listed in a page.
+  * - Minimum number of items per server response page
+    - Determines the minimum number of items that must to be displayed in a server response page. This parameter affects the number of studies, networks or datasets listed on a page.
 
-The explanation that lies below the checkboxes is self-explanatory.
-
-Cache Image settings
-~~~~~~~~~~~~~~~~~~~~
+**Cache Image settings**
 
 The option for time image timeout is supposed to be clear. Now, you also have a button to clear the image cache. This might be useful as, for instance, logo of studies (or networks) don't tend to change much, so the image cache timeout tends to be long. If, however, you change an image, you can clear the cache right away.
 
-Networks, Studies, Datasets and Variable Search
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Content Settings
+~~~~~~~~~~~~~~~~
 
-Depending on the purpose for which you intend to use Mica, you might want to deactivate the Networks (resp. Studies, Datasets or Variables) tab in the Search page. By deactivating the checkbox aside Show Networks (resp. Studies, Datasets or Variables) search, the Network (resp. Studies, Datasets or Variables) tab won't show up in the Search page.
+Each content setting has specific configuration related to their web page interface and functionality. Visit each setting section for detailed usage.
 
-Below each of these four configurations (Show Networks, Studies, Datasets or Variables search) are options to customize the result of a given search string entered in the left-hand-side column e.g., to show or not the studies in the results when one search for a network.
+Analysis Settings
+~~~~~~~~~~~~~~~~~~~
 
-In **Datasets Search > Show dataset auto-complete search filter**. If selected, the auto-complete search filter will be displayed in the search page. By choosing "Checkbox" you have a checkbox selection. Finally, you can also dispable the display.
+The only setting here is the title of the Entities Count page.
 
-Study, Dataset and Variable Content
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Search Settings
+~~~~~~~~~~~~~~~
 
-By clicking on a "specific" result on the Search page, that is, not a number of networks, variable, studies or dataset, you are brought on a page that describes that network, study, dataset or a variable. In the configuration panel, the options listed in the Study, Dataset or Variable Content boxes will set options concerning the display of information on a description page of that type.
+Configuration related to the Search web page interface and functionality. Visit each setting section for detailed usage.
 
-Taxonomies
-~~~~~~~~~~
+Mica Drupal Client Template Overriding
+--------------------------------------
 
-In this block, you may edit the appearance as well as the order of the taxonomies appearing in:
-
-* **Figures**. This concerns the display (or its absence thereof) of all figures concerning Variable Classification e.g., the Area of information, the various constructs etc.
-* **Search**. This concerns the display of the search panel (on the left) on the Search page under the Variable tab.
-
-If the text area for **Taxonomy in Figure** is empty, it will display all taxonomies. This is the default state.
-
-Translation
-~~~~~~~~~~~
-
-The last section is for translation of the web data portal created via Mica Drupal Client. The textarea concerns the pages that should not be translated. Suppose that your data web portal is translated in 2 languages (the primary language is English) and that a data access form for the data displayed therein is available only in English. Then, you can translate all the portal into the second language but not the pages related to data access. In order to do so, you need to enter the path of each of the page you don't want to be translated into the textarea separated by a coma and you're done: these pages will remain only in English.
-
-Mica Drupal Client Templating
------------------------------
-
-We will examine two distinct ways to do templating: with a sub-theme and with a custom module.
+We will examine two distinct ways: sub-theme and custom module.
 
 Dependencies
 ~~~~~~~~~~~~
@@ -94,40 +88,39 @@ First of all, you need to get:
 
 Further, see the `Drupal Bootstrap Documentation <https://drupal-bootstrap.org/api/bootstrap/7>`_.
 
-Overriding templates via a new sub-theme
+Overriding Templates via a new Sub-Theme
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Overriding a template is useful if one wants to determine the way the information is displayed in a page and have a better control over the design. Thus, for every page to display in Mica Drupal Client, there is a file (or a set of) template file(s) located in the corresponding template repository of each OBiBa module.
 
-It is not recommended to modify these files directly or the modifications will be overwritten the next time OBiBa Modules will be updated thus the idea of template overriding.
+It is not recommended to modify these files directly as the modifications will be overwritten the next time OBiBa Modules are updated, hence the idea of template overriding.
 
 .. note::
 
-  The list of templates that we can override can be seen in the template.php file of obiba_bootstrap.
+  The list of templates that we can override can be seen in the ``template.php`` file of ``obiba_bootstrap``.
 
 You may do template overriding as follow:
 
-* First, create a sub-template as decribed in the documentations hyperlinked above
-* Define obiba_bootstrap as the base theme in the .info file of that sub-theme.
+* First, create a sub-template as described in the links provided above.
+* Define ``obiba_bootstrap`` as the base theme in the ``.info`` file of that sub-theme.
 
-Once the sub-theme is set, you can override the different vues generated by a module by copying the template file for that module in the template folder of that sub-theme, that is:
+Once the sub-theme is set, you can override each view generated by a module as shown below:
 
 .. code-block:: bash
 
-  cp /site/all/modules/obiba_mica/<module to overide>/templates/<template to overide> <drupal>/sites/all/themes/<Sub_theme_bootstrap>/templates
+  cp /site/all/modules/obiba_mica/<module to override>/templates/<template to override> <drupal>/sites/all/themes/<Sub_theme_bootstrap>/templates
 
-Overriding templates via custom module
+Overriding Templates via Custom Module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to use default template obiba_bootstrap, which entails making smaller edits to the design, you may override the templates in a custom module that you can install in your instance of Mica Drupal Client:
+If you want to use default template ``obiba_bootstrap``, which entails making smaller edits to the design, you may override the templates in a custom module that you can install in your instance of Mica Drupal Client:
 
-* Copy the template that you want to override in the folder "Template" of the custom module,
-* Use the hook_theme() function to override the templates.
+* Copy the template that you want to override in the folder ``Template`` of the custom module,
+* Use the ``hook_theme()`` function to override the templates.
 
-For instance, you can use the following in a .module file:
+For instance, you can use the following in a ``.module`` file:
 
 .. code-block:: php
-
 
   /*
   * hook_theme()

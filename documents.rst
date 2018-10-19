@@ -5,6 +5,8 @@ Mica handles several type of documents, specific to the epidemiological studies 
 
 All the documents follow the :doc:`publication-flow` except the :ref:`data-access-requests` (which is a form privately exchanged between a researcher and the study/consortium).
 
+.. _document-types:
+
 Types
 -----
 
@@ -127,3 +129,8 @@ Comments
 --------
 
 To enhance the collaboration between Mica users, each member can add a comment on any Mica domain document as well as data access requests documents. Mica can be configured to send email notifications when a comment is added or updated.
+
+Cart
+----
+
+The cart groups a set of variables based on one or more search criteria. User can edit the cart by adding or removing variables, download its content (variables) as a CSV file and use it as a search criterion.
