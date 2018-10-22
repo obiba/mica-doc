@@ -166,8 +166,6 @@ The snippet below shows a report configuration file:
         "fr": "Rapport sur les demandes d'accès"
       },
 
-      ...
-
     },
     "table": {
       "generic.accessRequestId": {
@@ -178,8 +176,6 @@ The snippet below shows a report configuration file:
         "en": "TITLE",
         "fr": "TITRE"
       },
-
-      ...
 
     }
   }

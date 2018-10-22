@@ -195,10 +195,11 @@ folders.
 
 .. _files-permissions:
 
-Permissions
-~~~~~~~~~~~
-Permissions are applied to the file's associated document and not on the file itself. The following table describes each role the corresponding
-permitted operations:
+Draft Permissions
+~~~~~~~~~~~~~~~~~
+The following tables describe file and folder draft permissions:
+
+*File Permissions*
 
 .. list-table::
   :widths: 25 75
@@ -209,9 +210,37 @@ permitted operations:
   * - Reader
     - Can only view and download a file.
   * - Editor
-    - Can only edit and change the status of a file.
+    - Can only edit, download and change the status of a file.
   * - Reviewer
     - All operations are permitted.
+
+*Folder Permissions*
+
+.. list-table::
+  :widths: 25 75
+  :header-rows: 1
+
+  * - Role
+    - Description
+  * - Reader
+    - Can only view and download a folder.
+  * - Editor
+    - Can only edit, download, change the status and upload files into a folder.
+  * - Reviewer
+    - All operations are permitted.
+
+.. note::
+
+  File permissions are inherited from their parent folder unless specified.
+
+Publication Access
+~~~~~~~~~~~~~~~~~~
+
+Publication access makes folders and files available to everyone in :doc:`/drupal-user-guide/index`.
+
+.. note::
+
+  Publication access is only available if Mica content is not configured for :ref:`open access <admin-general-properties>`.
 
 Comments
 --------

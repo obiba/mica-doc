@@ -11,6 +11,8 @@ status.
 Configuration
 ~~~~~~~~~~~~~
 
+.. _admin-general-properties:
+
 Properties
 ----------
 
@@ -35,6 +37,11 @@ This section allows to define all general Mica configuration as
 |Data Source            | Primary Opal server Public URL         | This Opal server is the primary source of variables and data summaries. (see below)                                |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Participant Privacy Threshold          | No data summary will be returned from Opal if the number of participants is below this threshold.                  |
++-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+|Search Layout          | Layout 1                               | Layout emphasizing a search bar that maps keywords to available taxonomies.                                        |
+|                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+|                       | Layout 2                               | Layout providing a search panel on the left-hand-side that displays the full taxonomy of various search categories |
+|                       |                                        | (variable, study, and network).                                                                                    |
 +-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |Application Scope      | Single study enabled                   | If checked, only one study is present in Mica                                                                      |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
