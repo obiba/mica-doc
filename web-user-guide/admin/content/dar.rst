@@ -1,13 +1,6 @@
 Data Access Request Administration
 ##################################
 
-Summary
--------
-
-The *Administration* menu is available to users with the role
-``mica-administrator``. This menu gives access to server configuration and
-status.
-
 Definitions
 -----------
 
@@ -20,27 +13,47 @@ definition. See *Angular Schema Form* `documentation <https://github.com/json-sc
 The *Preview* and *Model* tabs are informational only and can be used to
 preview the rendered form and the input data that will be collected.
 
-Under the **Properties** section one can specify the document's *Title Field*
-and it's *Summary Field* as defined in the custom *Angular Schema Form*.
+Properties
+**********
 
-Under the **PDF Download** there are two choices:
-  * PDF Template
-  * Printable Page
+.. list-table::
+  :widths: 25 75
 
-Selecting the `PDF Template` option, one has to upload a template (one for each
-configured languages) compatible with the custum *Angular Schema Form* model.
+  * - Title Field
+    - Specifies the field value to be used as the document's title.
+  * - Summary Field
+    - Specifies the field value to be used as the document's summary.
+  * - Enable Amendments
+    - Enables the capability of requesting amendments to an approved data access request. This option is disabled by default.
 
-The `Printable Page` option makes use of the browser's print capability where
-one may choose to either print the document to PDF or simply print.
+PDF Download
+************
+
+The data collected in the form can be downloaded in the following formats:
+
+**PDF Template**, this option requires uploading a template (one for each
+configured languages) compatible with the custom *Angular Schema Form* model.
+
+**Printable Page**, this option renders the form as a printable page in the browser so the user can either save the form as a PDF or send it to a printer.
 
 .. _dar-predefined-action-logs:
 
-Under the **Predefined Action Names** one can manage the name of predefined actions
-to be used in a data access request's history. This name is in fact the action
-translation key as in the example below:
-``data-access-request.action-log.config.label.<action-key>``
+Predefined Action Names
+***********************
 
-  Make sure to precede your key with ``data-access-request.action-log.config.label``.
+*Predefined Action Names* are common actions that *data access officers* perform while processing the data access requests. These actions can then be logged in the data access request :ref:`history section <dar-history>`.
+
+The action names defined here are in fact translation keys that must be created in :doc:`/web-user-guide/admin/system/translation`.
+
+The following steps demonstrate how these names are added:
+
+- add the action names without any spaces or any of these invalid characters: ``. ~ !``
+- save the configuration
+- add the action keys in :doc:`/web-user-guide/admin/system/translation`
+
+.. note::
+
+  An action key is the action name preceded by its translation path: ``data-access-request.action-log.config.label.<action-name>``.
 
 Amendment Form
 **************
@@ -100,19 +113,43 @@ There are also two additional (sub) permissions that can be granted to a *Reader
 Customizing Reports
 -------------------
 
-To customize the data access request and amendment reports these files must be created:
+.. warning::
+  This is an **experimental** functionality, make sure to backup your database beforehand.
 
-- ``/etc/mica2/config/data-access-form/export-csv-schema.json``
-- ``/etc/mica2/config/data-access-amendment-form/export-csv-schema.json``
 
-To get the current report configuration files execute these queries in a MongoDB client of your choice:
 
-.. code-block:: bash
+Follow these steps to customize the data access request and amendment reports:
 
-  - db.getCollection('dataAccessForm').find({}, {csvExportFormat: 1, _id: 0})
-  - db.getCollection('dataAccessAmendmentForm').find({}, {csvExportFormat: 1, _id: 0})
+- stop Mica server
+- get the current report configuration files as templates:
 
-Once you have obtained these files you can go agead and modify the content.
+  .. code-block:: bash
+
+    mongo mica --eval 'db.dataAccessForm.find({}, {csvExportFormat: 1, _id: 0})'
+    mongo mica --eval 'db.dataAccessAmendmentForm.find({}, {csvExportFormat: 1, _id: 0})'
+
+- make sure ``/etc/mica2/config/data-access-form/`` and ``/etc/mica2/config/data-access-amendment-form/``  directories exist
+- copy your templates ``export-csv-schema.json`` under the previously created directories
+
+- clear the `csvExportFormat` field in dataAccessForm and dataAccessAmendmentForm:
+
+  .. code-block:: bash
+
+    mongo mica --eval 'db.dataAccessForm.update({_id: "default"}, {$set: {csvExportFormat: ""}})'
+    mongo mica --eval 'db.dataAccessAmendmentForm.update({_id: "default"}, {$set: {csvExportFormat: ""}})'
+
+- edit your templates:
+
+  - ``/etc/mica2/config/data-access-form/export-csv-schema.json``
+  - ``/etc/mica2/config/data-access-amendment-form/export-csv-schema.json``
+
+- to make sure that these files can be accessed by Mica server run the following shell command:
+
+  .. code-block:: bash
+
+    ``sudo chown -R mica:adm /etc/mica2``
+
+- start Mica server
 
 The snippet below shows a report configuration file:
 
@@ -128,6 +165,9 @@ The snippet below shows a report configuration file:
         "en": "Access Requests Report",
         "fr": "Rapport sur les demandes d'accès"
       },
+
+      ...
+
     },
     "table": {
       "generic.accessRequestId": {
@@ -138,21 +178,32 @@ The snippet below shows a report configuration file:
         "en": "TITLE",
         "fr": "TITRE"
       },
+
+      ...
+
     }
   }
 
+
+Where fields under ``headers`` are fixed (built-in) but their translations can
+be modified. Fields under ``table`` can be fully customized (removed, re-ordered, added, etc).
+
+The ``table`` properties can be inferred from the document's schema. They are
+the fields found in the model.
+
 .. note::
 
-  Fields prefixed by *generic.* are internal and not part of the data access request or amendment form schamas.
+  Properties prefixed by *generic.* are internal and not part of the data access request or amendment form schemas and are considered `built-ins`.
+  They can be removed, however.
 
 
-TODO: give an example...
+Excluding Legacy Data Access Requests IDs
+-----------------------------------------
 
-Pre-Defined Data Access Request IDs
------------------------------------
+To make sure legacy data access request IDs won't be used by Mica follow the following steps:
 
-To exclude a pre-defined list of data access request IDs the following steps must be followed:
-
+- stop Mica server
+- make sure ``/etc/mica2/config/data-access-form/`` exists
 - create the file ``data-access-request-exclusion-ids-list.yml`` under the folder ``/etc/mica2/config/data-access-form/``.
 - add each ID on a separate line as the example below.
 - run the command below to make sure the folder and the file have the proper permission:
@@ -172,24 +223,3 @@ Here is an example of the exclusion file:
     - "LEGACEY_ID_002"
     - "LEGACEY_ID_003"
 
-The process of importing legacy data access requests into Mica must be done manually and preferably via the Mica website UI as it enforces field validations defined in the form schema and definition. The following steps must be followed **before** ID exclusion:
-
-- create a new data access request
-- fill the new form based on the information in your legacy document
-- save the form
-- repeat these steps until all legacy data access requests are added
-- proceed with exluding IDs as described above
-- restart Mica
-
-Use :doc:`Mica Python Client </python-user-guide/other/rest>` to batch import legacy data access requests. The disadvantage of this method is the lack of any data entry validation and any JSON format error block the process. Choose this method if you are comfortable using a terminal and the python client. 
-
-
-- create a new data access request and fill as many field as possible so your template document be complete
-- get the new data access document vi Mica Python Client:
-
-  .. code-block:: bash
-
-    mica rest "/data-access-request/<REUQETS-ID>" -m GET -mk <MICA-SERVER-IP:PORT> -u <USER> -p <PASSWORD> -a application/json > template-dar.json
-
-
-TODO: complete steps

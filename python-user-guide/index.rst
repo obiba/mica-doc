@@ -1,4 +1,4 @@
-Python Introduction
+Mica Python Client
 ===================
 
 Mica Python client, a command line scripting tool written in Python, enables automation of tasks in a Mica server.

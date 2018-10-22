@@ -77,17 +77,21 @@ Add Criterion
 *************
 
 A user with administrator rights can add a criterion to the existing taxonomy.
-A criterion is described by a unique name (identifier), a title, a description,
-a type, a document field it's based on and search characteristics; Repeatable
-to Search for exact match or contained value, Hidden to exclude the criteria
-from the search and Localized for multilingual fields.
+
+``Name`` (identifier), ``Title``, and ``Description`` are required fields.
+Under **Definition**, ``Field`` is required and represents a fully qualified field name under the document model.
+Check the ``Repeatable`` definition if search must be an exact match or contained value.
+Check the ``Localized`` definition if the field is multilingual.
+
+Under **Display**, one can choose how and if the criterion will be shown.
+Checking ``Hidden`` will hide the criterion from the search while ``Facet`` controls whether or not it will be exposed in the list page.
 
 Add Term
 ********
 
 A user with administrator rights can add a term to an existing criterion. A
-term is described by a unique name for string criterion or a range for
-numerical criterion, a title, a description and a set of keywords useful when
+term is described by a unique ``Name`` for string criterion or a range for
+numerical criterion, a ``Title``, a ``Description`` and a set of ``Keywords`` useful when
 building search requests.
 
 Dataset Specific Search

@@ -5,6 +5,8 @@ Mica handles several type of documents, specific to the epidemiological studies 
 
 All the documents follow the :doc:`publication-flow` except the :ref:`data-access-requests` (which is a form privately exchanged between a researcher and the study/consortium).
 
+.. _document-types:
+
 Types
 -----
 
@@ -12,6 +14,8 @@ Network
 ~~~~~~~
 
 A network is a group of epidemiological studies that has specific research interests. It is described using the following fields: name, aims, investigators, contact information and participating studies. It can also be related to other networks.
+
+.. _individual-study-doc:
 
 Individual Study
 ~~~~~~~~~~~~~~~~
@@ -79,7 +83,7 @@ A data access request is an application form that researchers submit in order to
 Data Access Amendment
 ~~~~~~~~~~~~~~~~~~~~~
 
-A data access amendment is an application form that researches submit to amend changes to an already approved data access request. A data access amendment workflow is identical to that of a data access request.
+A data access amendment is an application form that researchers submit to request changes to a pre-approved data access request. The data access amendment workflow is identical to that of  data access requests.
 
 Search
 ------
@@ -125,3 +129,8 @@ Comments
 --------
 
 To enhance the collaboration between Mica users, each member can add a comment on any Mica domain document as well as data access requests documents. Mica can be configured to send email notifications when a comment is added or updated.
+
+Cart
+----
+
+The cart groups a set of variables based on one or more search criteria. User can edit the cart by adding or removing variables, download its content (variables) as a CSV file and use it as a search criterion.
