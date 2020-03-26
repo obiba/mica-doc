@@ -73,6 +73,85 @@ Launch Mica. This step will create/update the database schema for Mica and will 
 
 For the administrator accounts, the credentials are "administrator" as username and "password" as password. See User Directories Configuration to change it.
 
+Docker Image Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+OBiBa is an early adopter of the `Docker <https://www.docker.com/>`_ technology, providing its own images from the `Docker Hub repository <https://hub.docker.com/orgs/obiba/repositories>`_.
+
+A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a MongoDB database) would be:
+
+.. code-block:: yaml
+
+  version: '3'
+  services:
+        mica:
+                image: obiba/mica
+                ports:
+                        - "8835:8445"
+                        - "8872:8082"
+                links:
+                        - mongo
+                environment:
+                        - JAVA_OPTS=-Xmx2G
+                        - MICA_ADMINISTRATOR_PASSWORD=password
+                        - MICA_ANONYMOUS_PASSWORD=password
+                        - MONGO_HOST=mongo
+                        - MONGO_PORT=27017
+                        - OPAL_HOST=opal
+                        - OPAL_PORT=8443
+                        - AGATE_HOST=agate
+                        - AGATE_PORT=8444
+                volumes:
+                        - /opt/mica:/srv
+        mongo:
+                image: mongo
+        opal:
+                image: obiba/opal
+                ports:
+                        - "8833:8443"
+                        - "8870:8080"
+                links:
+                        - mongo
+                environment:
+                        - OPAL_ADMINISTRATOR_PASSWORD=password
+                        - MONGO_HOST=mongo
+                        - MONGO_PORT=27017
+                        - AGATE_HOST=agate
+                        - AGATE_PORT=8444
+                volumes:
+                        - /opt/opal:/srv
+        agate:
+                image: obiba/agate
+                ports:
+                        - "8834:8444"
+                        - "8871:8081"
+                links:
+                        - mongo
+                environment:
+                        - AGATE_ADMINISTRATOR_PASSWORD=password
+                        - MONGO_HOST=mongo
+                        - MONGO_PORT=27017
+                        - RECAPTCHA_SITE_KEY=6Lfo7gYTAAAAAOyl8_MHuH-AVBzRDtpIuJrjL3Pb
+                        - RECAPTCHA_SECRET_KEY=6Lfo7gYTAAAAADym-vSDvPBeBCXaxIprA0QXLk_b
+                volumes:
+                        - /opt/agate:/srv
+
+Then environment variables that are exposed by this image are:
+
+================================= =========================================================================
+Environment Variable              Description
+================================= =========================================================================
+``JAVA_OPTS``
+``MICA_ADMINISTRATOR_PASSWORD``   Agate administrator password, required and set at first start.
+``MICA_ANONYMOUS_PASSWORD``       Agate anonymous password, required and set at first start.
+``MONGO_HOST``                    MongoDB server host.
+``MONGO_PORT``                    MongoDB server port, default is ``27017``.
+``OPAL_HOST``                     Opal server host (optional).
+``OPAL_PORT``                     Opal server port, default is ``8443``.
+``AGATE_HOST``                    Agate server host.
+``AGATE_PORT``                    Agate server port, default is ``8444``.
+================================= =========================================================================
+
 Upgrade
 -------
 
