@@ -22,6 +22,7 @@ Mica is to be used with `Agate <http://www.obiba.org/pages/products/agate/>`_, t
 
    admin/installation
    admin/configuration
+   admin/pub-configuration
    admin/plugins
 
 .. toctree::
