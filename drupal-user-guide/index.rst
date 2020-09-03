@@ -234,3 +234,19 @@ The following instructions apply when upgrading from obiba_mica 7.x-1.3 or older
 If some templates have been overridden, please compare with the new original one.
 
 If you have defined a sub-theme of obiba_bootstrap's theme, you might need to update your style sheet.
+
+Drupal 7.72
+-----------
+
+For the security issues you should update your Drupal installation to the latest version 7.72. Also, make sure to use the bootstrap-7.x-22 version.
+After that please follow these steps:
+
+  - Install and enable the jquery_update-7.x-3.0-alpha5 version.
+  - Go to the jQuery configuration page under <YourDrupalInstallation>/admin/config/development/jquery_update.
+  - In "JQuery Migration" section check the "Enable JQuery Migrate Plugin" options, (do not enable the "JQuery Migration CDN").
+  - In the "Theme Override" section click on the "Configure"  link of your enabled theme.
+  - Once on the custom theme "Configuration" page check the 2.2  theme specific jQuery version under the  "JQUERY UPDATE" section and click on "Save" configuration.
+  - It may be useful to switch the default jQuery version to 2.2.
+  - Clear your site cache.
+
+These steps are recommended for anyone who updates the Drupal installation to 7.72.
