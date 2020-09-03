@@ -238,15 +238,15 @@ If you have defined a sub-theme of obiba_bootstrap's theme, you might need to up
 Drupal 7.72
 -----------
 
-For the security issues you should update your Drupal Installation to 7.72 Latest version, make sure to use the bootstrap-7.x-22 version
+For the security issues you should update your Drupal installation to the latest version 7.72. Also, make sure to use the bootstrap-7.x-22 version.
 After that please follow these steps:
 
-  - Install and enable the jquery_update-7.x-3.0-alpha5 Version
-  - Got to the Jquery config page under <YourDrupalInstallation>/admin/config/development/jquery_update
-  - In JQueryMigration Section check the  Enable jQuery Migrate Plugin options, (Don't enable the Jquery Migration CDN)
-  - In the Theme Override Section Click on Configure  link of your enabled theme
-  - Once on the your custom theme Configuration page check the 2.2 Theme specific jQuery version under the JQUERY UPDATE Section and click on Save configuration
-  - It may be useful to switch Default jQuery version to 2.2
- - Clear your site cache
+  - Install and enable the jquery_update-7.x-3.0-alpha5 version.
+  - Go to the jQuery configuration page under <YourDrupalInstallation>/admin/config/development/jquery_update.
+  - In "JQuery Migration" section check the "Enable JQuery Migrate Plugin" options, (do not enable the "JQuery Migration CDN").
+  - In the "Theme Override" section click on the "Configure"  link of your enabled theme.
+  - Once on the custom theme "Configuration" page check the 2.2  theme specific jQuery version under the  "JQUERY UPDATE" section and click on "Save" configuration.
+  - It may be useful to switch the default jQuery version to 2.2.
+  - Clear your site cache.
 
-These Steps may Help anyone who update his Drupal installation to 7.72
+These steps are recommended for anyone who updates the Drupal installation to 7.72.
