@@ -115,7 +115,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``portalLink``
      - The link applied to the logo. Default is the data portal itself (same as **Home** menu), but it could also be the organization's main portal.
 
-**Cart page**
+**Cart page settings**
 
 
 .. list-table::
@@ -131,7 +131,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showCartViewDownload``
      - Logical to allow downloading the content of the cart in the format of Opal views (for creating views in Opal from a variable selection). Default is restricted to users with administration-related role.
 
-**Contact Us page**
+**Contact Us page settings**
 
 .. list-table::
    :widths: 10 90
@@ -142,7 +142,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``contactEnabled``
      - Logical to show/hide the **Contact** menu. Default is **true**, but can be restricted to users within roles or groups.
 
-**User Profile page**
+**User Profile page settings**
 
 .. list-table::
    :widths: 10 90
@@ -155,7 +155,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showProfileGroups``
      - Logical to show/hide the groups to which the user belongs.
 
-**Repository list pages**
+**Repository list pages settings**
 
 .. list-table::
    :widths: 10 90
@@ -180,7 +180,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``datasetListDefaultDisplay``
      - Default display of a list of the studies. Default is **cards**.
 
-**Search page**
+**Search page settings**
 
 .. list-table::
    :widths: 10 90
@@ -201,7 +201,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``searchVariableColumns``
      - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study** or **dataset**.
 
-**Data Access pages**
+**Data Access pages settings**
 
 .. list-table::
    :widths: 10 90
@@ -214,7 +214,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``dataAccessCalloutsEnabled``
      - Show/hide the callout panels on the head of the data access pages.
 
-**Charts**
+**Charts settings**
 
 .. list-table::
    :widths: 10 90
@@ -229,7 +229,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``colors``
      - List of colors to be used for a set of chart elements (portions of a pie chart for instance).
 
-**Files**
+**Files settings**
 
 .. list-table::
    :widths: 10 90
@@ -250,7 +250,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showDatasetFiles``
      - Logical to show/hide the files that are associated to the datasets. Default is the same as what specified by ``showFiles``.
 
-**Variables classifications charts**
+**Variables classifications charts settings**
 
 .. list-table::
    :widths: 10 90
