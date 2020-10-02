@@ -65,6 +65,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
 
    * - Variable
      - Description
+   * - ``defaultLang``
+     - The default language to be used when extraction labels from documents. If no text version is found for the page's language, this default language's version will be looked up.
    * - ``datetimeFormat``
      - The format in which the date-time values should be rendered.
    * - ``date``
