@@ -462,17 +462,17 @@ Translations
 
 The translations are performed in the following order, for a given ``locale``:
 
-1. check for the message key in the message_<locale>.properties (at different locations)
+1. check for the message key in the messages_<locale>.properties (at different locations)
 2. check for the message key in the <locale> JSON object as defined the **Administration > Translations** section of the administration interface
 
-For the message_* properties, the translations can be added/overridden as follows:
+For the messages_* properties, the translations can be added/overridden as follows:
 
 .. code-block:: bash
 
   MICA_HOME
   └── conf
       └── translations
-          ├── message_fr.properties
-          └── message_en.properties
+          ├── messages_fr.properties
+          └── messages_en.properties
 
-Note that you can declare only the message_* properties files that are relevant (locales available from the website) and the content of these files can contain only the translation keys that you want to override.
+Note that you can declare only the messages_* properties files that are relevant (locales available from the website) and the content of these files can contain only the translation keys that you want to override.
