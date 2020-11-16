@@ -200,6 +200,12 @@ If enough, this is the less intrusive approach. Note that you do not need to red
      - Show/hide and order the graphics by specifying there name. Possible values are **geographical-distribution-chart**, **study-design-chart**, **number-participants-chart**, **bio-samples-chart** or **study-start-year-chart**.
    * - ``searchVariableColumns``
      - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study** or **dataset**.
+   * - ``searchDatasetColumns``
+     - Show/hide and order the column names for the list of datasets. Possible values are **name**, **type**, **networks**, **studies** or **variables**.
+   * - ``searchStudyColumns``
+     - Show/hide and order the column names for the list of studies. Possible values are **name**, **type**, **study-design**, **data-sources-available**, **participants**, **networks**, **individual** or **harmonization**.
+   * - ``searchNetworkColumns``
+     - Show/hide and order the column names for the list of networks. Possible values are **name**, **studies**, **datasets** or **variables**.
 
 **Data Access pages settings**
 
