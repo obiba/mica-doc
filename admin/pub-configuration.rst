@@ -216,9 +216,11 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - Variable
      - Description
    * - ``dataAccessInstructionsEnabled``
-     - Show/hide the instructions panel on the side of the data access form.
+     - Show/hide the instructions panel on the side of the data access form. Default is **true**.
    * - ``dataAccessCalloutsEnabled``
-     - Show/hide the callout panels on the head of the data access pages.
+     - Show/hide the callout panels on the head of the data access pages. Default is **true**.
+   * - ``dataAccessReportTimelineEnabled``
+     - Show/hide the report timeline in the dashboard page when the data access is approved. Applies only when a project end date can be found. Default is **true**.
 
 **Charts settings**
 
