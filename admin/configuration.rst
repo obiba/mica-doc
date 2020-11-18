@@ -114,18 +114,20 @@ Elasticsearch Configuration
 
 Mica server embeds `Elasticsearch <https://www.elastic.co/>`_ as its search engine. Elasticsearch is a key functionality of Mica as the process of publication consist in indexing documents (networks, studies, variables etc.) in the search engine. Advanced queries can be applied on the published documents. Elasticsearch is embeded, i.e. it is not an external application. Mica's Elasticsearch can be part of a cluster of Elasticsearch cluster. The configuration of the Elasticsearch node and how it should connect to the other nodes of the cluster can be specified in this section. Default configuration is usually enough.
 
-=================================== ================================
-Property                            Description
-=================================== ================================
-``elasticsearch.dataNode``          Boolean to specify if this node has data or if it is just a proxy to other nodes in a cluster.
-``elasticsearch.clusterName``       Cluster identifier.
-``elasticsearch.shards``            Number of shards.
-``elasticsearch.replicas``          Number of replicas.
-``elasticsearch.settings``          A string in JSON or YAML format to define other elasticsearch settings. See Elasticsearch Documentation for advanced settings.
-``elasticsearch.transportClient``   Boolean to indicate to use the Transport Client instead of creating an elasticsearch Node.
-``elasticsearch.transportAddress``  Elasticsearch service IP address and port when using the Transport Client, defaults to the localhost at port 9300.
-``elasticsearch.transportSniff``    Boolean to indicate the Transport Client to collect IP addresses from nodes in an elasticsearch cluster.
-=================================== ================================
+================================================== ================================
+Property                                           Description
+================================================== ================================
+``elasticsearch.dataNode``                         Boolean to specify if this node has data or if it is just a proxy to other nodes in a cluster.
+``elasticsearch.clusterName``                      Cluster identifier.
+``elasticsearch.shards``                           Number of shards.
+``elasticsearch.replicas``                         Number of replicas.
+``elasticsearch.settings``                         A string in JSON or YAML format to define other elasticsearch settings. See Elasticsearch Documentation for advanced settings.
+``elasticsearch.transportClient``                  Boolean to indicate to use the Transport Client instead of creating an elasticsearch Node.
+``elasticsearch.transportAddress``                 Elasticsearch service IP address and port when using the Transport Client, defaults to the localhost at port 9300.
+``elasticsearch.transportSniff``                   Boolean to indicate the Transport Client to collect IP addresses from nodes in an elasticsearch cluster.
+``elasticsearch.maxConcurrentJoinQueries``         Maximum count of ES queries that can be executed concurrently. Default value is ``4``.
+``elasticsearch.concurrentJoinQueriesWaitTimeout`` Wait timeout when executing concurrent ES queries in millis. Default value is ``30000`` milliseconds.
+================================================== ================================
 
 **Elasticsearch Cluster**
 
@@ -163,6 +165,19 @@ Mica uses the scripting capabilities of Elasticsearch. All the machines in the E
   script:
     inline: true
     indexed: true
+
+Miscelaneous Configuration
+--------------------------
+
+Advanced settings.
+
+=================================== ================================
+Property                            Description
+=================================== ================================
+``dar.reminder.cron``               Schedule (cron syntax) of the email reminder for Data Access report. Default value is ``0 0 0 * * ?`` (every day at midnight).
+``sets.cleanup.cron``               Schedule (cron syntax) of the expired cart/sets cleanup. Default value is ``0 0 * * * ?`` (every hour).
+=================================== ================================
+
 
 User Directories
 ----------------
