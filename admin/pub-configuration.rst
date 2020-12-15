@@ -57,7 +57,8 @@ Some template variables (date formats, branding, favicon etc.) are defined in `l
 
 If enough, this is the less intrusive approach. Note that you do not need to redefine all the settings, just reassign the ones of interest.
 
-**General settings**
+General settings
+****************
 
 .. list-table::
    :widths: 10 90
@@ -98,7 +99,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``adminLTEPath``
      - The location of the `AdminLTE <https://adminlte.io/>`_ theme if this one has been modified (see the **Theme** section in this documentation).
 
-**Home page settings**
+Home page settings
+******************
 
 .. list-table::
    :widths: 10 90
@@ -115,8 +117,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``portalLink``
      - The link applied to the logo. Default is the data portal itself (same as **Home** menu), but it could also be the organization's main portal.
 
-**Cart page settings**
-
+Cart page settings
+******************
 
 .. list-table::
    :widths: 10 90
@@ -126,12 +128,15 @@ If enough, this is the less intrusive approach. Note that you do not need to red
      - Description
    * - ``cartEnabled``
      - Logical to show/hide the cart links (**Cart** menu, addition/removal to/from cart buttons). Default is consistent with the application's general configuration, but can be fine-tuned to make the cart visible to users within roles or groups.
+   * - ``listsEnabled``
+     - Logical to show/hide the lists links (**Lists** menu, addition to list buttons). Default is consistent with the application's general configuration, but can be fine-tuned to make the lists visible to users within roles or groups.
    * - ``showCartDownload``
      - Logical to allow downloading the content of the cart. Default is restricted to users with administration-related role.
    * - ``showCartViewDownload``
      - Logical to allow downloading the content of the cart in the format of Opal views (for creating views in Opal from a variable selection). Default is restricted to users with administration-related role.
 
-**Contact Us page settings**
+Contact Us page settings
+************************
 
 .. list-table::
    :widths: 10 90
@@ -142,7 +147,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``contactEnabled``
      - Logical to show/hide the **Contact** menu. Default is **true**, but can be restricted to users within roles or groups.
 
-**User Profile page settings**
+User Profile page settings
+**************************
 
 .. list-table::
    :widths: 10 90
@@ -155,7 +161,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showProfileGroups``
      - Logical to show/hide the groups to which the user belongs.
 
-**Repository list pages settings**
+Repository list pages settings
+******************************
 
 .. list-table::
    :widths: 10 90
@@ -180,7 +187,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``datasetListDefaultDisplay``
      - Default display of a list of the studies. Default is **cards**.
 
-**Search page settings**
+Search page settings
+********************
 
 .. list-table::
    :widths: 10 90
@@ -197,17 +205,62 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``mapName``
      - Map name to be used in the graphic **geographical-distribution-chart**. Default is **world**, possible values are **world**, **europe**, **north-america**, **south-america**, **asia**, **africa** or **oceania**.
    * - ``searchCharts``
-     - Show/hide and order the graphics by specifying there name. Possible values are **geographical-distribution-chart**, **study-design-chart**, **number-participants-chart**, **bio-samples-chart** or **study-start-year-chart**.
+     - Show/hide and order the graphics by specifying their name. Possible values are **geographical-distribution-chart**, **study-design-chart**, **number-participants-chart**, **bio-samples-chart** or **study-start-year-chart**.
+   * - ``searchVariableListDisplay``
+     - Logical to show/hide the list of variables resulting from the search. Default is consistent with the application's general configuration.
+   * - ``searchDatasetListDisplay``
+     - Logical to show/hide the list of datasets resulting from the search. Default is consistent with the application's general configuration.
+   * - ``searchStudyListDisplay``
+     - Logical to show/hide the list of studies resulting from the search. Default is consistent with the application's general configuration.
+   * - ``searchNetworkListDisplay``
+     - Logical to show/hide the list of networks resulting from the search. Default is consistent with the application's general configuration.
    * - ``searchVariableColumns``
-     - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study** or **dataset**.
+     - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study**, **population**, **data-collection-event**/**dce** or **dataset**.
    * - ``searchDatasetColumns``
      - Show/hide and order the column names for the list of datasets. Possible values are **name**, **type**, **networks**, **studies** or **variables**.
    * - ``searchStudyColumns``
      - Show/hide and order the column names for the list of studies. Possible values are **name**, **type**, **study-design**, **data-sources-available**, **participants**, **networks**, **individual** or **harmonization**.
    * - ``searchNetworkColumns``
      - Show/hide and order the column names for the list of networks. Possible values are **name**, **studies**, **datasets** or **variables**.
+   * - ``searchVariableFields``
+     - List of the variable fields to be extracted from search results.
+   * - ``searchDatasetFields``
+     - List of the dataset fields to be extracted from search results.
+   * - ``searchStudyFields``
+     - List of the study fields to be extracted from search results.
+   * - ``searchNetworkFields``
+     - List of the network fields to be extracted from search results.
+   * - ``searchVariableSortFields``
+     - List of the variable fields to be used for sorting the search. Default is to sort by study, dataset, index (i.e. order in the dataset's data dictionary) and name.
+   * - ``searchDatasetSortFields``
+     - List of the dataset fields to be used for sorting the search. Default is to sort by study, population, data collection event and acronym.
+   * - ``searchStudySortFields``
+     - List of the study fields to be used for sorting the search. Default is to sort by acronym.
+   * - ``searchNetworkSortFields``
+     - List of the network fields to be used for sorting the search. Default is to sort by acronym.
+   * - ``searchCoverageDisplay``
+     - Logical to show/hide the **Coverage** search results tab.
+   * - ``searchGraphicsDisplay``
+     - Logical to show/hide the **Graphics** search results tab.
+   * - ``searchListDisplay``
+     - Logical to show/hide the **List** search results tab.
+   * - ``searchCriteriaMenus``
+     - Show/hide the search criteria in the sidebar by specifying their type (possible values are **variable**, **dataset**, **study**, **network**).
 
-**Data Access pages settings**
+Variable page settings
+**********************
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 1
+
+   * - Variable
+     - Description
+   * - ``showHarmonizedVariableSummarySelector``
+     - For a dataschema variable, allow the possibility to display the summary statistics of a specific harmonized variable. Default is **true**.
+
+Data Access pages settings
+**************************
 
 .. list-table::
    :widths: 10 90
@@ -221,8 +274,11 @@ If enough, this is the less intrusive approach. Note that you do not need to red
      - Show/hide the callout panels on the head of the data access pages. Default is **true**.
    * - ``dataAccessReportTimelineEnabled``
      - Show/hide the report timeline in the dashboard page when the data access is approved. Applies only when a project end date can be found. Default is **true**.
+   * - ``dataAccessArchiveEnabled``
+     - Show/hide the **Archive** button, to users with appropriate permissions and when the data access request is completed. Default is **true**.
 
-**Charts settings**
+Charts settings
+***************
 
 .. list-table::
    :widths: 10 90
@@ -237,7 +293,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``colors``
      - List of colors to be used for a set of chart elements (portions of a pie chart for instance).
 
-**Files settings**
+Files settings
+**************
 
 .. list-table::
    :widths: 10 90
@@ -258,7 +315,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showDatasetFiles``
      - Logical to show/hide the files that are associated to the datasets. Default is the same as what specified by ``showFiles``.
 
-**Variables classifications charts settings**
+Variables classifications charts settings
+*****************************************
 
 .. list-table::
    :widths: 10 90
