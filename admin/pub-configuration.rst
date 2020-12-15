@@ -57,7 +57,8 @@ Some template variables (date formats, branding, favicon etc.) are defined in `l
 
 If enough, this is the less intrusive approach. Note that you do not need to redefine all the settings, just reassign the ones of interest.
 
-**General settings**
+General settings
+****************
 
 .. list-table::
    :widths: 10 90
@@ -98,7 +99,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``adminLTEPath``
      - The location of the `AdminLTE <https://adminlte.io/>`_ theme if this one has been modified (see the **Theme** section in this documentation).
 
-**Home page settings**
+Home page settings
+******************
 
 .. list-table::
    :widths: 10 90
@@ -115,8 +117,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``portalLink``
      - The link applied to the logo. Default is the data portal itself (same as **Home** menu), but it could also be the organization's main portal.
 
-**Cart page settings**
-
+Cart page settings
+******************
 
 .. list-table::
    :widths: 10 90
@@ -133,7 +135,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showCartViewDownload``
      - Logical to allow downloading the content of the cart in the format of Opal views (for creating views in Opal from a variable selection). Default is restricted to users with administration-related role.
 
-**Contact Us page settings**
+Contact Us page settings
+************************
 
 .. list-table::
    :widths: 10 90
@@ -144,7 +147,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``contactEnabled``
      - Logical to show/hide the **Contact** menu. Default is **true**, but can be restricted to users within roles or groups.
 
-**User Profile page settings**
+User Profile page settings
+**************************
 
 .. list-table::
    :widths: 10 90
@@ -157,7 +161,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showProfileGroups``
      - Logical to show/hide the groups to which the user belongs.
 
-**Repository list pages settings**
+Repository list pages settings
+******************************
 
 .. list-table::
    :widths: 10 90
@@ -182,7 +187,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``datasetListDefaultDisplay``
      - Default display of a list of the studies. Default is **cards**.
 
-**Search page settings**
+Search page settings
+********************
 
 .. list-table::
    :widths: 10 90
@@ -209,7 +215,7 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``searchNetworkListDisplay``
      - Logical to show/hide the list of networks resulting from the search. Default is consistent with the application's general configuration.
    * - ``searchVariableColumns``
-     - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study** or **dataset**.
+     - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study**, **population**, **data-collection-event**/**dce** or **dataset**.
    * - ``searchDatasetColumns``
      - Show/hide and order the column names for the list of datasets. Possible values are **name**, **type**, **networks**, **studies** or **variables**.
    * - ``searchStudyColumns``
@@ -225,13 +231,13 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``searchNetworkFields``
      - List of the network fields to be extracted from search results.
    * - ``searchVariableSortFields``
-     - List of the variable fields to be used for sorting the search.
+     - List of the variable fields to be used for sorting the search. Default is to sort by study, dataset, index (i.e. order in the dataset's data dictionary) and name.
    * - ``searchDatasetSortFields``
-     - List of the dataset fields to be used for sorting the search.
+     - List of the dataset fields to be used for sorting the search. Default is to sort by study, population, data collection event and acronym.
    * - ``searchStudySortFields``
-     - List of the study fields to be used for sorting the search.
+     - List of the study fields to be used for sorting the search. Default is to sort by acronym.
    * - ``searchNetworkSortFields``
-     - List of the network fields to be used for sorting the search.
+     - List of the network fields to be used for sorting the search. Default is to sort by acronym.
    * - ``searchCoverageDisplay``
      - Logical to show/hide the **Coverage** search results tab.
    * - ``searchGraphicsDisplay``
@@ -241,7 +247,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``searchCriteriaMenus``
      - Show/hide the search criteria in the sidebar by specifying their type (possible values are **variable**, **dataset**, **study**, **network**).
 
-**Variable page settings**
+Variable page settings
+**********************
 
 .. list-table::
    :widths: 10 90
@@ -252,7 +259,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showHarmonizedVariableSummarySelector``
      - For a dataschema variable, allow the possibility to display the summary statistics of a specific harmonized variable. Default is **true**.
 
-**Data Access pages settings**
+Data Access pages settings
+**************************
 
 .. list-table::
    :widths: 10 90
@@ -269,7 +277,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``dataAccessArchiveEnabled``
      - Show/hide the **Archive** button, to users with appropriate permissions and when the data access request is completed. Default is **true**.
 
-**Charts settings**
+Charts settings
+***************
 
 .. list-table::
    :widths: 10 90
@@ -284,7 +293,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``colors``
      - List of colors to be used for a set of chart elements (portions of a pie chart for instance).
 
-**Files settings**
+Files settings
+**************
 
 .. list-table::
    :widths: 10 90
@@ -305,7 +315,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``showDatasetFiles``
      - Logical to show/hide the files that are associated to the datasets. Default is the same as what specified by ``showFiles``.
 
-**Variables classifications charts settings**
+Variables classifications charts settings
+*****************************************
 
 .. list-table::
    :widths: 10 90
