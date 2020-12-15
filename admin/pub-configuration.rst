@@ -126,6 +126,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
      - Description
    * - ``cartEnabled``
      - Logical to show/hide the cart links (**Cart** menu, addition/removal to/from cart buttons). Default is consistent with the application's general configuration, but can be fine-tuned to make the cart visible to users within roles or groups.
+   * - ``listsEnabled``
+     - Logical to show/hide the lists links (**Lists** menu, addition to list buttons). Default is consistent with the application's general configuration, but can be fine-tuned to make the lists visible to users within roles or groups.
    * - ``showCartDownload``
      - Logical to allow downloading the content of the cart. Default is restricted to users with administration-related role.
    * - ``showCartViewDownload``
@@ -197,7 +199,15 @@ If enough, this is the less intrusive approach. Note that you do not need to red
    * - ``mapName``
      - Map name to be used in the graphic **geographical-distribution-chart**. Default is **world**, possible values are **world**, **europe**, **north-america**, **south-america**, **asia**, **africa** or **oceania**.
    * - ``searchCharts``
-     - Show/hide and order the graphics by specifying there name. Possible values are **geographical-distribution-chart**, **study-design-chart**, **number-participants-chart**, **bio-samples-chart** or **study-start-year-chart**.
+     - Show/hide and order the graphics by specifying their name. Possible values are **geographical-distribution-chart**, **study-design-chart**, **number-participants-chart**, **bio-samples-chart** or **study-start-year-chart**.
+   * - ``searchVariableListDisplay``
+     - Logical to show/hide the list of variables resulting from the search. Default is consistent with the application's general configuration.
+   * - ``searchDatasetListDisplay``
+     - Logical to show/hide the list of datasets resulting from the search. Default is consistent with the application's general configuration.
+   * - ``searchStudyListDisplay``
+     - Logical to show/hide the list of studies resulting from the search. Default is consistent with the application's general configuration.
+   * - ``searchNetworkListDisplay``
+     - Logical to show/hide the list of networks resulting from the search. Default is consistent with the application's general configuration.
    * - ``searchVariableColumns``
      - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study** or **dataset**.
    * - ``searchDatasetColumns``
@@ -206,6 +216,41 @@ If enough, this is the less intrusive approach. Note that you do not need to red
      - Show/hide and order the column names for the list of studies. Possible values are **name**, **type**, **study-design**, **data-sources-available**, **participants**, **networks**, **individual** or **harmonization**.
    * - ``searchNetworkColumns``
      - Show/hide and order the column names for the list of networks. Possible values are **name**, **studies**, **datasets** or **variables**.
+   * - ``searchVariableFields``
+     - List of the variable fields to be extracted from search results.
+   * - ``searchDatasetFields``
+     - List of the dataset fields to be extracted from search results.
+   * - ``searchStudyFields``
+     - List of the study fields to be extracted from search results.
+   * - ``searchNetworkFields``
+     - List of the network fields to be extracted from search results.
+   * - ``searchVariableSortFields``
+     - List of the variable fields to be used for sorting the search.
+   * - ``searchDatasetSortFields``
+     - List of the dataset fields to be used for sorting the search.
+   * - ``searchStudySortFields``
+     - List of the study fields to be used for sorting the search.
+   * - ``searchNetworkSortFields``
+     - List of the network fields to be used for sorting the search.
+   * - ``searchCoverageDisplay``
+     - Logical to show/hide the **Coverage** search results tab.
+   * - ``searchGraphicsDisplay``
+     - Logical to show/hide the **Graphics** search results tab.
+   * - ``searchListDisplay``
+     - Logical to show/hide the **List** search results tab.
+   * - ``searchCriteriaMenus``
+     - Show/hide the search criteria in the sidebar by specifying their type (possible values are **variable**, **dataset**, **study**, **network**).
+
+**Variable page settings**
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 1
+
+   * - Variable
+     - Description
+   * - ``showHarmonizedVariableSummarySelector``
+     - For a dataschema variable, allow the possibility to display the summary statistics of a specific harmonized variable. Default is **true**.
 
 **Data Access pages settings**
 
@@ -221,6 +266,8 @@ If enough, this is the less intrusive approach. Note that you do not need to red
      - Show/hide the callout panels on the head of the data access pages. Default is **true**.
    * - ``dataAccessReportTimelineEnabled``
      - Show/hide the report timeline in the dashboard page when the data access is approved. Applies only when a project end date can be found. Default is **true**.
+   * - ``dataAccessArchiveEnabled``
+     - Show/hide the **Archive** button, to users with appropriate permissions and when the data access request is completed. Default is **true**.
 
 **Charts settings**
 
