@@ -84,17 +84,17 @@ Property          Description
 
 Mica server should connect to Opal and access to some selected tables only with the lowest level of permissions (View dictionary and summary, i.e. no access to individual data). Please refer to the Opal Table Documentation for more details about the permissions that can be applied on a table.
 
-Mica Server Configuration
+Agate Server Configuration
 --------------------------
 
-Mica server uses Mica as a user directory and as a notification emails service. From the Mica point of view, Mica is not a user: it is an application. Each time Mica needs a service from Mica, it will provide the information necessary to its identification. The application credentials registered in Mica are to be specified in this section. If you want to specify advanced permissions or allow users to submit data access requests, the following Mica connection details needs to be configured.
+Mica server uses Agate as a user directory and as a notification emails service. From the Agate point of view, Mica is not a user: it is an application. Each time Mica needs a service from Agate, it will provide the information necessary to its identification. The application credentials registered in Mica are to be specified in this section. If you want to specify advanced permissions or allow users to submit data access requests, the following Mica connection details needs to be configured.
 
 ========================== ================================================================
 Property                   Description
 ========================== ================================================================
-``agate.url``              Mica server URL. It is highly recommended to use https protocol.
-``agate.application.name`` Application name for connection to Mica server.
-``agate.application.key``  Application key for connection to Mica server.
+``agate.url``              Agate server URL. It is highly recommended to use https protocol.
+``agate.application.name`` Mica application ID for connection to Agate server.
+``agate.application.key``  Mica application key for connection to Agate server.
 ========================== ================================================================
 
 Shiro Configuration
