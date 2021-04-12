@@ -20,7 +20,7 @@ List
 
       curl --user administrator:password https://mica-demo.obiba.org/ws/draft/networks
 
-   Using Python command line tool
+   Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
    .. sourcecode:: shell
 
@@ -131,7 +131,7 @@ Index
 
     curl --user administrator:password -X PUT https://mica-demo.obiba.org/ws/draft/networks/_index
 
-  Using Python command line tool
+  Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 

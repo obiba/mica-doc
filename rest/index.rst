@@ -8,7 +8,7 @@ The REST API allows to do all necessary operations for managing :doc:`../documen
 Authentication
 --------------
 
-Mica supports only `Basic authentication <https://tools.ietf.org/html/rfc7617>`_, which consists of a HTTP request's header field in the form of ``Authorization: Basic <credentials>``, where credentials is the Base64 encoding of user's (or application's) ID and password joined by a single colon ``:``.
+Mica supports `Basic authentication <https://tools.ietf.org/html/rfc7617>`_, which consists of a HTTP request's header field in the form of ``Authorization: Basic <credentials>``, where credentials is the Base64 encoding of user's (or application's) ID and password joined by a single colon ``:``.
 
 Using cURL, it is as simple as providing the `--user <https://curl.se/docs/manpage.html#-u>`_ option:
 

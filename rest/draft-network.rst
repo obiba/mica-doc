@@ -20,7 +20,7 @@ Get
 
       curl --user administrator:password https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
 
-   Using Python command line tool
+   Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
    .. sourcecode:: shell
 
@@ -139,11 +139,11 @@ Upate
 
       curl --user administrator:password -X PUT -H "Content-Type: application/json" --data-binary "@network.json" https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
 
-   Using Python command line tool
+   Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
    .. sourcecode:: shell
 
-      mica rest -mk https://mica-demo.obiba.org -u administrator -p password --method PUT --accept "application/json" /draft/network/bioshare-eu < network.json
+      mica rest -mk https://mica-demo.obiba.org -u administrator -p password --method PUT --content-type "application/json" /draft/network/bioshare-eu < network.json
 
    :query string comment: Optional revision comment.
 
@@ -172,7 +172,7 @@ Get Model
 
     curl --user administrator:password https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/model
 
-  Using Python command line tool
+  Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -217,11 +217,11 @@ Update Model
 
       curl --user administrator:password -X PUT -H "Content-Type: application/json" --data-binary "@model.json" https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/model
 
-   Using Python command line tool
+   Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
    .. sourcecode:: shell
 
-      mica rest -mk https://mica-demo.obiba.org -u administrator -p password --method PUT --accept "application/json" /draft/network/bioshare-eu/model < model.json
+      mica rest -mk https://mica-demo.obiba.org -u administrator -p password --method PUT --content-type "application/json" /draft/network/bioshare-eu/model < model.json
 
 Index
 -----
@@ -240,7 +240,7 @@ Index
 
     curl --user administrator:password -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_index
 
-  Using Python command line tool
+  Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -263,7 +263,7 @@ Update Status
 
     curl --user administrator:password -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
 
-  Using Python command line tool
+  Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -288,7 +288,7 @@ Publish
 
     curl --user administrator:password -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
 
-  Using Python command line tool
+  Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -311,7 +311,7 @@ Unpublish
 
     curl --user administrator:password -X DELETE https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
 
-  Using Python command line tool
+  Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -334,7 +334,7 @@ Remove
 
     curl --user administrator:password -X DELETE https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
 
-  Using Python command line tool
+  Using the :doc:`../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
