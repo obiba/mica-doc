@@ -12,7 +12,6 @@ Mica Server	                                  Java server providing web services
 `Opal Server <http://opaldoc.obiba.org>`_	    Java server providing web services (REST) for importing, transforming and analyzing study variables.
 `Agate Server <http://agatedoc.obiba.org>`_   Java server providing web services (REST) for user management and notifications.
 Mica Web Application                          Front-end to Mica Server providing client interface to manage Mica Domain content as well as to administrate and configure access permissions and secure connections.
-Mica Drupal Client                            Extension of the Drupal Content Management System (CMS) allowing to build a web data portal with Mica's published content.
 Mica Python Client                            Python front-end to Mica server providing services for administrative command-line and automation tasks.
 Mica R Client                                 R front-end to Mica server providing services for Mica content analysis and reporting.
 ============================================= ======================================================
@@ -52,10 +51,3 @@ Agate application is used for:
 * having centralized services such as profile management and email notifications.
 
 Installation and configuration guides can be found in the `Agate documentation <http://agatedoc.obiba.org>`_.
-
-Drupal Server
--------------
-
-`Drupal <https://drupal.org>`_ is a content management system, i.e. an application allowing to build fully customizable web portals. Drupal can be extended by modules and themes: Mica and Agate modules have been developed to access to the services of these servers. Drupal server is therefore a client of Mica and Agate servers.
-
-Installation and configuration guides about Drupal as a Mica client can be found in the Mica Drupal Client User Guide documentation.
