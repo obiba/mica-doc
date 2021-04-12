@@ -10,14 +10,14 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
 Mica is to be used with `Agate <http://www.obiba.org/pages/products/agate/>`_, the `OBiBa <http://obiba.org/>`_'s central authentication server which centralizes user related services such as profile management, and a notification system using emails.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    introduction
    documents
    publication-flow
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Administrator Guide
 
    admin/installation
@@ -26,26 +26,27 @@ Mica is to be used with `Agate <http://www.obiba.org/pages/products/agate/>`_, t
    admin/plugins
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Web User Guide
 
    web-user-guide/index
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Drupal User Guide
-
-   drupal-user-guide/index
-   drupal-user-guide/configuration
-
-.. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Python User Guide
 
    python-user-guide/index
    python-user-guide/authz
    python-user-guide/doc
    python-user-guide/other
+
+.. toctree::
+  :maxdepth: 2
+  :caption: REST API Guide
+
+  rest/index
+  rest/draft-networks
+  rest/draft-network
 
 Partners and Funders
 ====================
