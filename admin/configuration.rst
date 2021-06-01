@@ -80,6 +80,7 @@ Property          Description
 ``opal.url``      Opal server URL. It is highly recommended to use https protocol.
 ``opal.username`` User name for connection to Opal server.
 ``opal.password`` User password for connection to Opal server.
+``opal.token``    `Opal personal access token <https://opaldoc.obiba.org/en/latest/web-user-guide/my-profile.html#personal-access-tokens>`_ for connection to Opal server. If defined it has the priority over the username/password credentials.
 ================= ================================================================
 
 Mica server should connect to Opal and access to some selected tables only with the lowest level of permissions (View dictionary and summary, i.e. no access to individual data). Please refer to the Opal Table Documentation for more details about the permissions that can be applied on a table.
