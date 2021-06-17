@@ -6,7 +6,7 @@ Mica Python client, a command line scripting tool written in Python, enables aut
 Requirements
 ------------
 
-Python 2.x must be installed on the system. See more about `Python <https://www.python.org/>`_.
+Python 3.x must be installed on the system. See more about `Python <https://www.python.org/>`_.
 
 Installation
 ------------
