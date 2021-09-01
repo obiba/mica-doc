@@ -111,6 +111,4 @@ Permissions
 ***********
 
 The permissions that apply to all the documents of the considered type can be
-specified in this section. See Permissions documentation which is still
-relevant (expect that is applies to all documents in a type instead of a
-specific one).
+specified in this section. See :ref:`Permissions <documents-permissions>` for more information.
