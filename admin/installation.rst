@@ -146,6 +146,7 @@ Environment Variable              Description
 ``MICA_ANONYMOUS_PASSWORD``       Agate anonymous password, required and set at first start.
 ``MONGO_HOST``                    MongoDB server host.
 ``MONGO_PORT``                    MongoDB server port, default is ``27017``.
+``MONGO_DB``                      MongoDB database nale, default is ``mica``.
 ``OPAL_HOST``                     Opal server host (optional).
 ``OPAL_PORT``                     Opal server port, default is ``8443``.
 ``AGATE_HOST``                    Agate server host.
