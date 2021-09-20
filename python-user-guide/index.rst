@@ -41,7 +41,7 @@ This type of package is cross-platform (Linux, Windows, Mac).
 
 **Install on Linux or Mac**
 
-1. `Download the most recent version <https://download.obiba.org/mica/stable/>`_
+1. `Download the most recent version <https://github.com/obiba/mica-python-client/releases>`_
 2. Decompress the file and enter the installation folder:
 
 .. code-block:: bash
@@ -70,37 +70,10 @@ You can install Cygwin, making sure that CURL, Python, gcc are included and foll
   cd /usr/lib
   cp libcurl.dll.a libcurl.a
   cd <your-desired-dir>
-  curl -C - -O http://download.obiba.org/mica/stable/mica-python-client-X.XX.tar.gz
+  curl -C - -O https://github.com/obiba/mica-python-client/releases/download/XXX/mica-python-client-XXX.tar.gz
   tar xzvf mica-python-client-X.XX.tar.gz
   cd mica-python-client-X.XX
   python setup.py install --record installed_files.lst
-
-* Using plain Windows tools
-
-This Windows installation is the most complicated one but does not required any third party tools. You are required to do a few manual installations before the package is fully usable. The following steps were tested on a Windows 7.
-
-1. You must have Python installed on your Windows system. Run this `installer <http://www.python.org/ftp/python/2.7.5/python-2.7.5.msi>`_ in case you don't have one.
-2. Download the `Google protobuf binary <http://code.google.com/p/protobuf/downloads/detail?name=protoc-2.5.0-win32.zip&can=2&q=>`_ and make sure that its containing folder is in your path.
-3. Download the `Google protobuf source <http://code.google.com/p/protobuf/downloads/detail?name=protobuf-2.5.0.zip>`_ package containing the setup.py file and follow these steps:
-
-.. code-block:: bash
-
-  unzip protobuf-2.5.0.zip
-  cd protobuf-2.5.0/python
-  python setup.py install
-
-4. Go to the `Python Libs <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ site and download the file pycurl-7.19.0.win-amd64-py2.7.‌exe
-5. Run the installer and follow the instructions until the package is installed
-6. `Download the most recent version <https://download.obiba.org/mica/stable/>`_ and follow these steps:
-
-.. code-block:: bash
-
-  unzip http://download.obiba.org/mica/stable/mica-python-client-X.XX.zip
-  cd mica-python-client-X.XX
-  python setup.py bdist_wininst
-  cd dist
-
-7. Execute the generated installer and follow the instructions (mica-python-client-X.XX.win-amd64.exe)
 
 Usage
 -----
