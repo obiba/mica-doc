@@ -236,7 +236,7 @@ The following tables describe file and folder draft permissions:
 Publication Access
 ~~~~~~~~~~~~~~~~~~
 
-Publication access makes folders and files available to everyone in :doc:`/drupal-user-guide/index`.
+Publication access makes folders and files available to everyone.
 
 .. note::
 

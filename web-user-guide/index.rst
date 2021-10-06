@@ -1,5 +1,5 @@
-Mica Web Application
-====================
+Web Introduction
+================
 
 The Mica Web Application is the administration web interface of the Mica
 server. It is NOT the end-user web portal and therefore firewall policies can

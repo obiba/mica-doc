@@ -42,6 +42,14 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
    python-user-guide/doc
    python-user-guide/other
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: R User Guide
+
+   r-user-guide/index
+   r-user-guide/usage
+
 .. toctree::
   :maxdepth: 1
   :caption: REST API Guide

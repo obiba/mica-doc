@@ -116,6 +116,8 @@ Home page settings
      - The link to list the datasets. Default is the **Datasets** menu.
    * - ``portalLink``
      - The link applied to the logo. Default is the data portal itself (same as **Home** menu), but it could also be the organization's main portal.
+   * - ``showSignin``
+     - Show the link to the Sign in page. Default is **true** when published content is private or data access request submission is enabled or the cart is enabled.
 
 Cart page settings
 ******************
