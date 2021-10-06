@@ -5,6 +5,8 @@ Mica handles several type of documents, specific to the epidemiological studies 
 
 All the documents follow the :doc:`publication-flow` except the :ref:`data-access-requests` (which is a form privately exchanged between a researcher and the study/consortium).
 
+.. _document-types:
+
 Types
 -----
 
@@ -12,6 +14,8 @@ Network
 ~~~~~~~
 
 A network is a group of epidemiological studies that has specific research interests. It is described using the following fields: name, aims, investigators, contact information and participating studies. It can also be related to other networks.
+
+.. _individual-study-doc:
 
 Individual Study
 ~~~~~~~~~~~~~~~~
@@ -73,11 +77,13 @@ A research project reports information about the work that was conducted thanks 
 Data Access Request
 ~~~~~~~~~~~~~~~~~~~
 
-A data access request is different type of document (compared to the studies, datasets etc.):
+A data access request is an application form that researchers submit in order to gain access to the network/study data. There is a predefined workflow from submission to approval described in more detail in :doc:`web-user-guide/data-access-request`.
 
-* it is created by a final user (usually a researcher having an account on the data web portal),
-* it has its own life cycle (submission, approval etc.),
-* permissions (view and edition) are restricted to the researcher and the data access officer and depend on the state of the request.
+
+Data Access Amendment
+~~~~~~~~~~~~~~~~~~~~~
+
+A data access amendment is an application form that researchers submit to request changes to a pre-approved data access request. The data access amendment workflow is identical to that of  data access requests.
 
 Search
 ------
@@ -94,6 +100,8 @@ Associations
 The following diagram describes the various documents that can be published in the Mica web portal. Each of them can be edited individually in the Mica Web Application administration interface (except variables, defined in the Opal servers).
 
 .. image:: images/mica-associations.png
+
+.. _documents-permissions:
 
 Permissions
 -----------
@@ -121,3 +129,8 @@ Comments
 --------
 
 To enhance the collaboration between Mica users, each member can add a comment on any Mica domain document as well as data access requests documents. Mica can be configured to send email notifications when a comment is added or updated.
+
+Cart
+----
+
+The cart groups a set of variables based on one or more search criteria. User can edit the cart by adding or removing variables, download its content (variables) as a CSV file and use it as a search criterion.

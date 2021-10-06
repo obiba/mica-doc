@@ -64,6 +64,7 @@ instance/
 # Sphinx documentation
 docs/_build/
 _build/
+.doctrees/
 
 # PyBuilder
 target/
@@ -100,3 +101,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# vscode
+.vscode
+.DS_Store
