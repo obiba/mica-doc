@@ -1,3 +1,5 @@
+.. _pub-pages:
+
 Public Pages Configuration
 ==========================
 
