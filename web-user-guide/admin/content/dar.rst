@@ -4,11 +4,9 @@ Data Access Request
 Application Form
 ----------------
 
-The web application form can be specified both in terms of schema and UI
-definition. See *Schema Form* `documentation <https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md>`_ for more details.
+The web application form can be specified both in terms of schema and UI definition. See `Schema Form documentation <http://schemaform.io/>`_ for more details.
 
-The *Preview* and *Model* tabs are informational only and can be used to
-preview the rendered form and the input data that will be collected.
+The *Preview* and *Model* tabs are informational only and can be used to respectively preview the rendered form and the input data that will be collected.
 
 Properties
 ~~~~~~~~~~
@@ -17,23 +15,84 @@ Properties
   :widths: 25 75
 
   * - Title Field
-    - Specifies the field value to be used as the document's title.
+    - Specifies the field which value will be used as the project's title.
   * - Summary Field
-    - Specifies the field value to be used as the document's summary.
-  * - Enable Amendments
-    - Enables the capability of requesting amendments to an approved data access request. This option is disabled by default.
+    - Specifies the field which value will be used as the project's summary.
+  * - End Date Field
+    - Specifies the field which value will be used to build the project timeline, with an effect on the intermediate and final report notifications.
 
 PDF Download
 ~~~~~~~~~~~~
 
 The data collected in the form can be downloaded in the following formats:
 
-**PDF Template**, this option requires uploading a template (one for each
-configured languages) compatible with the custom *Schema Form* model.
-
-**Printable Page**, this option renders the form as a printable page in the browser so the user can either save the form as a PDF or send it to a printer.
+* **PDF Template**, this option requires uploading a template (one for each configured languages) compatible with the custom *Schema Form* model.
+* **Printable Page**, this option renders the form as a printable page in the browser so the user can either save the form as a PDF or send it to a printer.
 
 .. _dar-predefined-action-logs:
+
+
+Feasibility Form
+----------------
+
+Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
+
+Amendment Form
+--------------
+
+Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
+
+Under the **Properties** section one can specify the document's *Title Field* and it's *Summary Field* as defined in the custom *Schema Form*.
+
+Notifications
+-------------
+
+Email notifications can be sent, if configured, to applicant and data access officers when an event happens on the data access request. Events can be: status changes, comment additions, or updates. Report notifications can also be configured.
+
+These configurations apply to the data access request as a whole, the main application form, the feasibility forms and the amendments.
+
+Settings
+--------
+
+The data access request goes through several steps. Some minimum settings can be applied to control this workflow, i.e. enabling the *review* status and making the accepted and rejected status final. Also the pattern to generate identifiers for data access requests can be configured.
+
+General
+~~~~~~~
+
+**Permissions**
+
+By default the Data Access Officers (DAOs) do not have the permission to edit the application forms, only the applicant and the administrator can do it. It is possible to set the edit permission for DAOs.
+
+**Other Forms**
+
+Other forms within a data access request can be enabled:
+
+* Amendments, is the capability of requesting amendments to an approved data access request. This option is disabled by default.
+* Feasibility inquiries, is the possibility, at any time of the request lifecycle, to ask for a quick evaluation of a project application or amendment. This option is disabled by default.
+
+**Variables**
+
+It is possible to attach a set of variables to a form (main, amendment or feasibility forms). This set of variables can be defined by the data access request applicant while browsing the catalog of variables, or searching for variables: the variables of interest can be set in a cart which can then be associated to a data access request. Once the request is submitted, the set of variables cannot be modified.
+
+Workflow
+~~~~~~~~
+
+The data access request lifecycle can be adjusted with different options:
+
+* Under review intermediate state
+* Conditionally approved intermediate state
+* Approved final state
+* Rejected final state
+
+See :ref:`dar` documentation for details.
+
+ID Generation
+~~~~~~~~~~~~~
+
+Rules for generating a data access request unique identifier can be defined:
+
+* ID prefix
+* ID length, including leading zeros or not
 
 Predefined Action Names
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,39 +111,6 @@ The following steps demonstrate how these names are added:
 
   An action key is the action name preceded by its translation path: ``data-access-request.action-log.config.label.<action-name>``.
 
-
-Feasibility Form
-----------------
-
-Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
-
-Amendment Form
---------------
-
-Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
-
-Under the **Properties** section one can specify the document's *Title Field* and it's *Summary Field* as defined in the custom *Schema Form*.
-
-Notifications
--------------
-
-Email notifications can be sent, if configured, to applicant and data access
-officers when an event happens on the data access request. Events can be:
-status changes or comment additions or updates.
-
-These configurations apply to both the data access requests and their
-amendments.
-
-Settings
---------
-
-The data access request goes through several steps. Some minimum settings can
-be applied to control this workflow, i.e. enabling the *review* status and
-making the accepted and rejected status final. Also the pattern to generate
-identifiers for data access requests can be configured.
-
-These configurations apply to both the data access requests and their
-amendments.
 
 .. _dar-permissions:
 
@@ -116,8 +142,6 @@ Customizing Reports
 
 .. warning::
   This is an **experimental** functionality, make sure to backup your database beforehand.
-
-
 
 Follow these steps to customize the data access request and amendment reports:
 

@@ -6,7 +6,7 @@ Mica R client, available as a R package, enables data exploration of a Mica serv
 Requirements
 ------------
 
-R 3.x must be installed on the system. See more about `R project <https://r-project.org>`_.
+R 3.6.x or 4.x must be installed on the system. See more about `R project <https://r-project.org>`_.
 
 Installation
 ------------

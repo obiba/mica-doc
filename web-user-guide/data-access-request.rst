@@ -1,3 +1,5 @@
+.. _dar:
+
 Data Access Requests Management
 ===============================
 
