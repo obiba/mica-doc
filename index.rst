@@ -51,12 +51,11 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
    r-user-guide/usage
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
   :caption: REST API Guide
 
   rest/index
-  rest/draft-networks
-  rest/draft-network
+  rest/draft
 
 Partners and Funders
 ====================

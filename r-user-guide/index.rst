@@ -11,8 +11,8 @@ R 3.x must be installed on the system. See more about `R project <https://r-proj
 Installation
 ------------
 
-You can install Mica R package from the official CRAN repository:
+You can install Mica R package from the official `CRAN repository <https://cran.r-project.org/package=micar>`_:
 
 .. code-block:: r
 
-  install.package("micar")
+  install.packages("micar")

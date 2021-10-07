@@ -1,3 +1,5 @@
+.. _pub-flow:
+
 Publication Flow
 ================
 

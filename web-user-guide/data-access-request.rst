@@ -109,12 +109,15 @@ The workflow is resumed in the following table:
       | Under Review
     - Submitted
 
-Application form
+Application Form
 ~~~~~~~~~~~~~~~~
 
-The application form is configured by the administrator, who can also define
-the PDF template used to create a printable copy of the form (available by
-clicking on the *Download* button).
+The application form is configured by the administrator, who can also define the PDF template used to create a printable copy of the form (available by clicking on the *Download* button).
+
+Feasibility Inquiry
+~~~~~~~~~~~~~~~~~~~
+
+Researchers can fill in a short form to ensure the feasibility of a project. This can be a preliminary of the main application form or of an amendment.
 
 Amendments
 ~~~~~~~~~~
@@ -137,4 +140,3 @@ History
 ~~~~~~~
 
 A list of all status changes of a data access request and its amendments. In addition, administrators and data access officers can log actions that they have taken while processing a request or an amendment. These actions are either :ref:`pre-defined <dar-predefined-action-logs>` or free text. Only users or groups with proper permissions (see :ref:`data access request permissions <dar-permissions>`) can view action logs.
-

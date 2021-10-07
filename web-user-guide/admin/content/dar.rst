@@ -1,20 +1,17 @@
 Data Access Request Administration
-##################################
-
-Definitions
------------
+==================================
 
 Application Form
-****************
+----------------
 
 The web application form can be specified both in terms of schema and UI
-definition. See *Angular Schema Form* `documentation <https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md>`_ for more details.
+definition. See *Schema Form* `documentation <https://github.com/json-schema-form/angular-schema-form/blob/master/docs/index.md>`_ for more details.
 
 The *Preview* and *Model* tabs are informational only and can be used to
 preview the rendered form and the input data that will be collected.
 
 Properties
-**********
+~~~~~~~~~~
 
 .. list-table::
   :widths: 25 75
@@ -27,19 +24,19 @@ Properties
     - Enables the capability of requesting amendments to an approved data access request. This option is disabled by default.
 
 PDF Download
-************
+~~~~~~~~~~~~
 
 The data collected in the form can be downloaded in the following formats:
 
 **PDF Template**, this option requires uploading a template (one for each
-configured languages) compatible with the custom *Angular Schema Form* model.
+configured languages) compatible with the custom *Schema Form* model.
 
 **Printable Page**, this option renders the form as a printable page in the browser so the user can either save the form as a PDF or send it to a printer.
 
 .. _dar-predefined-action-logs:
 
 Predefined Action Names
-***********************
+~~~~~~~~~~~~~~~~~~~~~~~
 
 *Predefined Action Names* are common actions that *data access officers* perform while processing the data access requests. These actions can then be logged in the data access request :ref:`history section <dar-history>`.
 
@@ -55,17 +52,21 @@ The following steps demonstrate how these names are added:
 
   An action key is the action name preceded by its translation path: ``data-access-request.action-log.config.label.<action-name>``.
 
+
+Feasibility Form
+----------------
+
+Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
+
 Amendment Form
-**************
+--------------
 
-Same as the *Application Form*, it uses *Angular Schema Form* to define the
-schema and UI definition.
+Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
 
-Under the **Properties** section one can specify the document's *Title Field*
-and it's *Summary Field* as defined in the custom *Angular Schema Form*.
+Under the **Properties** section one can specify the document's *Title Field* and it's *Summary Field* as defined in the custom *Schema Form*.
 
 Notifications
-*************
+-------------
 
 Email notifications can be sent, if configured, to applicant and data access
 officers when an event happens on the data access request. Events can be:
@@ -75,7 +76,7 @@ These configurations apply to both the data access requests and their
 amendments.
 
 Settings
-********
+--------
 
 The data access request goes through several steps. Some minimum settings can
 be applied to control this workflow, i.e. enabling the *review* status and
@@ -88,7 +89,7 @@ amendments.
 .. _dar-permissions:
 
 Permissions
-***********
+-----------
 
 .. list-table::
   :widths: 25 75
@@ -191,31 +192,3 @@ the fields found in the model.
 
   Properties prefixed by *generic.* are internal and not part of the data access request or amendment form schemas and are considered `built-ins`.
   They can be removed, however.
-
-
-Excluding Legacy Data Access Requests IDs
------------------------------------------
-
-To make sure legacy data access request IDs won't be used by Mica follow the following steps:
-
-- stop Mica server
-- make sure ``/etc/mica2/config/data-access-form/`` exists
-- create the file ``data-access-request-exclusion-ids-list.yml`` under the folder ``/etc/mica2/config/data-access-form/``.
-- add each ID on a separate line as the example below.
-- run the command below to make sure the folder and the file have the proper permission:
-
-  .. code-block:: bash
-
-    sudo chown -R mica:adm /etc/mica2
-
-- restart Mica server so the changes take effect.
-
-Here is an example of the exclusion file:
-
-.. code-block:: yaml
-
-  exclusions:
-    - "LEGACEY_ID_001"
-    - "LEGACEY_ID_002"
-    - "LEGACEY_ID_003"
-

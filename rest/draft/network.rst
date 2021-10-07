@@ -18,9 +18,9 @@ Get
 
    .. sourcecode:: shell
 
-      curl --user administrator:password https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
+      curl --user administrator:password -H "Accept:application/json" https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
 
-   Using the :doc:`../python-user-guide/other/rest` Python command line tool
+   Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
    .. sourcecode:: shell
 
@@ -137,9 +137,9 @@ Upate
 
    .. sourcecode:: shell
 
-      curl --user administrator:password -X PUT -H "Content-Type: application/json" --data-binary "@network.json" https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
+      curl --user administrator:password -H "Accept:application/json" -X PUT -H "Content-Type: application/json" --data-binary "@network.json" https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
 
-   Using the :doc:`../python-user-guide/other/rest` Python command line tool
+   Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
    .. sourcecode:: shell
 
@@ -170,9 +170,9 @@ Get Model
 
   .. sourcecode:: shell
 
-    curl --user administrator:password https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/model
+    curl --user administrator:password -H "Accept:application/json" https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/model
 
-  Using the :doc:`../python-user-guide/other/rest` Python command line tool
+  Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -215,9 +215,9 @@ Update Model
 
    .. sourcecode:: shell
 
-      curl --user administrator:password -X PUT -H "Content-Type: application/json" --data-binary "@model.json" https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/model
+      curl --user administrator:password -H "Accept:application/json" -X PUT -H "Content-Type: application/json" --data-binary "@model.json" https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/model
 
-   Using the :doc:`../python-user-guide/other/rest` Python command line tool
+   Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
    .. sourcecode:: shell
 
@@ -238,9 +238,9 @@ Index
 
   .. sourcecode:: shell
 
-    curl --user administrator:password -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_index
+    curl --user administrator:password -H "Accept:application/json" -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_index
 
-  Using the :doc:`../python-user-guide/other/rest` Python command line tool
+  Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -261,9 +261,9 @@ Update Status
 
   .. sourcecode:: shell
 
-    curl --user administrator:password -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
+    curl --user administrator:password -H "Accept:application/json" -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
 
-  Using the :doc:`../python-user-guide/other/rest` Python command line tool
+  Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -286,9 +286,9 @@ Publish
 
   .. sourcecode:: shell
 
-    curl --user administrator:password -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
+    curl --user administrator:password -H "Accept:application/json" -X PUT https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
 
-  Using the :doc:`../python-user-guide/other/rest` Python command line tool
+  Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -309,9 +309,9 @@ Unpublish
 
   .. sourcecode:: shell
 
-    curl --user administrator:password -X DELETE https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
+    curl --user administrator:password -H "Accept:application/json" -X DELETE https://mica-demo.obiba.org/ws/draft/network/bioshare-eu/_publish
 
-  Using the :doc:`../python-user-guide/other/rest` Python command line tool
+  Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
@@ -332,9 +332,9 @@ Remove
 
   .. sourcecode:: shell
 
-    curl --user administrator:password -X DELETE https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
+    curl --user administrator:password -H "Accept:application/json" -X DELETE https://mica-demo.obiba.org/ws/draft/network/bioshare-eu
 
-  Using the :doc:`../python-user-guide/other/rest` Python command line tool
+  Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
