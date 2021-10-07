@@ -1,5 +1,5 @@
-System Administration
-======================
+System
+======
 
 .. toctree::
 
@@ -11,4 +11,3 @@ System Administration
   indexing
   metrics
   logs
-

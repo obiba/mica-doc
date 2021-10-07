@@ -1,8 +1,7 @@
-Content Administration
-======================
+Content
+=======
 
 .. toctree::
 
   document
   dar
-

@@ -1,5 +1,5 @@
-Document Configuration
-======================
+Document Types
+==============
 
 Summary
 -------

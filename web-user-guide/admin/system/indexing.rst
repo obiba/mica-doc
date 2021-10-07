@@ -1,13 +1,13 @@
-Indexing Administration
-~~~~~~~~~~~~~~~~~~~~~~~
+Indexing
+========
 
-*Summary*
-*********
+Summary
+-------
 
-The **URL-NEEDED:search engine** is based on indexed documents. Each index can be rebuilt without affecting the history of changes and the publication status of the documents.
+The `search engine <https://www.elastic.co/elasticsearch/>`_ is based on indexed documents. Each index can be rebuilt without affecting the history of changes and the publication status of the documents.
 
-*Index Type*
-************
+Definitions
+-----------
 
 .. list-table::
   :widths: 24 75
@@ -29,4 +29,3 @@ The **URL-NEEDED:search engine** is based on indexed documents. Each index can b
     - Index that allows to search for harmonization datasets and associated variables.
   * - **Taxonomies**
     - Index that allows to search for taxonomy terms (i.e. the search criteria).
-

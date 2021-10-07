@@ -30,8 +30,8 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
 
    web-user-guide/index
    web-user-guide/documents-management
-   web-user-guide/admin/index
    web-user-guide/data-access-request
+   web-user-guide/admin/index
 
 .. toctree::
    :maxdepth: 2

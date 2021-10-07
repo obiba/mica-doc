@@ -10,12 +10,12 @@ Operations
 ----------
 
 List
-****
+~~~~
 
 The List tab displays the results of the search query inventoried in the documents catalogue and organized in four different tabs; Networks, Studies, Datasets and Variables. Each tab describes in details the corresponding search result and contains links that redirect either to a page (e.g variable page, study page, network page) or to a count-search page (e.g variable count, study count).
 
 Coverage
-********
+~~~~~~~~~
 
 The Coverage displays the results of the search query in a tabular format, giving an overview of which document covers at least one of the search criteria, where the documents are Study, Dataset (Study Dataset and Harmonized Dataset) and Network. The table reports the total number of variables linked to each document and for each search criterion. Click on any number to obtain the corresponding list of variables. More advanced results can be obtains using the following functionalities.
 
@@ -23,11 +23,11 @@ The Coverage displays the results of the search query in a tabular format, givin
 - **Data Collection Event (DCE)**: Check "Data Collection Event (DCE)" box to obtain the breakdown of variable numbers by data collection events. Click on the button “Full Screen” to better visualize the results. For more information about the Data Collection Event, refer to Mic a documents page, section Study.
 
 Graphics
-********
+~~~~~~~~
 
 The tab Graphics summarizes the characteristics of the studies meeting the search criteria in terms of geographical distribution, study design, number of participants and collected biological samples. Click on any count displays the corresponding search page.
 
 Download Results
-****************
+~~~~~~~~~~~~~~~~
 
 The search result of any tab can be downloaded and stored in a csv file by clicking on the button Download.
