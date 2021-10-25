@@ -37,7 +37,7 @@ Page                     Description
 ``data-accesses``        The list of data access requests (restricted access)
 ``data-access``          The data access request main page (there are other pages for each of the data access request forms and features)
 ``contact``              The "Contact Us" form to send a contact request to the administrators or data access officers
-``cart``                 The variables cart page
+``cart``                 The variables/studies/networks cart page
 ======================== ==================
 
 The `templates structure <https://github.com/obiba/mica2/blob/master/mica-webapp/src/main/resources/_templates/>`_ is organized in a way that it should not be necessary to override these main pages definitions. Instead of that, it is recommended to change/extend the theme/style as described in this guide.
@@ -130,14 +130,36 @@ Cart page settings
 
    * - Variable
      - Description
+   * - ``variablesCartEnabled``
+     - Logical to enable the cart of variables. Default is consistent with the application's general configuration, but can be fine-tuned to make the cart visible to users within roles or groups.
+   * - ``studiesCartEnabled``
+     - Logical to enable the cart of studies. Default is consistent with the application's general configuration, but can be fine-tuned to make the cart visible to users within roles or groups.
+   * - ``networksCartEnabled``
+     - Logical to enable the cart of networks. Default is consistent with the application's general configuration, but can be fine-tuned to make the cart visible to users within roles or groups.
    * - ``cartEnabled``
-     - Logical to show/hide the cart links (**Cart** menu, addition/removal to/from cart buttons). Default is consistent with the application's general configuration, but can be fine-tuned to make the cart visible to users within roles or groups.
+     - Logical to show/hide the cart links (**Cart** menu, addition/removal to/from cart buttons). Default is true when one of the variables, studies or networks cart is enabled. It can be fine-tuned to make the cart visible to users within roles or groups.
    * - ``listsEnabled``
      - Logical to show/hide the lists links (**Lists** menu, addition to list buttons). Default is consistent with the application's general configuration, but can be fine-tuned to make the lists visible to users within roles or groups.
    * - ``showCartDownload``
      - Logical to allow downloading the content of the cart. Default is restricted to users with administration-related role.
    * - ``showCartViewDownload``
      - Logical to allow downloading the content of the cart in the format of Opal views (for creating views in Opal from a variable selection). Default is restricted to users with administration-related role.
+   * - ``defaultCartType``
+     - Link to the cart page will show the specified cart type tab (one of 'variables', 'studies' or 'networks'). Default is not specified, i.e. the first cart type tab will be active.
+
+Compare page settings
+*********************
+
+.. list-table::
+   :widths: 10 90
+   :header-rows: 1
+
+   * - Variable
+     - Description
+   * - ``studiesCompareEnabled``
+     - Logical to enable the comparison of studies from the search page (no authentication required) or from the cart of studies (authentication required, see ``studiesCartEnabled``).
+   * - ``networksCompareEnabled``
+     - Logical to enable the comparison of networks from the search page (no authentication required) or from the cart of studies (authentication required, see ``studiesCartEnabled``).
 
 Contact Us page settings
 ************************
