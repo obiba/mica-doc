@@ -29,6 +29,9 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
    :caption: Web User Guide
 
    web-user-guide/index
+   web-user-guide/documents-management
+   web-user-guide/data-access-request
+   web-user-guide/admin/index
 
 .. toctree::
    :maxdepth: 2
@@ -38,6 +41,21 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
    python-user-guide/authz
    python-user-guide/doc
    python-user-guide/other
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: R User Guide
+
+   r-user-guide/index
+   r-user-guide/usage
+
+.. toctree::
+  :maxdepth: 2
+  :caption: REST API Guide
+
+  rest/index
+  rest/draft
 
 Partners and Funders
 ====================

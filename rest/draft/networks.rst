@@ -18,9 +18,9 @@ List
 
    .. sourcecode:: shell
 
-      curl --user administrator:password https://mica-demo.obiba.org/ws/draft/networks
+      curl --user administrator:password -H "Accept:application/json" https://mica-demo.obiba.org/ws/draft/networks
 
-   Using the :doc:`../python-user-guide/other/rest` Python command line tool
+   Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
    .. sourcecode:: shell
 
@@ -129,9 +129,9 @@ Index
 
   .. sourcecode:: shell
 
-    curl --user administrator:password -X PUT https://mica-demo.obiba.org/ws/draft/networks/_index
+    curl --user administrator:password -H "Accept:application/json" -X PUT https://mica-demo.obiba.org/ws/draft/networks/_index
 
-  Using the :doc:`../python-user-guide/other/rest` Python command line tool
+  Using the :doc:`../../python-user-guide/other/rest` Python command line tool
 
   .. sourcecode:: shell
 
