@@ -1,8 +1,7 @@
 R Usage
 =======
 
-All the R commands that perform search return data frames. The query parameter that can be passed as an argument is the one that can be
-copied from the search page.
+All the R commands that perform search return data frames. The query parameter that can be passed as an argument is the one that can be copied from the search page.
 
 Connection
 ----------
@@ -24,7 +23,7 @@ Connection
 Search
 ------
 
-A unified search service allows to get any kind of document type, given search criteria applied to same or other document types. Only the published documents can be searched.
+A unified search service allows to get any kind of document type, the search criteria can be applied to same or other document types. Only the published documents can be searched.
 
 Networks
 ~~~~~~~~
@@ -77,7 +76,7 @@ Search for variables.
 Taxonomies
 ~~~~~~~~~~
 
-The taxonomies describe the variable annotations, used to build the search criteria.
+The taxonomies describe the variable annotations and are also used to build the search criteria.
 
 .. code-block:: r
 

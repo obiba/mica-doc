@@ -83,7 +83,7 @@ A data access request is an application form that researchers submit in order to
 Data Access Amendment
 ~~~~~~~~~~~~~~~~~~~~~
 
-A data access amendment is an application form that researchers submit to request changes to a pre-approved data access request. The data access amendment workflow is identical to that of  data access requests.
+A data access amendment is an application form that researchers submit to request changes to a pre-approved data access request. The data access amendment workflow is identical to that of data access requests.
 
 Search
 ------
@@ -133,4 +133,6 @@ To enhance the collaboration between Mica users, each member can add a comment o
 Cart
 ----
 
-The cart groups a set of variables based on one or more search criteria. User can edit the cart by adding or removing variables, download its content (variables) as a CSV file and use it as a search criterion.
+The cart groups a set of variables based on one or more search criteria. User can edit the cart by adding or removing variables, download its content (variables) as a CSV file and use it as a search criterion. Variables of a cart can be attached to a Data Access Request.
+
+The cart can also contain studies and networks. Similarly the content of the cart can be downloaded as CSV files (for internal content analysis). Documents of the cart also be compared between each other.

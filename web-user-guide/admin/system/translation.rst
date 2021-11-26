@@ -4,7 +4,7 @@ Translations
 Summary
 -------
 
-The Mica's interface can be translated in any language defined in the General Administration.
+The Mica's interface can be translated in any language defined in the General Administration. Note that after a language has been added and translations done in the different documents, the content of the site needs to be re-indexed.
 
 Definition
 ----------

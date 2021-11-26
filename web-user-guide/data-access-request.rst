@@ -16,7 +16,7 @@ To create a data access request, users have to fill out the application form
 and *submit* it once it is completed. The *validate* button can be used to
 check that the form contains the required information. Before submitting
 he request, the form can be edited and saved (for future edits) as needed.
-After the request is submitted, the form is frozen and can no longer be
+After the request is submitted, the form is locked and can no longer be
 edited unless the request is reopened.
 
 After the request is submitted, a data access officer will *review* it in order
@@ -50,7 +50,7 @@ activated, the flow is:
 
 .. image:: ../images/mica-dar-under-review-conditionally-approved-flow.png
 
-The workflow is resumed in the following table:
+The workflow is described in the following table:
 
 .. list-table::
   :widths: 15 55 15 15
@@ -75,7 +75,7 @@ The workflow is resumed in the following table:
       * Approved
       * Rejected
   * - Under Review
-    - | The request is being reviewed by the application officer. He can reopen, conditionally approve (if this state is activated), approve or reject the request.
+    - | The request is being reviewed by the application officer, who can reopen, conditionally approve (if this state is activated), approve or reject the request.
     - Submitted
     - * Opened
       * Approved
