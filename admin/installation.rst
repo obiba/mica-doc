@@ -91,10 +91,11 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                         - "8872:8082"
                 links:
                         - mongo
+                        - agate
+                        - opal
                 environment:
                         - JAVA_OPTS=-Xmx2G
-                        - MICA_ADMINISTRATOR_PASSWORD=password
-                        - MICA_ANONYMOUS_PASSWORD=password
+                        - MICA_ADMINISTRATOR_PASSWORD=${MICA_ADMINISTRATOR_PASSWORD}
                         - MONGO_HOST=mongo
                         - MONGO_PORT=27017
                         - OPAL_HOST=opal
@@ -112,14 +113,19 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                         - "8870:8080"
                 links:
                         - mongo
+                        - rock
+                        - agate
                 environment:
-                        - OPAL_ADMINISTRATOR_PASSWORD=password
+                        - OPAL_ADMINISTRATOR_PASSWORD=${OPAL_ADMINISTRATOR_PASSWORD}
                         - MONGO_HOST=mongo
                         - MONGO_PORT=27017
                         - AGATE_HOST=agate
                         - AGATE_PORT=8444
+                        - ROCK_HOSTS=rock:8085
                 volumes:
                         - /opt/opal:/srv
+        rock:
+                image: obiba/rock
         agate:
                 image: obiba/agate
                 ports:
@@ -128,11 +134,11 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                 links:
                         - mongo
                 environment:
-                        - AGATE_ADMINISTRATOR_PASSWORD=password
+                        - AGATE_ADMINISTRATOR_PASSWORD=${AGATE_ADMINISTRATOR_PASSWORD}
                         - MONGO_HOST=mongo
                         - MONGO_PORT=27017
-                        - RECAPTCHA_SITE_KEY=6Lfo7gYTAAAAAOyl8_MHuH-AVBzRDtpIuJrjL3Pb
-                        - RECAPTCHA_SECRET_KEY=6Lfo7gYTAAAAADym-vSDvPBeBCXaxIprA0QXLk_b
+                        - RECAPTCHA_SITE_KEY=${RECAPTCHA_SITE_KEY}
+                        - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
                 volumes:
                         - /opt/agate:/srv
 
