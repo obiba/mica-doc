@@ -25,10 +25,10 @@ Page                     Description
 ``just-registered``      The welcome page after a user has registered
 ``networks``             The list of networks
 ``network``              The network page
-``studies``              The list of studies
-``study``                The study page (can be individual or harmonization)
-``datasets``             The list of datasets
-``dataset``              The dataset page (can be collection or harmonization)
+``studies``              The list of studies and initiatives
+``study``                The study page (can be individual study or harmonization initiative)
+``datasets``             The list of datasets and protocols
+``dataset``              The dataset page (can be collected datasets or harmonization protocols)
 ``variable``             The variable page (can be collected, data schema or harmonized)
 ``search``               The catalog search page
 ``projects``             The list of approved projects

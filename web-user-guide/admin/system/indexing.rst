@@ -19,13 +19,19 @@ Definitions
     - Indices about any type of document: network, study, dataset (and associated variables), file, person.
   * - **Networks**
     - Index that allows to search for networks.
-  * - **Studies**
-    - Index that allows to search for studies.
-  * - **All datasets**
-    - Index that allows to search for datasets of any type and associated variables.
-  * - **Study datasets**
-    - Index that allows to search for study datasets and associated variables.
-  * - **Harmonization datasets**
-    - Index that allows to search for harmonization datasets and associated variables.
+  * - **Studies / Initiatives**
+    - Index that allows to search for individual studies and harmonization initiatives.
+  * - **Datasets / Protocols**
+    - Index that allows to search for collected datasets and harmonization protocols and their associated variables.
+  * - **Collected Datasets**
+    - Index that allows to search for collected datasets and associated variables.
+  * - **Harmonization Protocols**
+    - Index that allows to search for harmonization protocols and associated variables.
+  * - **Persons**
+    - Index that allows to search persons who can be associated to studies, initiatives or networks.
+  * - **Files**
+    - Index that allows to search files associated with all Mica documents.
+  * - **Projects**
+    - Index that allows to search projects.
   * - **Taxonomies**
     - Index that allows to search for taxonomy terms (i.e. the search criteria).

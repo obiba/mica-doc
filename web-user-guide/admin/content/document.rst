@@ -66,12 +66,12 @@ Add Term
 
 A user with administrator rights can add a term to an existing criterion. A term is described by a unique ``Name`` for string criterion or a range for numerical criterion, a ``Title``, a ``Description`` and a set of ``Keywords`` useful when building search requests.
 
-Dataset Specific Search
+Dataset/Protocol Search
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Despite the fact that study datasets and harmonization datasets can have different fields, there is only one dataset taxonomy that apply to both sub-type of datasets. See the className search criterion that allows to discriminate datasets by their specific type.
+Despite the fact that collected datasets and harmonization protocols can have different fields, there is only one taxonomy that applies to both document types. See the className search criterion that allows to discriminate datasets by their specific type.
 
-In addition to that, datasets in Mica have associated variables that are extracted from Opal. Variable model cannot be configured as it lives in Opal, but variable base taxonomy (i.e. that refers the variable properties) can be adjusted in this section.
+In addition to that, datasets and protocols in Mica have associated variables that are extracted from Opal. Variable model cannot be configured as it lives in Opal, but variable base taxonomy (i.e. that refers the variable properties) can be adjusted in this section.
 
 Permissions
 ~~~~~~~~~~~

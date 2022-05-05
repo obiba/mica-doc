@@ -72,7 +72,7 @@ Users with Editor or Reviewer permission can manage the list of populations.
 *******************************
 Users with Editor or Reviewer permission can manage the list of data collection events of a population.
 
-Harmonization Study Operations
+Harmonization Initiative Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Manage Contacts*
@@ -83,10 +83,6 @@ Users with Editor or Reviewer permission can manage (add/remove/edit) the list o
 **********************
 Users with Editor or Reviewer permission can manage the list of investigators.
 
-*Manage Populations*
-********************
-Users with Editor or Reviewer permission can manage the list of populations.
-
 Collected Dataset Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -94,13 +90,13 @@ Collected Dataset Operations
 ********************
 Users with Editor or Reviewer permission can manage (add/remove/edit) the associated study table.
 
-Harmonized Dataset Operations
+Harmonization Protocol Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Manage Study Tables*
 *********************
-Users with Editor or Reviewer permission can manage (add/remove/edit) the list of study tables. This operation only applies to harmonized
-datasets having a collection of study tables.
+Users with Editor or Reviewer permission can manage (add/remove/edit) the list of study tables. This operation only applies to harmonization
+protocols having a collection of study tables.
 
 Revisions
 ---------
