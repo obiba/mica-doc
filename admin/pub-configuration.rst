@@ -88,12 +88,16 @@ General settings
      - CSS classes to apply to the <i> element to render the icon that represents a network.
    * - ``studyIcon``
      - CSS classes to apply to the <i> element to render the icon that represents a study.
+   * - ``initiativeIcon``
+     - CSS classes to apply to the <i> element to render the icon that represents a harmonization initiative.
    * - ``datasetIcon``
      - CSS classes to apply to the <i> element to render the icon that represents a dataset.
    * - ``harmoDatasetIcon``
      - CSS classes to apply to the <i> element to render the icon that represents a harmonization dataset.
    * - ``variableIcon``
      - CSS classes to apply to the <i> element to render the icon that represents a variable.
+   * - ``dataschemaIcon``
+     - CSS classes to apply to the <i> element to render the icon that represents a dataschema variable.
    * - ``projectIcon``
      - CSS classes to apply to the <i> element to render the icon that represents a project.
    * - ``taxonomyIcon``
@@ -241,13 +245,29 @@ Search page settings
    * - ``searchNetworkListDisplay``
      - Logical to show/hide the list of networks resulting from the search. Default is consistent with the application's general configuration.
    * - ``searchVariableColumns``
-     - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study**, **population**, **data-collection-event**/**dce** or **dataset**.
+     - Show/hide and order the column names for the list of variables. Possible values are **label**, **label+description** (variable label with a tooltip that shows the description), **valueType**, **annotations**, **type**, **study**, **population**, **data-collection-event**/**dce**, **initiative**, **dataset** or **protocol**. This configuration will be used when on the ``/search`` path.
+   * - ``searchVariableColumnsHarmonization``
+     - Same as the ``searchVariableColumns`` configuration but will be used when on the ``/harmonization-search`` path.
+   * - ``searchVariableColumnsIndividual``
+     - Same as the ``searchVariableColumns`` configuration but will be used when on the ``/individual-search`` path.
    * - ``searchDatasetColumns``
-     - Show/hide and order the column names for the list of datasets. Possible values are **name**, **type**, **networks**, **studies** or **variables**.
+     - Show/hide and order the column names for the list of datasets. Possible values are **name**, **type**, **networks**, **studies**, **initiatives** or **variables**.
+   * - ``searchDatasetColumnsHarmonization``
+     - Same as the ``searchDatasetColumns`` configuration but will be used when on the ``/harmonization-search`` path.
+   * - ``searchDatasetColumnsIndividual``
+     - Same as the ``searchDatasetColumns`` configuration but will be used when on the ``/individual-search`` path.
    * - ``searchStudyColumns``
      - Show/hide and order the column names for the list of studies. Possible values are **name**, **type**, **study-design**, **data-sources-available**, **participants**, **networks**, **individual** or **harmonization**.
+   * - ``searchStudyColumnsHarmonization``
+     - Same as the ``searchStudyColumns`` configuration but will be used when on the ``/harmonization-search`` path.
+   * - ``searchStudyColumnsIndividual``
+     - Same as the ``searchStudyColumns`` configuration but will be used when on the ``/individual-search`` path.
    * - ``searchNetworkColumns``
-     - Show/hide and order the column names for the list of networks. Possible values are **name**, **studies**, **datasets** or **variables**.
+     - Show/hide and order the column names for the list of networks. Possible values are **name**, **studies**, **datasets**, **harmonization**, **individual** or **variables**.
+   * - ``searchNetworkColumnsHarmonization``
+     - Same as the ``searchNetworkColumns`` configuration but will be used when on the ``/harmonization-search`` path.
+   * - ``searchNetworkColumnsIndividual``
+     - Same as the ``searchNetworkColumns`` configuration but will be used when on the ``/individual-search`` path.
    * - ``searchVariableFields``
      - List of the variable fields to be extracted from search results.
    * - ``searchDatasetFields``
