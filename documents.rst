@@ -32,15 +32,10 @@ Data Collection Event
 
 A data collection event is a collection of information on one or more population(s) over a specific period of time (e.g. baseline, follow-up 1, follow-up 2). It is described using the following fields: name, start and end date, and data sources (e.g. questionnaires, physical measures, biosample measures, etc). A data collection event may be associated to one or more populations and it can include one or more datasets.
 
-Harmonization Study
-~~~~~~~~~~~~~~~~~~~
+Harmonization Initiative
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-A harmonization study is defined as a research project harmonizing data across individual studies to answer specific reseach questions. It is described using the following fields: acronym, contact information, objectives, design and related documents. A harmonization study can include one population and one or more harmonized dataset (dataschema).
-
-Population
-^^^^^^^^^^
-
-A population is a set of individuals sharing the same selection criteria for enrollment in the individual studies selected to create the harmonization study. It is described using the fields: name and description. A population is linked to one or more harmonized dataset.
+A harmonization initiative is defined as a research project harmonizing data across individual studies to answer specific reseach questions. It is described using the following fields: acronym, contact information, objectives, design and related documents. A harmonization study can include one or more harmonized protocols (dataschema).
 
 Collected Dataset
 ~~~~~~~~~~~~~~~~~
@@ -52,10 +47,10 @@ Collected Variable
 
 A collected variable is a variable that was collected, measured, or constructed within a study protocol. It is described using the following fields: name, label, description, type, unit, categories, and area of information covered. If the collected dataset includes data, summary statistics of the collected variable can be published on the web portal (e.g. means, minimum, maximum, counts and percentages). Each collected variable is part of one and only one study-specific dataset.
 
-Harmonized Dataset
-~~~~~~~~~~~~~~~~~~
+Harmonization Protocol
+~~~~~~~~~~~~~~~~~~~~~~
 
-A harmonized dataset holds metadata about core variables constructed from multiple collected datasets. The metadata is described using a standardized format of data dictionary which provides information on harmonized variables’ definitions and characteristics (e.g. type, unit, categories, and area of information covered): this represent the data schema of the harmonized dataset. It can be optionally associated to the harmonized data.
+A harmonization protocol holds metadata about core variables constructed from multiple collected datasets. The metadata is described using a standardized format of data dictionary which provides information on harmonized variables’ definitions and characteristics (e.g. type, unit, categories, and area of information covered): this represent the data schema of the harmonization protocol. It can be optionally associated to the harmonized data.
 
 Data Schema Variable
 ^^^^^^^^^^^^^^^^^^^^
