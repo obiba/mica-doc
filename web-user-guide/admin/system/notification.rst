@@ -19,8 +19,8 @@ Notifications can be configured by checking one or many of the following options
 
   * - **On network status changed notification**
     - Send email notifications when network status changes to Deleted, to Under review or to Draft.
-  * - **On study or initiative status changed notification**
-    - Send email notifications when study or initiative status changes to Deleted, to Under review or to Draft.
+  * - **On individual study or harmonization initiative status changed notification**
+    - Send email notifications when individual study or harmonization initiative status changes to Deleted, to Under review or to Draft.
   * - **On collected dataset status changed notification**
     - Send email notifications when collected dataset status changes to Deleted, to Under review or to Draft.
   * - **On harmonization protocol status changed notification**

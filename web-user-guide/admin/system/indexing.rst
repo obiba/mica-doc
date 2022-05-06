@@ -19,9 +19,9 @@ Definitions
     - Indices about any type of document: network, study, dataset (and associated variables), file, person.
   * - **Networks**
     - Index that allows to search for networks.
-  * - **Studies / Initiatives**
+  * - **Individual Studies / Harmonization Initiatives**
     - Index that allows to search for individual studies and harmonization initiatives.
-  * - **Datasets / Protocols**
+  * - **Collected Datasets / Harmonization Protocols**
     - Index that allows to search for collected datasets and harmonization protocols and their associated variables.
   * - **Collected Datasets**
     - Index that allows to search for collected datasets and associated variables.

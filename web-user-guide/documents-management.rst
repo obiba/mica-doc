@@ -73,7 +73,7 @@ Users with Editor or Reviewer permission can manage the list of populations.
 Users with Editor or Reviewer permission can manage the list of data collection events of a population.
 
 Harmonization Initiative Operations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Manage Contacts*
 *****************
@@ -91,7 +91,7 @@ Collected Dataset Operations
 Users with Editor or Reviewer permission can manage (add/remove/edit) the associated study table.
 
 Harmonization Protocol Operations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Manage Study Tables*
 *********************
