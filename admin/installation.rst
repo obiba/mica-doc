@@ -20,12 +20,12 @@ Memory (RAM) Minimum: 4GB, Recommended: >4GB
 Server Software Requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-======== ================= ================================================================ ========================
-Software Suggested version Download link                                                    Usage
-======== ================= ================================================================ ========================
-Java     8                 `OpenJDK 8 downloads <http://openjdk.java.net/projects/jdk8/>`_  Java runtime environment
-MongoDB  >= 2.4.x          `MongoDB downloads <http://www.mongodb.org/downloads>`_          Database engine
-======== ================= ================================================================ ========================
+======== ================= ==================================================================================================== ========================
+Software Suggested version Download link                                                                                        Usage
+======== ================= ==================================================================================================== ========================
+Java     8                 `OpenJDK 8 downloads <http://openjdk.java.net/projects/jdk8/>`_                                      Java runtime environment
+MongoDB  <= 4.2.x          `MongoDB Community downloads <https://www.mongodb.com/docs/v4.2/administration/install-community/>`_ Database engine
+======== ================= ==================================================================================================== ========================
 
 While Java is required by Mica server application, MongoDB can be installed on another server.
 
@@ -105,7 +105,7 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                 volumes:
                         - /opt/mica:/srv
         mongo:
-                image: mongo
+                image: mongo:4.2
         opal:
                 image: obiba/opal
                 ports:
