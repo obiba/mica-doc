@@ -15,3 +15,7 @@
 .highlight {
     background: #eeffcc;
 }
+
+a.footnote-reference {
+    font-size: smaller !important;
+}

@@ -17,7 +17,7 @@ The List tab displays the results of the search query inventoried in the documen
 Coverage
 ~~~~~~~~~
 
-The Coverage displays the results of the search query in a tabular format, giving an overview of which document covers at least one of the search criteria, where the documents are Study, Dataset (Study Dataset and Harmonized Dataset) and Network. The table reports the total number of variables linked to each document and for each search criterion. Click on any number to obtain the corresponding list of variables. More advanced results can be obtains using the following functionalities.
+The Coverage displays the results of the search query in a tabular format, giving an overview of which document covers at least one of the search criteria, where the documents are Study, Dataset (Collected Dataset and Harmonization Protocol) and Network. The table reports the total number of variables linked to each document and for each search criterion. Click on any number to obtain the corresponding list of variables. More advanced results can be obtains using the following functionalities.
 
 - **Full coverage**: The study and Dataset list can be filtered by clicking on the "Full Coverage" button to keep only documents that collected information on all search criteria covered by the query. Select documents individually using the check-boxes to the left of the table and click on the button "Filter" the keep a document sub-set.
 - **Data Collection Event (DCE)**: Check "Data Collection Event (DCE)" box to obtain the breakdown of variable numbers by data collection events. Click on the button “Full Screen” to better visualize the results. For more information about the Data Collection Event, refer to Mic a documents page, section Study.

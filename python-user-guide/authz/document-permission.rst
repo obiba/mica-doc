@@ -13,7 +13,7 @@ Arguments
 ============ ===========
 Argument     Description
 ============ ===========
-``DOCUMENT`` Mica document: ``network``, ``individual-study``, ``harmonization-study``, ``collected-dataset``, ``harmonized-dataset`` (see :doc:`../../documents`)
+``DOCUMENT`` Mica document: ``network``, ``individual-study``, ``harmonization-study`` [1]_, ``collected-dataset``, ``harmonized-dataset``  [2]_ (see :doc:`../../documents`)
 ``ID``       Identifier of the document
 ============ ===========
 
@@ -83,3 +83,6 @@ Remove the above permission:
 .. code-block:: bash
 
   mica perm-individual-study --mica http://mica-demo.obiba.org --user administrator --password password --type USER --subject demouser --delete demo
+
+.. [1] ``harmonization-study`` refers to ``Harmonization Initiative``.
+.. [2] ``harmonized-dataset`` refers to ``Harmonization Protocol``.

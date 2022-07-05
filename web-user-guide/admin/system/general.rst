@@ -44,9 +44,9 @@ This section allows to define all general Mica configuration as
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Single network enabled                 | If checked, only one network is present in Mica.                                                                   |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|                       | Study datasets section enabled         | If checked, study datasets section is accessible.                                                                  |
+|                       | Collected datasets section enabled         | If checked, collected datasets section is accessible.                                                          |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|                       | Harmonization datasets section enabled | If checked, harmonization datasets section is accessible.                                                          |
+|                       | Harmonization protocols section enabled | If checked, harmonization protocols section is accessible.                                                        |
 +-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 To edit a field, click on "Edit" and edit or modify the content the fields therein.
