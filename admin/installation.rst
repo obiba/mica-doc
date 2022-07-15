@@ -148,8 +148,7 @@ Then environment variables that are exposed by this image are:
 Environment Variable              Description
 ================================= =========================================================================
 ``JAVA_OPTS``
-``MICA_ADMINISTRATOR_PASSWORD``   Agate administrator password, required and set at first start.
-``MICA_ANONYMOUS_PASSWORD``       Agate anonymous password, required and set at first start.
+``MICA_ADMINISTRATOR_PASSWORD``   Mica administrator password, required and set at first start.
 ``MONGO_HOST``                    MongoDB server host.
 ``MONGO_PORT``                    MongoDB server port, default is ``27017``.
 ``MONGO_DB``                      MongoDB database nale, default is ``mica``.
