@@ -34,21 +34,25 @@ The most simple workflow is:
 * ``Rejected`` state is final
 
 .. image:: ../images/mica-dar-simple-flow.png
+   :scale: 50%
 
 When the ``Under Review`` intermediate state is activated (which is the default
 configuration), the flow is:
 
 .. image:: ../images/mica-dar-default-flow.png
+   :scale: 50%
 
 When the ``Conditionally Approved`` intermediate state is activated, the flow
 is:
 
 .. image:: ../images/mica-dar-conditionally-approved-flow.png
+   :scale: 50%
 
 When both ``Under Review`` + ``Conditionally Approved`` intermediate states are
 activated, the flow is:
 
 .. image:: ../images/mica-dar-under-review-conditionally-approved-flow.png
+   :scale: 50%
 
 The workflow is described in the following table:
 
