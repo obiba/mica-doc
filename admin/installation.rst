@@ -87,7 +87,6 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
         mica:
                 image: obiba/mica
                 ports:
-                        - "8835:8445"
                         - "8872:8082"
                 links:
                         - mongo
@@ -109,7 +108,6 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
         opal:
                 image: obiba/opal
                 ports:
-                        - "8833:8443"
                         - "8870:8080"
                 links:
                         - mongo
@@ -129,7 +127,6 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
         agate:
                 image: obiba/agate
                 ports:
-                        - "8834:8444"
                         - "8871:8081"
                 links:
                         - mongo
