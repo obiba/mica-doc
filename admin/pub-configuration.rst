@@ -330,6 +330,8 @@ Data Access pages settings
      - Show/hide the report timeline in the dashboard page when the data access is approved. Applies only when a project end date can be found. Default is **true**.
    * - ``dataAccessArchiveEnabled``
      - Show/hide the **Archive** button, to users with appropriate permissions and when the data access request is completed. Default is **true**.
+   * - ``showDataAccessEventsInComments``
+     - List of each data access form type which events are to be included in the life line of the comments, so that users can contextualize the comments with the changes of the data access forms status. Possible values are **request**, **preliminary**, **feasibility**, **amendment** and **agreement**, default is all.
 
 Charts settings
 ***************
