@@ -117,9 +117,13 @@ Home page settings
    * - ``networksLink``
      - The link to list the networks. Default is the **Networks** menu.
    * - ``studiesLink``
-     - The link to list the studies. Default is the **Studies** menu.
+     - The link to list the individual studies. Default is the **Individual Studies** menu.
+   * - ``initiativesLink``
+     - The link to list the harmonization initiatives. Default is the **Harmonization Initiatives** menu.
    * - ``datasetsLink``
-     - The link to list the datasets. Default is the **Datasets** menu.
+     - The link to list the collected datasets. Default is the **Collected Datasets** menu.
+   * - ``protocolsLink``
+     - The link to list the harmonization protocols. Default is the **Harmonization Protocols** menu.
    * - ``portalLink``
      - The link applied to the logo. Default is the data portal itself (same as **Home** menu), but it could also be the organization's main portal.
    * - ``showSignin``
@@ -227,7 +231,11 @@ Search page settings
    * - Variable
      - Description
    * - ``defaultSearchState``
-     - The state of the Search interface when entering the page. Default is showing the list of studies or the list of variables when there is only one study.
+     - The state of the interface when entering the search page. Default is showing the list of studies or the list of variables when there is only one study.
+   * - ``defaultIndividualSearchState``
+     - The state of the interface when entering the individual search page. Default is showing the list of individual studies or the list of variables when there is only one study.
+   * - ``defaultHarmonizationSearchState``
+     - The state of the interface when entering the harmonization search page. Default is showing the list of harmonization initiatives or the list of variables when there is only one initiative.
    * - ``downloadQueryEnabled``
      - Logical to show/hide the button for downloading the results of the query. Default is **true**, but can be restricted to users within roles or groups.
    * - ``showCopyQuery``
