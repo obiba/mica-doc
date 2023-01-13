@@ -6,8 +6,16 @@ Data Access Requests Management
 Summary
 ~~~~~~~
 
-Before requesting access to data, a researcher needs to register by sending a
-*data access request*.
+Before requesting access to data, a researcher needs to register and follow some steps to submit a
+*data access request*. This access request is composed of at least one main application form to be filled in
+by the applicant. Other forms can be enabled for more complex procedures, such as preliminary form, feasibility form,
+amendment form and end-user agreement form. Each of these forms is to be designed by the administrator.
+
+Once a form is filled-in and submitted by the applicant, data access officers will review it before approval or rejection.
+
+Notification emails help with the communication between the applicant and the data access officer during the life cycle of each form.
+
+Collaborators can be associated by the applicant to a request. Collaborators can only contribute to their own end-user agreement form (if enabled).
 
 Request Workflow
 ~~~~~~~~~~~~~~~~
@@ -115,20 +123,46 @@ The workflow is described in the following table:
       | Under Review
     - Submitted
 
-Application Form
-~~~~~~~~~~~~~~~~
+Application Forms
+~~~~~~~~~~~~~~~~~
 
-The application form is configured by the administrator, who can also define the PDF template used to create a printable copy of the form (available by clicking on the *Download* button).
+Preliminary Form (optional)
+---------------------------
 
-Feasibility Inquiry
-~~~~~~~~~~~~~~~~~~~
+This form is optional and needs to be designed and enabled by the system administrator.
 
-Researchers can fill in a short form to ensure the feasibility of a project. This can be a preliminary of the main application form or of an amendment.
+As setting up a research project can take time in terms of definition of the data/biosamples material needed, organizing the human resources, securing a source of funding etc. the preliminary form allows to start the data access request, before finalizing it with a main form.
 
-Amendments
-~~~~~~~~~~
+Main Form
+---------
 
-Researchers can submit amendments to request changes (e.g. additional data, new research collaborators) to a pre-approved data access request.
+The application form is to be designed by the system administrator, who can also define the PDF template used to create a printable copy of the form (available by clicking on the *Download* button).
+
+The applicant is responsible for filling-in and submitting this form. The form can be reopened when there are requests for changes. A data access request is approved (resp. rejected) when this form is approved (resp. rejected).
+
+Feasibility Inquiry (optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This form is optional and needs to be designed and enabled by the system administrator.
+
+Researchers can fill in a short form to ensure the feasibility of a project. This can be a preliminary of the main application form or of an amendment. Several feasibility forms can be submitted.
+
+Amendments (optional)
+~~~~~~~~~~~~~~~~~~~~~
+
+This form is optional and needs to be designed and enabled by the system administrator.
+
+Researchers can submit amendments to request changes (e.g. additional data, new research collaborators) to a pre-approved main form. Several amendment forms can be submitted.
+
+End-User Agreements (optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This form is optional and needs to be designed and enabled by the system administrator.
+
+Documents
+~~~~~~~~~
+
+Files can be uploaded by the applicant or the data access officers at any time in the process of the request. This can be used to
 
 Comments
 ~~~~~~~~
@@ -146,3 +180,10 @@ History
 ~~~~~~~
 
 A list of all status changes of a data access request and its amendments. In addition, administrators and data access officers can log actions that they have taken while processing a request or an amendment. These actions are either :ref:`pre-defined <dar-predefined-action-logs>` or free text. Only users or groups with proper permissions (see :ref:`data access request permissions <dar-permissions>`) can view action logs.
+
+Collaborators
+~~~~~~~~~~~~~
+
+Other users can be invited to collaborate to a data access request. The applicant sends the invitation by providing the collaborator's email address. This collaborator receives a notification email containing a personal link to accept this invitation. The collaborator must create an account (with the same email) before accepting the invitation.
+
+A collaborator gets read-only access to the request. Once the main application form has been approved, and if the end-user agreement feature is enabled, each collaborator must fill-in and submit its personal end-user agreement statement.
