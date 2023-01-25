@@ -123,46 +123,57 @@ The workflow is described in the following table:
       | Under Review
     - Submitted
 
+Forms
+~~~~~
+
 Application Forms
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Preliminary Form (optional)
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This form is optional and needs to be designed and enabled by the system administrator.
 
 As setting up a research project can take time in terms of definition of the data/biosamples material needed, organizing the human resources, securing a source of funding etc. the preliminary form allows to start the data access request, before finalizing it with a main form.
 
 Main Form
----------
+^^^^^^^^^
 
 The application form is to be designed by the system administrator, who can also define the PDF template used to create a printable copy of the form (available by clicking on the *Download* button).
 
 The applicant is responsible for filling-in and submitting this form. The form can be reopened when there are requests for changes. A data access request is approved (resp. rejected) when this form is approved (resp. rejected).
 
-Feasibility Inquiry (optional)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Feasibility Inquiry Form (optional)
+-----------------------------------
 
 This form is optional and needs to be designed and enabled by the system administrator.
 
 Researchers can fill in a short form to ensure the feasibility of a project. This can be a preliminary of the main application form or of an amendment. Several feasibility forms can be submitted.
 
-Amendments (optional)
-~~~~~~~~~~~~~~~~~~~~~
+Amendment Form (optional)
+-------------------------
 
 This form is optional and needs to be designed and enabled by the system administrator.
 
 Researchers can submit amendments to request changes (e.g. additional data, new research collaborators) to a pre-approved main form. Several amendment forms can be submitted.
 
-End-User Agreements (optional)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+End-User Agreement Form (optional)
+----------------------------------
 
 This form is optional and needs to be designed and enabled by the system administrator.
+
+In a data access request, the possible strategies to make the end-user agreements available are:
+
+* Always, i.e. as soon as the data access request is created,
+* After the Preliminary form is approved,
+* After the main form is approved.
+
+When some collaborators are associated to a data access request, each of them must fill-in its own end-user agreement form (the applicant has its own as well).
 
 Documents
 ~~~~~~~~~
 
-Files can be uploaded by the applicant or the data access officers at any time in the process of the request. This can be used to
+Files can be uploaded by the applicant or the data access officers at any time in the process of the request.
 
 Comments
 ~~~~~~~~
@@ -184,6 +195,62 @@ A list of all status changes of a data access request and its amendments. In add
 Collaborators
 ~~~~~~~~~~~~~
 
-Other users can be invited to collaborate to a data access request. The applicant sends the invitation by providing the collaborator's email address. This collaborator receives a notification email containing a personal link to accept this invitation. The collaborator must create an account (with the same email) before accepting the invitation.
+Other users can be invited to collaborate to a data access request. The applicant sends the invitation by providing the collaborator's email address. This collaborator receives a notification email containing a personal link to accept this invitation. This personal link expires after a configurable number of days (7 by default) and is revocable by the applicant. The collaborator must create an account (with the same email) before accepting the invitation.
 
-A collaborator gets read-only access to the request. Once the main application form has been approved, and if the end-user agreement feature is enabled, each collaborator must fill-in and submit its personal end-user agreement statement.
+A collaborator gets read-only access to the request. When the end-user agreement feature is enabled, each collaborator must fill-in and submit its personal end-user agreement statement.
+
+Notification Emails
+~~~~~~~~~~~~~~~~~~~
+
+For each event in the data access request life-cycle, a notification event can be sent:
+
+.. list-table::
+  :widths: 20 80
+  :header-rows: 1
+
+  * - Event
+    - Description
+  * - On creation
+    - Email is sent to data access officers on data access request creation (i.e. saved for the first time but not yet submitted).
+  * - On submission
+    - Email is sent to data access officers and to applicant on data access request submission.
+  * - On review
+    - Email is sent to applicant when its data access request is being reviewed.
+  * - On reopening
+    - Email is sent to applicant when its data access request is reopened.
+  * - On conditional approval
+    - Email is sent to applicant when its data access request is in the 'Conditionally Approved' state.
+  * - On rejection
+    - Email is sent to applicant when its data access request is rejected.
+  * - On approval
+    - Email is sent to applicant when its data access request is approved.
+  * - On comment
+    - Email is sent to applicant and data access officers when the data access request is commented.
+  * - On documents update
+    - Email is sent to applicant and data access officers when the document list of the data access request is updated.
+
+There are also notification emails related to the project reporting:
+
+.. list-table::
+  :widths: 20 80
+  :header-rows: 1
+
+  * - Event
+    - Description
+  * - Final report reminder
+    - Email is sent to applicant to remind that a final report is due. Applies to approved data access requests only.
+  * - Intermediate report reminder
+    - Email is sent to applicant to remind that an intermediate (yearly) report is due. Applies to approved data access requests only.
+
+Some emails are sent in relation with collaborators:
+
+.. list-table::
+  :widths: 20 80
+  :header-rows: 1
+
+  * - Event
+    - Description
+  * - On collaboration invitation
+    - Email is sent to the invited collaborator with a personal link to the data access request.
+  * - On collaboration accepted
+    - Email is sent to applicant when an invitation to collaborate to the data access request has been accepted.
