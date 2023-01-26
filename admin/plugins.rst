@@ -6,11 +6,25 @@ Repository
 
 Mica plugins available are:
 
-==================================================================== =========== =========================================================================================================================================== =============== ============
-Name                                                                 Type        Description                                                                                                                                 Depends         API
-==================================================================== =========== =========================================================================================================================================== =============== ============
-`mica-search-es <https://github.com/obiba/mica-search-es/releases>`_ mica-search Mica search engine based on Elasticsearch 2.4. Can be used embedded in Mica (default) or configured to connect to an Elasticsearch cluster. No dependencies `Search Plugin API <https://github.com/obiba/mica2/tree/master/mica-spi/src/main/java/org/obiba/mica/spi/search>`_
-==================================================================== =========== =========================================================================================================================================== =============== ============
+
+.. list-table::
+  :header-rows: 1
+
+  * - Name
+    - Type
+    - Description
+    - Depends
+    - API
+  * - `mica-search-es <https://github.com/obiba/mica-search-es/releases>`_
+    - mica-search
+    - Mica search engine based on Elasticsearch 2.4. Can be used embedded in Mica (default) or configured to connect to an Elasticsearch cluster.
+    - No dependencies
+    - `Search Plugin API <https://github.com/obiba/mica2/tree/master/mica-spi/src/main/java/org/obiba/mica/spi/search>`_
+  * - `mica-search-es7 <https://github.com/obiba/mica-search-es7/releases>`_
+    - mica-search
+    - Mica search engine based on Elasticsearch 7.x. To be configured to connect to an Elasticsearch cluster.
+    - Elasticsearch server
+    - `Search Plugin API <https://github.com/obiba/mica2/tree/master/mica-spi/src/main/java/org/obiba/mica/spi/search>`_
 
 Installation
 ------------
