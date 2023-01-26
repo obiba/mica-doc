@@ -19,14 +19,28 @@ Mica plugins available are:
     - API
   * - `mica-search-es <https://github.com/obiba/mica-search-es/releases>`_
     - mica-search
-    - Mica search engine based on Elasticsearch 2.4. Can be used embedded in Mica (default) or configured to connect to an Elasticsearch cluster.
+    - | Mica search engine based on Elasticsearch 2.4. Can be used embedded in Mica (default)
+      | or configured to connect to an Elasticsearch cluster.
     - No dependencies
     - `Search Plugin API <https://github.com/obiba/mica2/tree/master/mica-spi/src/main/java/org/obiba/mica/spi/search>`_
   * - `mica-search-es7 <https://github.com/obiba/mica-search-es7/releases>`_
     - mica-search
-    - Mica search engine based on Elasticsearch 7.x. To be configured to connect to an Elasticsearch cluster.
+    - | Mica search engine based on Elasticsearch 7.x.
+      | To be configured to connect to an Elasticsearch cluster.
     - Elasticsearch server
     - `Search Plugin API <https://github.com/obiba/mica2/tree/master/mica-spi/src/main/java/org/obiba/mica/spi/search>`_
+  * - `mica-tables-spss <https://github.com/obiba/mica-tables-spss/releases>`_
+    - mica-tables
+    - | Read dataset dictionaries from SPSS files.
+      | Reference implementation of the `mica-tables` plugin type.
+    - No dependencies
+    - `Table Source Plugin API <https://github.com/obiba/mica2/tree/master/mica-spi/src/main/java/org/obiba/mica/spi/tables>`_
+  * - `mica-taxonomies-files <https://github.com/obiba/mica-taxonomies-files/releases>`_
+    - mica-taxonomies
+    - | Read taxonomies from local files or from a URL.
+      | Reference implementation of the `mica-taxonomies` plugin type.
+    - No dependencies
+    - `Taxonomies Plugin API <https://github.com/obiba/mica2/tree/master/mica-spi/src/main/java/org/obiba/mica/spi/taxonomies>`_
 
 Installation
 ------------
