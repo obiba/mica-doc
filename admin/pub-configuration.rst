@@ -13,32 +13,41 @@ Configuring Pages
 
 The main public pages are:
 
-======================== ==================
-Page                     Description
-======================== ==================
-``index``                The home page
-``profile``              The user profile page for updating personal information and password
-``signin``               The login page
-``signup``               The user registration page
-``signup-with``          The user registration page, with form pre-filled with personal information extracted from a OpenID Connect server
-``forgot-password``      The page to ask for password reset
-``just-registered``      The welcome page after a user has registered
-``networks``             The list of networks
-``network``              The network page
-``studies``              The list of studies and initiatives
-``study``                The study page (can be individual study or harmonization initiative)
-``datasets``             The list of datasets and protocols
-``dataset``              The dataset page (can be collected datasets or harmonization protocols)
-``variable``             The variable page (can be collected, data schema or harmonized)
-``search``               The catalog search page
-``projects``             The list of approved projects
-``project``              The approved project page
-``data-access-process``  The data access process presentation page
-``data-accesses``        The list of data access requests (restricted access)
-``data-access``          The data access request main page (there are other pages for each of the data access request forms and features)
-``contact``              The "Contact Us" form to send a contact request to the administrators or data access officers
-``cart``                 The variables/studies/networks cart page
-======================== ==================
+================================ ==================
+Page                             Description
+================================ ==================
+``index``                        The home page
+``profile``                      The user profile page for updating personal information and password
+``signin``                       The login page
+``signup``                       The user registration page
+``signup-with``                  The user registration page, with form pre-filled with personal information extracted from a OpenID Connect server
+``forgot-password``              The page to ask for password reset
+``just-registered``              The welcome page after a user has registered
+``networks``                     The list of networks
+``network``                      The network page
+``studies``                      The list of studies and initiatives
+``study``                        The study page (can be individual study or harmonization initiative)
+``datasets``                     The list of datasets and protocols
+``dataset``                      The dataset page (can be collected datasets or harmonization protocols)
+``variable``                     The variable page (can be collected, data schema or harmonized)
+``search``                       The catalog search page
+``projects``                     The list of approved projects
+``project``                      The approved project page
+``data-access-process``          The data access process presentation page
+``data-accesses``                The list of data access requests (restricted access)
+``data-access``                  The data access request main page (there are other pages for each of the data access request forms and features)
+``data-access-agreement-form``   The data access request agreement form page
+``data-access-amendment-form``   The data access request amendment form page
+``data-access-comments``         The data access request comments page
+``data-access-documents``        The data access request documents page
+``data-access-feasibility-form`` The data access request feasibility form page
+``data-access-form``             The data access request main form page
+``data-access-history``          The data access request history page
+``data-access-preliminary-form`` The data access request preliminary form page
+``data-access-private-comments`` The data access request private comments page
+``contact``                      The "Contact Us" form to send a contact request to the administrators or data access officers
+``cart``                         The variables/studies/networks cart page
+================================ ==================
 
 The `templates structure <https://github.com/obiba/mica2/blob/master/mica-webapp/src/main/resources/_templates/>`_ is organized in a way that it should not be necessary to override these main pages definitions. Instead of that, it is recommended to change/extend the theme/style as described in this guide.
 
@@ -330,6 +339,8 @@ Data Access pages settings
      - Show/hide the report timeline in the dashboard page when the data access is approved. Applies only when a project end date can be found. Default is **true**.
    * - ``dataAccessArchiveEnabled``
      - Show/hide the **Archive** button, to users with appropriate permissions and when the data access request is completed. Default is **true**.
+   * - ``showDataAccessEventsInComments``
+     - List of each data access form type which events are to be included in the life line of the comments, so that users can contextualize the comments with the changes of the data access forms status. Possible values are **request**, **preliminary**, **feasibility**, **amendment** and **agreement**, default is all.
 
 Charts settings
 ***************

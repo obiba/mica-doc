@@ -31,6 +31,10 @@ The data collected in the form can be downloaded in the following formats:
 
 .. _dar-predefined-action-logs:
 
+Preliminary Form
+----------------
+
+Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
 
 Feasibility Form
 ----------------
@@ -43,6 +47,11 @@ Amendment Form
 Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
 
 Under the **Properties** section one can specify the document's *Title Field* and it's *Summary Field* as defined in the custom *Schema Form*.
+
+End User Agreement Form
+-----------------------
+
+Same as the *Application Form*, it uses *Schema Form* to define the schema and UI definition.
 
 Notifications
 -------------
