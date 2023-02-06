@@ -50,7 +50,7 @@ All plugins are to be deployed as a directory at the following location: **MICA_
 Automatic Installation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Because having a search engine is an absolute requirement, Mica server will check at startup that there is a plugin of type ``mica-search`` and if it's not the case, the latest version of the `mica-search-es <https://github.com/obiba/mica-search-es/releases>`_ plugin (that applies to the current Mica server version) will be automatically downloaded and installed without needing a server restart. If for any reason this plugin cannot be automatically downloaded (network issue), the Mica start-up will fail and you will need to install the plugin manually.
+Because having a search engine is an absolute requirement, Mica server will check at startup that there is a plugin of type ``mica-search`` and if it's not the case, the latest version of the `mica-search-es <https://github.com/obiba/mica-search-es>`_ plugin (that applies to the current Mica server version) will be automatically downloaded and installed without needing a server restart. If for any reason this plugin cannot be automatically downloaded (network issue), the Mica start-up will fail and you will need to install the plugin manually.
 
 Manual Installation
 ~~~~~~~~~~~~~~~~~~~
