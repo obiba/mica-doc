@@ -6,74 +6,27 @@ Mica Python client, a command line scripting tool written in Python, enables aut
 Requirements
 ------------
 
-Python 3.x must be installed on the system. See more about `Python <https://www.python.org/>`_.
+Python 3.7+ must be installed on the system. See more about `Python <https://www.python.org/>`_.
 
 Installation
 ------------
 
-You can install Mica Python Client via the following two methods:
-
-* use the Debian/RPM package manager
-* use a Python package
-
-Debian Package Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Follow the `OBiBa Debian Repository <http://www.obiba.org/pages/pkg/>`_ instructions and run:
+The Mica Python Client is available on the official `Python Package Index <https://pypi.org/>`_.
 
 .. code-block:: bash
 
-  sudo apt-get install mica-python-client
-
-RPM Package Installation
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Follow the `OBiBa RPM Repository <http://www.obiba.org/pages/rpm/>`_ instructions and run:
-
-.. code-block:: bash
-
-  sudo yum install mica-python-client
-
-Python Package Installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This type of package is cross-platform (Linux, Windows, Mac).
-
-**Install on Linux or Mac**
-
-1. `Download the most recent version <https://github.com/obiba/mica-python-client/releases>`_
-2. Decompress the file and enter the installation folder:
-
-.. code-block:: bash
-
-  tar xvzf mica-python-client-X.XX.tar.gz
-  cd mica-python-client-X.XX
-
-3. Install the package:
-
-.. code-block:: bash
-
-  sudo python setup.py install --record installed_files.lst
+  sudo pip install obiba-mica
 
 .. note::
-  The *--record* will generate a list of installed files on your system. Since there is no uninstaller, you can use this file to remove the Mica Python Client package. You can do this by executing the following command:
-  ``sudo cat installed_files.lst | xargs rm -rf``
+  Previous versions were available as system packages. Make sure to remove them before installing the package with ``pip``.
 
-**Install on Windows**
+  .. code-block:: bash
 
-* Using Cygwin
+    # on Debian systems
+    sudo apt-get remove mica-python-client
 
-You can install Cygwin, making sure that CURL, Python, gcc are included and follow these steps inside a Cygwin BASH window:
-
-.. code-block:: bash
-
-  cd /usr/lib
-  cp libcurl.dll.a libcurl.a
-  cd <your-desired-dir>
-  curl -C - -O https://github.com/obiba/mica-python-client/releases/download/XXX/mica-python-client-XXX.tar.gz
-  tar xzvf mica-python-client-X.XX.tar.gz
-  cd mica-python-client-X.XX
-  python setup.py install --record installed_files.lst
+    # on RPM systems
+    sudo yum remove mica-python-client
 
 Usage
 -----
