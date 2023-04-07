@@ -97,14 +97,12 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                         - MICA_ADMINISTRATOR_PASSWORD=${MICA_ADMINISTRATOR_PASSWORD}
                         - MONGO_HOST=mongo
                         - MONGO_PORT=27017
-                        - OPAL_HOST=opal
-                        - OPAL_PORT=8443
-                        - AGATE_HOST=agate
-                        - AGATE_PORT=8444
+                        - OPAL_URL=http://opal:8080
+                        - AGATE_URL=http://agate:8081
                 volumes:
                         - /opt/mica:/srv
         mongo:
-                image: mongo:4.2
+                image: mongo:6.0
         opal:
                 image: obiba/opal
                 ports:
@@ -117,8 +115,7 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                         - OPAL_ADMINISTRATOR_PASSWORD=${OPAL_ADMINISTRATOR_PASSWORD}
                         - MONGO_HOST=mongo
                         - MONGO_PORT=27017
-                        - AGATE_HOST=agate
-                        - AGATE_PORT=8444
+                        - AGATE_URL=http://agate:8081
                         - ROCK_HOSTS=rock:8085
                 volumes:
                         - /opt/opal:/srv
