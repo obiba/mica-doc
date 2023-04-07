@@ -149,10 +149,12 @@ Environment Variable              Description
 ``MONGO_HOST``                    MongoDB server host.
 ``MONGO_PORT``                    MongoDB server port, default is ``27017``.
 ``MONGO_DB``                      MongoDB database nale, default is ``mica``.
-``OPAL_HOST``                     Opal server host (optional).
-``OPAL_PORT``                     Opal server port, default is ``8443``.
-``AGATE_HOST``                    Agate server host.
-``AGATE_PORT``                    Agate server port, default is ``8444``.
+``OPAL_URL``                      Opal server URL (optional).
+``OPAL_HOST``                     [Deprecated, use ``OPAL_URL``] Opal server host (optional).
+``OPAL_PORT``                     [Deprecated, use ``OPAL_URL``] Opal server port, default is ``8443``.
+``AGATE_URL``                     Agate server URL.
+``AGATE_HOST``                    [Deprecated, use ``AGATE_URL``] Agate server host.
+``AGATE_PORT``                    [Deprecated, use ``AGATE_URL``] Agate server port, default is ``8444``.
 ================================= =========================================================================
 
 Upgrade
