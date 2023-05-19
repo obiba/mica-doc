@@ -98,6 +98,17 @@ The following diagram describes the various documents that can be published in t
 
 .. _documents-permissions:
 
+Annotations
+-----------
+Individual studies can have two types of annotations:
+
+* User-Defined.
+* Inferred from their associated variables.
+* ...
+
+User-Defined annotations are primarily for studies that may not have any variables but need to be documented by variable taxonomies.
+
+
 Permissions
 -----------
 
