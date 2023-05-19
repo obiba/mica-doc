@@ -23,6 +23,10 @@ more information.
 
 Users with Reviewer permission can publish a document with status Under Review.
 
+.. note::
+  When a collected dataset is published, its associated study must also be published to update its inferred annotations. It is only during this process that list of variable annotations are collected.
+
+
 *Unpublish*
 ***********
 Users with Reviewer permission can unpublish an already published document.
