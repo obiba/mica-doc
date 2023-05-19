@@ -28,25 +28,22 @@ This section allows to define all general Mica configuration as
 |                       | Default Character Set                  | The character set with which the data will be entered in Mica e.g. , UTF-8, iso-8859-1, etc.                       |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Open access                            | If checked, access to published documents will be opened to everyone.                                              |
+|                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+|                       | Taxonomies for Annotation by Concept   | The list of variable taxonomies used in individual study annotation by concept.                                    |
 +-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|Data Source            | Primary Opal server Public URL         | This Opal server is the primary source of variables and data summaries. (see below)                                |
+| Data Source           | Primary Opal server Public URL         | This Opal server is the primary source of variables and data summaries. (see below)                                |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Participant Privacy Threshold          | No data summary will be returned from Opal if the number of participants is below this threshold.                  |
 +-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|Search Layout          | Layout 1                               | Layout emphasizing a search bar that maps keywords to available taxonomies.                                        |
-|                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|                       | Layout 2                               | Layout providing a search panel on the left-hand-side that displays the full taxonomy of various search categories |
-|                       |                                        | (variable, study, and network).                                                                                    |
-+-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|Application Scope      | Single study enabled                   | If checked, only one study is present in Mica                                                                      |
+| Application Scope     | Single study enabled                   | If checked, only one study is present in Mica                                                                      |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Network section enabled                | If checked, n etwork section is accessible.                                                                        |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Single network enabled                 | If checked, only one network is present in Mica.                                                                   |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|                       | Collected datasets section enabled         | If checked, collected datasets section is accessible.                                                          |
+|                       | Collected datasets section enabled     | If checked, collected datasets section is accessible.                                                              |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|                       | Harmonization protocols section enabled | If checked, harmonization protocols section is accessible.                                                        |
+|                       | Harmonization protocols section enabled| If checked, harmonization protocols section is accessible.                                                         |
 +-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 To edit a field, click on "Edit" and edit or modify the content the fields therein.

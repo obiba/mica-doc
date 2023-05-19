@@ -72,6 +72,10 @@ Users with Editor or Reviewer permission can manage the list of populations.
 *******************************
 Users with Editor or Reviewer permission can manage the list of data collection events of a population.
 
+*Manage Annotations*
+*******************************
+Users with Editor or Reviewer permission can manage the list of annotations. The list of annotations can be customized to include a subset of variable taxonomies. See the Content configurations in the :ref:`administration section <admin-general-properties>`
+
 Harmonization Initiative Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
