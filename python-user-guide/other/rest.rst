@@ -64,7 +64,7 @@ Add a new individual study document:
 
 .. code-block:: bash
 
-  mica rest /draft/individual-studies -m POST -u administrator -p password -mk https://mica-demo.obiba.org -a application/json < patate-study.json
+  mica rest /draft/individual-studies -m POST -u administrator -p password -mk https://mica-demo.obiba.org -ct application/json < patate-study.json
 
 Search all files of the draft version of a network:
 
