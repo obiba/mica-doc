@@ -101,10 +101,10 @@ Annotations
 -----------
 Individual studies can have two types of annotations:
 
-* By Concept.
+* Manually annotated by a taxonomy domain.
 * Inferred from their associated variables.
 
-Annotations by concept are primarily for studies that may not have any variables but need to be documented by variable taxonomies.
+Manual annotations by a domain are primarily for studies that do not have any variables but need to be classified by a taxonomy.
 
 .. _documents-permissions:
 

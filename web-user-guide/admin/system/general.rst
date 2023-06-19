@@ -29,7 +29,7 @@ This section allows to define all general Mica configuration as
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 |                       | Open access                            | If checked, access to published documents will be opened to everyone.                                              |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-|                       | Taxonomies for Annotation by Concept   | The list of variable taxonomies used in individual study annotation by concept.                                    |
+|                       | Taxonomies for Annotation by Domain    | The list of variable taxonomies used in individual study annotation by domain.                                     |
 +-----------------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Data Source           | Primary Opal server Public URL         | This Opal server is the primary source of variables and data summaries. (see below)                                |
 |                       +----------------------------------------+--------------------------------------------------------------------------------------------------------------------+
