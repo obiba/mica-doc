@@ -35,3 +35,10 @@ Definitions
     - Index that allows to search projects.
   * - **Taxonomies**
     - Index that allows to search for taxonomy terms (i.e. the search criteria).
+
+.. note::
+  In order to keep the inferred annotations of individual studies up-to-date, the order of indexing must be as follows:
+
+  #. Index the collected datasets which will index their associated vatiables as well.
+
+  #. Index the individual studies to update the inferred variable annotations.
