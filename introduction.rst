@@ -9,7 +9,7 @@ Mica is built upon a multi-tier architecture consisting of several RESTful serve
 Application                                   Description
 ============================================= ======================================================
 Mica Server	                                  Java server providing web services (REST) for managing, storing, searching Mica Domain content and communicating with other servers listed below.
-`Opal Server <http://opaldoc.obiba.org>`_	    Java server providing web services (REST) for importing, transforming and analyzing study variables.
+`Opal Server <http://opaldoc.obiba.org>`_	    Optional Java server providing web services (REST) for importing, transforming and analyzing study variables.
 `Agate Server <http://agatedoc.obiba.org>`_   Java server providing web services (REST) for user management and notifications.
 Mica Web Application                          Front-end to Mica Server providing client interface to manage Mica Domain content as well as to administrate and configure access permissions and secure connections.
 Mica Python Client                            Python front-end to Mica server providing services for administrative command-line and automation tasks.
@@ -18,7 +18,19 @@ Mica R Client                                 R front-end to Mica server providi
 
 The diagram below illustrates the relationships between the Mica server and the other tiers:
 
-.. image:: images/mica-architecture.png
+.. figure:: images/mica-architecture.png
+   :scale: 50%
+
+   Mica system regular architecture
+
+The system architecture can be simplified by replacing Opal with data dictionary and taxonomy files (or remote services using :ref:`plugins`):
+
+.. figure:: images/mica-architecture-light.png
+  :scale: 50%
+
+  Mica system light architecture
+
+Note that it is possible to combine Opal with data dictionary and taxonomy files.
 
 Mica Server
 -----------
@@ -29,6 +41,11 @@ Mica server is a client of Opal and Agate servers.
 
 Opal Server
 -----------
+
+.. note::
+
+  Since Mica 5.2 it is not required to manage data dictionaries and taxonomies in a Opal server. The data dictionaries can be provided by Excel files attached to the datasets. The taxonomies can be defined by local configuration files or can be downloaded from a remote service (using an appropriate plugin).
+
 
 Opal application is used for:
 
@@ -41,6 +58,9 @@ Opal offers well established security controls, allowing to NOT expose individua
 Installation and configuration guides can be found in the `Opal documentation <http://opaldoc.obiba.org>`_.
 
 Mica expects at least one Opal server when some datasets are defined. Additional Opal servers can also be identified to access to distributed datasets.
+
+
+
 
 Agate Server
 ------------

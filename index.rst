@@ -23,6 +23,7 @@ Targeted at individual studies and study consortia, `OBiBa <http://obiba.org/>`_
    admin/configuration
    admin/pub-configuration
    admin/plugins
+   admin/backup-restore
 
 .. toctree::
    :maxdepth: 2

@@ -23,6 +23,10 @@ more information.
 
 Users with Reviewer permission can publish a document with status Under Review.
 
+.. note::
+  When a collected dataset is published, its associated study must also be published to update its inferred annotations. It is only during this process that list of variable annotations are collected.
+
+
 *Unpublish*
 ***********
 Users with Reviewer permission can unpublish an already published document.
@@ -71,6 +75,10 @@ Users with Editor or Reviewer permission can manage the list of populations.
 *Manage Data Collection Events*
 *******************************
 Users with Editor or Reviewer permission can manage the list of data collection events of a population.
+
+*Manage Annotations*
+*******************************
+Users with Editor or Reviewer permission can manage the list of annotations. The list of annotations can be customized to include a subset of variable taxonomies. See the Content configurations in the :ref:`administration section <admin-general-properties>`
 
 Harmonization Initiative Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -96,6 +96,16 @@ The following diagram describes the various documents that can be published in t
 
 .. image:: images/mica-associations.png
 
+
+Annotations
+-----------
+Individual studies can have two types of annotations:
+
+* Manually annotated by a taxonomy domain.
+* Inferred from their associated variables.
+
+Manual annotations by a domain are primarily for studies that do not have any variables but need to be classified by a taxonomy.
+
 .. _documents-permissions:
 
 Permissions
