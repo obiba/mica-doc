@@ -99,12 +99,12 @@ The following diagram describes the various documents that can be published in t
 
 Annotations
 -----------
-Individual studies can have two types of annotations:
+Individual studies can be annotated in two ways:
 
-* Manually annotated by a taxonomy domain.
-* Inferred from their associated variables.
+* Manually annotated by a taxonomy vocabulary.
+* Inferred annotations from their associated variables.
 
-Manual annotations by a domain are primarily for studies that do not have any variables but need to be classified by a taxonomy.
+Manual annotations by vocabulary are primarily for studies that do not have any associated variables but need to be classified by a taxonomy vocabulary.  
 
 .. _documents-permissions:
 
