@@ -98,6 +98,17 @@ Property                   Description
 ``agate.application.key``  Mica application key for connection to Agate server.
 ========================== ================================================================
 
+Cross Site Resource Forgery (CSRF)
+----------------------------------
+
+`CSRF <https://owasp.org/www-community/attacks/csrf>`_ attacks can be mitigated by a built-in interceptor. Default behavior allows connections (http or https) from ``localhost`` and ``127.0.0.1``. Requests from pages served by Mica should be allowed as well (https only), unless network settings or proxies modify or do not report the referer URL.
+
+======================================= =========================================================================
+Property                                Description
+======================================= =========================================================================
+``csrf.allowed``                        Comma separated list of client ``host:port`` explicitly allowed to connect to Opal server. Use ``*`` as a wildcard. Default is empty.
+======================================= =========================================================================
+
 Shiro Configuration
 -------------------
 
