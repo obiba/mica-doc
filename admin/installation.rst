@@ -145,7 +145,9 @@ Environment Variable              Description
 ``MICA_ADMINISTRATOR_PASSWORD``   Mica administrator password, required and set at first start.
 ``MONGO_HOST``                    MongoDB server host.
 ``MONGO_PORT``                    MongoDB server port, default is ``27017``.
-``MONGO_DB``                      MongoDB database nale, default is ``mica``.
+``MONGO_DB``                      MongoDB database name, default is ``mica``.
+``MONGO_USER``                    MongoDB user name (optional).
+``MONGO_PASSWORD``                MongoDB user password (optional).
 ``OPAL_URL``                      Opal server URL (optional).
 ``OPAL_HOST``                     [Deprecated, use ``OPAL_URL``] Opal server host (optional).
 ``OPAL_PORT``                     [Deprecated, use ``OPAL_URL``] Opal server port, default is ``8443``.
