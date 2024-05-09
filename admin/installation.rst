@@ -148,6 +148,7 @@ Environment Variable              Description
 ``MONGO_DB``                      MongoDB database name, default is ``mica``.
 ``MONGO_USER``                    MongoDB user name (optional).
 ``MONGO_PASSWORD``                MongoDB user password (optional).
+``MONGODB_URI``                   Replaces the above MongoDB variables, represents the MongoDB URI without the `mongodb://` prefix.
 ``OPAL_URL``                      Opal server URL (optional).
 ``OPAL_HOST``                     [Deprecated, use ``OPAL_URL``] Opal server host (optional).
 ``OPAL_PORT``                     [Deprecated, use ``OPAL_URL``] Opal server port, default is ``8443``.
