@@ -20,14 +20,15 @@ Memory (RAM) Minimum: 4GB, Recommended: >4GB
 Server Software Requirements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-======== ================= ==================================================================================================== ========================
-Software Suggested version Download link                                                                                        Usage
-======== ================= ==================================================================================================== ========================
-Java     8                 `OpenJDK 8 downloads <http://openjdk.java.net/projects/jdk8/>`_                                      Java runtime environment
-MongoDB  <= 6.0.x          `MongoDB Community downloads <https://www.mongodb.com/docs/v4.2/administration/install-community/>`_ Database engine
-======== ================= ==================================================================================================== ========================
+============= ================= =========================================================================== ========================
+Software      Suggested version Download link                                                               Usage
+============= ================= =========================================================================== ========================
+Java          21                `OpenJDK downloads <https://jdk.java.net/>`_                                Java runtime environment
+MongoDB       <= 8.0.x          `MongoDB Community downloads <https://www.mongodb.com/docs/manual/>`_       Database engine
+Elasticsearch 8.16.1            `Elasticsearch downloads <https://www.elastic.co/downloads/elasticsearch>`_ Search engine
+============= ================= =========================================================================== ========================
 
-While Java is required by Mica server application, MongoDB can be installed on another server.
+While Java is required by Mica server application, MongoDB and Elasticsearch can be installed on other servers.
 
 Install
 -------
@@ -78,11 +79,10 @@ Docker Image Installation
 
 OBiBa is an early adopter of the `Docker <https://www.docker.com/>`_ technology, providing its own images from the `Docker Hub repository <https://hub.docker.com/orgs/obiba/repositories>`_.
 
-A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a MongoDB database) would be:
+A typical `docker compose <https://docs.docker.com/compose/>`_ file (including a MongoDB database) would be:
 
 .. code-block:: yaml
 
-  version: '3'
   services:
         mica:
                 image: obiba/mica
@@ -92,6 +92,7 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                         - mongo
                         - agate
                         - opal
+                        - es8
                 environment:
                         - JAVA_OPTS=-Xmx2G
                         - MICA_ADMINISTRATOR_PASSWORD=${MICA_ADMINISTRATOR_PASSWORD}
@@ -99,10 +100,11 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                         - MONGO_PORT=27017
                         - OPAL_URL=http://opal:8080
                         - AGATE_URL=http://agate:8081
+                        - ELASTICSEARCH_HOST=es8
                 volumes:
                         - /opt/mica:/srv
         mongo:
-                image: mongo:6.0
+                image: mongo:8.0
         opal:
                 image: obiba/opal
                 ports:
@@ -135,13 +137,28 @@ A typical `docker-compose <https://docs.docker.com/compose/>`_ file (including a
                         - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
                 volumes:
                         - /opt/agate:/srv
+        es8:
+                image: docker.elastic.co/elasticsearch/elasticsearch:8.16.1
+                environment:
+                        - cluster.name=mica
+                        - node.name=es8
+                        - discovery.type=single-node
+                        - bootstrap.memory_lock=true
+                        - network.host=0.0.0.0
+                        - xpack.security.enabled=false
+                        - xpack.security.http.ssl.enabled=false
+                        - ES_JAVA_OPTS=-Xms512m -Xmx512m
+                ulimits:
+                        memlock:
+                                soft: -1
+                                hard: -1
 
 Then environment variables that are exposed by this image are:
 
 ================================= =========================================================================
 Environment Variable              Description
 ================================= =========================================================================
-``JAVA_OPTS``
+``JAVA_OPTS``                     Java VM arguments.
 ``MICA_ADMINISTRATOR_PASSWORD``   Mica administrator password, required and set at first start.
 ``MONGO_HOST``                    MongoDB server host.
 ``MONGO_PORT``                    MongoDB server port, default is ``27017``.
@@ -155,6 +172,7 @@ Environment Variable              Description
 ``AGATE_URL``                     Agate server URL.
 ``AGATE_HOST``                    [Deprecated, use ``AGATE_URL``] Agate server host.
 ``AGATE_PORT``                    [Deprecated, use ``AGATE_URL``] Agate server port, default is ``8444``.
+``ELASTICSEARCH_HOST``            Elasticserch server host.
 ================================= =========================================================================
 
 Upgrade
@@ -213,7 +231,7 @@ The Mica server can be launched from the command line. The environment variable 
 Environment variable Required Description
 ==================== ======== ===========
 ``MICA_HOME``        yes      Path to the Mica "home" directory.
-``JAVA_OPTS``        no       Options for the Java Virtual Machine. For example: `-Xmx4096m -XX:MaxPermSize=256m`
+``JAVA_OPTS``        no       Options for the Java Virtual Machine. For example: `-Xmx4096m -Xms1024m`.
 ==================== ======== ===========
 
 To change the defaults update:  ``bin/mica`` or ``bin/mica.bat``
