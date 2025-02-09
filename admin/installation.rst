@@ -88,7 +88,7 @@ A typical `docker compose <https://docs.docker.com/compose/>`_ file (including a
                 image: obiba/mica
                 ports:
                         - "8872:8082"
-                links:
+                depends_on:
                         - mongo
                         - agate
                         - opal
@@ -109,7 +109,7 @@ A typical `docker compose <https://docs.docker.com/compose/>`_ file (including a
                 image: obiba/opal
                 ports:
                         - "8870:8080"
-                links:
+                depends_on:
                         - mongo
                         - rock
                         - agate
@@ -127,7 +127,7 @@ A typical `docker compose <https://docs.docker.com/compose/>`_ file (including a
                 image: obiba/agate
                 ports:
                         - "8871:8081"
-                links:
+                depends_on:
                         - mongo
                 environment:
                         - AGATE_ADMINISTRATOR_PASSWORD=${AGATE_ADMINISTRATOR_PASSWORD}
