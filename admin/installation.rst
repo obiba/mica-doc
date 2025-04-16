@@ -139,6 +139,9 @@ A typical `docker compose <https://docs.docker.com/compose/>`_ file (including a
                         - /opt/agate:/srv
         es8:
                 image: docker.elastic.co/elasticsearch/elasticsearch:8.16.1
+                expose:
+                        - 9300
+                        - 9200
                 environment:
                         - cluster.name=mica
                         - node.name=es8
