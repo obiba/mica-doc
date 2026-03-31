@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  mica-docs:
+    build:
+      context: ..
+      dockerfile: tools/Dockerfile
+    container_name: mica-documentation
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount source files for live editing
+      - ..:/docs
+      # Exclude build directory and Python cache
+      - /docs/_build
+      - /docs/.doctrees
+      - /docs/__pycache__
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    command: >
+      sh -c "
+      echo 'Building Mica documentation...' &&
+      sphinx-build -b html . _build/html &&
+      echo 'Documentation built successfully!' &&
+      echo 'Serving documentation at http://localhost:8000' &&
+      python -m http.server 8000 --directory _build/html
+      "

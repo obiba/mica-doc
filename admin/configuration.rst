@@ -124,59 +124,91 @@ Property                            Description
 Elasticsearch Configuration
 ---------------------------
 
-Mica server embeds `Elasticsearch <https://www.elastic.co/>`_ as its search engine. Elasticsearch is a key functionality of Mica as the process of publication consist in indexing documents (networks, studies, variables etc.) in the search engine. Advanced queries can be applied on the published documents. Elasticsearch is embeded, i.e. it is not an external application. Mica's Elasticsearch can be part of a cluster of Elasticsearch cluster. The configuration of the Elasticsearch node and how it should connect to the other nodes of the cluster can be specified in this section. Default configuration is usually enough.
+Mica server uses `Elasticsearch <https://www.elastic.co/>`_ as its search engine. Elasticsearch is a key functionality of Mica as the process of publication consist in indexing documents (networks, studies, variables etc.) in the search engine. Advanced queries can be applied on the published documents.
+
+.. note::
+
+  Since the upgrade to Java 21, Mica no longer supports embedded Elasticsearch. An external Elasticsearch server is required. As of now, Mica uses Elasticsearch 8.16.1 or compatible versions.
+
+  Alternatively, Mica also supports `OpenSearch 2.x <https://opensearch.org/>`_ through the `mica-search-os2 plugin <https://github.com/obiba/mica-search-os2>`_, which provides a drop-in replacement for the default Elasticsearch integration.
+
+The configuration below specifies how Mica should connect to the Elasticsearch server.
 
 ================================================== ================================
 Property                                           Description
 ================================================== ================================
-``elasticsearch.dataNode``                         Boolean to specify if this node has data or if it is just a proxy to other nodes in a cluster.
+``elasticsearch.host``                             Elasticsearch server host address. Defaults to ``localhost``.
+``elasticsearch.port``                             Elasticsearch server port. Defaults to ``9200``.
 ``elasticsearch.clusterName``                      Cluster identifier.
 ``elasticsearch.shards``                           Number of shards.
 ``elasticsearch.replicas``                         Number of replicas.
-``elasticsearch.settings``                         A string in JSON or YAML format to define other elasticsearch settings. See Elasticsearch Documentation for advanced settings.
-``elasticsearch.transportClient``                  Boolean to indicate to use the Transport Client instead of creating an elasticsearch Node.
-``elasticsearch.transportAddress``                 Elasticsearch service IP address and port when using the Transport Client, defaults to the localhost at port 9300.
-``elasticsearch.transportSniff``                   Boolean to indicate the Transport Client to collect IP addresses from nodes in an elasticsearch cluster.
 ``elasticsearch.maxConcurrentJoinQueries``         Maximum count of ES queries that can be executed concurrently. Default value is ``4``.
 ``elasticsearch.concurrentJoinQueriesWaitTimeout`` Wait timeout when executing concurrent ES queries in millis. Default value is ``30000`` milliseconds.
 ================================================== ================================
 
 **Elasticsearch Cluster**
 
-Mica can be set to join or connect to an Elasticsearch cluster. You need to set *elasticsearch.clusterName* to the name of the cluster you want to join. There are different possible `cluster topologies <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html>`_, each of which has different resource utilization profiles in terms or memory and CPU.
+Mica connects to an external Elasticsearch server or cluster. You need to configure the connection details to point to your Elasticsearch installation.
 
 .. note::
 
-  To avoid API incompatibility issues, the recommended version of `Elasticsearch server is 2.4 <https://www.elastic.co/downloads/past-releases/elasticsearch-2-4-4>`_.
+  As of now, the supported version of Elasticsearch is `8.16.1 <https://www.elastic.co/downloads/elasticsearch>`_ or compatible versions.
 
-
-An example of a configuration to join an elasticsearch cluster using a `Client Node <https://www.elastic.co/guide/en/elasticsearch/reference/2.2/modules-node.html#client-node>`_:
-
-.. code-block:: yaml
-
-  elasticsearch:
-    clusterName: mycluster
-    dataNode: false
-    settings: '{"node.master": false, "node.local": false}'
-
-An example of a configuration using the transport client:
+Example configuration to connect to a single Elasticsearch server:
 
 .. code-block:: yaml
 
   elasticsearch:
+    host: localhost
+    port: 9200
+    clusterName: mica
+
+Example configuration to connect to an Elasticsearch cluster:
+
+.. code-block:: yaml
+
+  elasticsearch:
+    host: es-node1.example.com
+    port: 9200
     clusterName: mycluster
-    transportClient: true
-    transportAddress: "myhost:9300"
 
 **Elasticsearch Server Configuration**
 
-Mica uses the scripting capabilities of Elasticsearch. All the machines in the Elasticsearch cluster should have the scripting module enabled by setting the following values in the *elasticsearch.yml* configuration file (location of this file depends on how your elasticsearch service is installed):
+Elasticsearch should be installed and running before starting Mica. See the `Elasticsearch installation guide <https://www.elastic.co/guide/en/elasticsearch/reference/8.16/install-elasticsearch.html>`_ for installation instructions.
+
+For Docker-based installations, refer to the :doc:`installation` guide which includes a complete docker-compose configuration with Elasticsearch.
+
+**Docker Elasticsearch Configuration Example**
+
+For a single-node Elasticsearch setup using Docker, use the following configuration:
 
 .. code-block:: yaml
 
-  script:
-    inline: true
-    indexed: true
+  es8:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.16.1
+    expose:
+      - 9300
+      - 9200
+    environment:
+      - cluster.name=mica
+      - node.name=es8
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - network.host=0.0.0.0
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+
+**Important Configuration Notes:**
+
+- ``xpack.security.enabled=false`` disables X-Pack security features (not recommended for production without proper network security)
+- ``discovery.type=single-node`` configures Elasticsearch for single-node operation
+- ``ES_JAVA_OPTS`` sets JVM heap size (adjust based on your available memory)
+- Ensure that the Elasticsearch cluster name in your Elasticsearch configuration matches the ``elasticsearch.clusterName`` setting in Mica's configuration
 
 Miscelaneous Configuration
 --------------------------
