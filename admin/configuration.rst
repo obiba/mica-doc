@@ -130,7 +130,7 @@ Mica server uses `Elasticsearch <https://www.elastic.co/>`_ as its search engine
 
   Since the upgrade to Java 21, Mica no longer supports embedded Elasticsearch. An external Elasticsearch server is required. As of now, Mica uses Elasticsearch 8.16.1 or compatible versions.
 
-  Alternatively, Mica also supports `OpenSearch 2.x <https://opensearch.org/>`_ through the `mica-search-os2 plugin <https://github.com/obiba/mica-search-os2>`_, which provides a drop-in replacement for the default Elasticsearch integration.
+  Alternatively, Mica also supports `OpenSearch 2.x <https://opensearch.org/>`_ through the `mica-search-os2 plugin <https://github.com/obiba/mica-search-os2>`_, which provides a drop-in replacement for the default Elasticsearch integration. See the :doc:`plugins` page for more information on search plugins and how to switch between Elasticsearch and OpenSearch.
 
 The configuration below specifies how Mica should connect to the Elasticsearch server.
 
