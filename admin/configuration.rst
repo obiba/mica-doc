@@ -278,9 +278,9 @@ The example shiro.ini file below demonstrates how encryption is configured.
   #     cd <MICA_DIST_HOME>/tools && shiro-hasher.bat -p
   #
   # Format is:
-  # username=password[,role]*
-  administrator = $shiro1$SHA-256$500000$dxucP0IgyO99rdL0Ltj1Qg==$qssS60kTC7TqE61/JFrX/OEk0jsZbYXjiGhR7/t+XNY=,mica-administrator
-  anonymous = $shiro1$SHA-256$500000$dxucP0IgyO99rdL0Ltj1Qg==$qssS60kTC7TqE61/JFrX/OEk0jsZbYXjiGhR7/t+XNY=
+  # username="password-hash"[,role]*
+  administrator = "$shiro2$argon2id$v=19$t=1,m=65536,p=4$q4uNaPW6sY1mDaLvlRcXPw$/zeLc6+GYP9//fahi+8qDj/a1KlJLvtQjRRTvbOePb0",mica-administrator
+  anonymous = "$shiro2$argon2id$v=19$t=1,m=65536,p=4$2ikVjnBLc7hjLWh1+Za/Uw$hgaMknQwQOcEy2kYYOgKLloSRo2VvHbYbxASNu69wuk"
 
   [roles]
   # The 'roles' section is for simple deployments
