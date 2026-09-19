@@ -19,17 +19,18 @@ Using cURL, it is as simple as providing the `--user <https://curl.se/docs/manpa
 Authorization
 -------------
 
-Authorizations are role based. The built-in roles are:
+Authorizations are role based. The built-in roles are (see :doc:`../admin/configuration` for how roles are granted from user groups):
 
-============================ ===============
+============================ ==================================================
 Role                         Description
-============================ ===============
+============================ ==================================================
 ``mica-administrator``       Can edit/publish data and change system configuration.
 ``mica-reviewer``            Can edit draft data and publish them.
-``mica-editor``              Can edit data draft data.
+``mica-editor``              Can edit draft data.
+``mica-external-editor``     Can add draft data and submit data access requests.
 ``mica-data-access-officer`` Can manage data access requests.
-``mica-user``                Can view published data.
-============================ ===============
+``mica-user``                Can view published data and submit data access requests.
+============================ ==================================================
 
 Clients
 -------

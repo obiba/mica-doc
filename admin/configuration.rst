@@ -98,6 +98,58 @@ Property                   Description
 ``agate.application.key``  Mica application key for connection to Agate server.
 ========================== ================================================================
 
+Roles Configuration
+-------------------
+
+Authorizations in Mica are role based. The built-in roles are:
+
+============================ ==============================================================================
+Role                         Description
+============================ ==============================================================================
+``mica-administrator``       Can edit/publish data and change system configuration.
+``mica-reviewer``            Can edit draft data and publish them.
+``mica-editor``              Can edit draft data.
+``mica-external-editor``     Can add draft data and submit data access requests.
+``mica-data-access-officer`` Can manage data access requests.
+``mica-user``                Can view published data and submit data access requests.
+============================ ==============================================================================
+
+A user gets a role from the groups it belongs to, as reported by the user directory (Agate). By default each role is granted by the group of the same name. This mapping can be changed with the ``roles`` section of the **application.yml** file: each entry maps a role to the group(s) granting it. Several groups separated by a comma (``,``) are all required; alternatives are separated by a pipe (``|``).
+
+.. code-block:: yaml
+
+  roles:
+    mica-administrator: mica-administrator
+    mica-reviewer: mica-reviewer
+    mica-editor: mica-editor
+    mica-external-editor: mica-external-editor
+    mica-data-access-officer: mica-data-access-officer
+    mica-user: mica-user
+
+The groups of a user are also kept as such, so that they can be used when applying permissions on a document.
+
+The mapping is used in both directions: when Mica needs to reach the users having a role (notification emails to the data access officers, to the reviewers and editors of a document; users listed in the data access requests page), the groups granting that role are used. Only the groups appearing alone in an alternative are used: a condition requiring several groups grants the role to the users belonging to all of them, not to each group as a whole, so it is ignored (with ``a,b|c`` the members of ``c`` are reached). When a role has no such single group, the group of the role name is used, and a warning is logged at startup. The same applies to the groups of the *Sign-up* and *Contact* settings of the administration interface: a group that is the name of a role stands for the groups granting that role.
+
+**Several Mica Instances Sharing One Agate**
+
+When several Mica applications (say ``a`` and ``b``) are registered in the same Agate server, it is not necessary to define common ``mica-reviewer``, ``mica-editor`` etc. groups plus one group per application for the application access. Instead, define in Agate the groups of each instance, associated with the corresponding application (for instance ``mica-reviewer-a`` associated with application ``a``), and map them to the roles in the **application.yml** of each instance. For instance ``a``:
+
+.. code-block:: yaml
+
+  roles:
+    mica-administrator: mica-administrator-a
+    mica-reviewer: mica-reviewer-a
+    mica-editor: mica-editor-a
+    mica-external-editor: mica-external-editor-a
+    mica-data-access-officer: mica-data-access-officer-a
+    mica-user: mica-user-a
+
+A user of the ``mica-reviewer-a`` group then has access to instance ``a`` only, as a reviewer.
+
+.. note::
+
+  The mapping is read when the server starts: a change requires a restart of Mica.
+
 Cross Site Resource Forgery (CSRF)
 ----------------------------------
 
