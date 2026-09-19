@@ -128,7 +128,7 @@ A user gets a role from the groups it belongs to, as reported by the user direct
 
 The groups of a user are also kept as such, so that they can be used when applying permissions on a document.
 
-The mapping is used in both directions: when Mica needs to reach the users having a role (notification emails to the data access officers, to the reviewers and editors of a document; users listed in the data access requests page), the groups granting that role are used. When a condition requires several groups, the members of each of these groups are notified. The same applies to the groups of the *Sign-up* and *Contact* settings of the administration interface: a group that is the name of a role stands for the groups granting that role.
+The mapping is used in both directions: when Mica needs to reach the users having a role (notification emails to the data access officers, to the reviewers and editors of a document; users listed in the data access requests page), the groups granting that role are used. Only the groups appearing alone in an alternative are used: a condition requiring several groups grants the role to the users belonging to all of them, not to each group as a whole, so it is ignored (with ``a,b|c`` the members of ``c`` are reached). When a role has no such single group, the group of the role name is used, and a warning is logged at startup. The same applies to the groups of the *Sign-up* and *Contact* settings of the administration interface: a group that is the name of a role stands for the groups granting that role.
 
 **Several Mica Instances Sharing One Agate**
 
