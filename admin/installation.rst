@@ -96,6 +96,7 @@ A typical `docker compose <https://docs.docker.com/compose/>`_ file (including a
                 environment:
                         - JAVA_OPTS=-Xmx2G
                         - MICA_ADMINISTRATOR_PASSWORD=${MICA_ADMINISTRATOR_PASSWORD}
+                        - MICA_PUBLIC_URL=http://localhost:8872
                         - MONGO_HOST=mongo
                         - MONGO_PORT=27017
                         - OPAL_URL=http://opal:8080
@@ -135,6 +136,7 @@ A typical `docker compose <https://docs.docker.com/compose/>`_ file (including a
                         - MONGO_PORT=27017
                         - RECAPTCHA_SITE_KEY=${RECAPTCHA_SITE_KEY}
                         - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
+                        - AGATE_PUBLIC_URL=http://localhost:8871
                 volumes:
                         - /opt/agate:/srv
         es8:
@@ -163,6 +165,8 @@ Environment Variable              Description
 ================================= =========================================================================
 ``JAVA_OPTS``                     Java VM arguments.
 ``MICA_ADMINISTRATOR_PASSWORD``   Mica administrator password, required and set at first start.
+``MICA_PUBLIC_URL``               Public base URL of the server (optional). Applied only when not already set in the administration settings.
+``MICA_PORTAL_URL``               Public base URL of the portal (optional). Applied only when not already set in the administration settings.
 ``MONGO_HOST``                    MongoDB server host.
 ``MONGO_PORT``                    MongoDB server port, default is ``27017``.
 ``MONGO_DB``                      MongoDB database name, default is ``mica``.

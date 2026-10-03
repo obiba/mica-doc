@@ -49,6 +49,11 @@ This section allows to define all general Mica configuration as
 To edit a field, click on "Edit" and edit or modify the content the fields therein.
 
 .. note::
+  **Server Identification URLs**
+
+  The initial values of the **Public URL** and the **Portal URL** can be provided by the ``mica.public-url`` and ``mica.portal-url`` properties (environment variables ``MICA_PUBLIC_URL`` and ``MICA_PORTAL_URL``). They are applied only when the corresponding setting is empty.
+
+.. note::
   **Terminology**
 
   By the *primary* Opal server , we mean the Opal server on which Mica looks for data if no other Opal is specified in a study definition.
