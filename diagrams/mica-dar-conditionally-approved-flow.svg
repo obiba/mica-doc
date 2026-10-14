@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="560" height="360" viewBox="0 0 560 360">
+<style>
+@font-face{font-family:Sora;src:url(../_static/fonts/Sora-Variable.ttf)}
+@font-face{font-family:Inst;src:url(../_static/fonts/InstrumentSans-Variable.ttf)}
+text{font-family:Inst,sans-serif;font-size:15px;font-weight:500;fill:#0D2321}
+.h{font-family:Sora,sans-serif;font-weight:600;letter-spacing:-.02em}
+.lane{font-family:Sora,sans-serif;font-weight:600;font-size:13px;letter-spacing:.06em;fill:#2F5DA8}
+.m{fill:#4F6663}
+.l{font-size:13.5px;fill:#4F6663;paint-order:stroke;stroke:#fff;stroke-width:6px;stroke-linejoin:round}
+.e{fill:none;stroke:#4F6663;stroke-width:1.5}
+.div{stroke:#8EAEE3;stroke-width:2;stroke-dasharray:8 6}
+.s0{fill:#fff;stroke:#4F6663;stroke-width:1.5}
+.s1{fill:#fff;stroke:#2F5DA8;stroke-width:1.5}
+.s1i{fill:#C3D3EE}
+.s2{fill:#fff;stroke:#2F5DA8;stroke-width:5}
+.c{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#4F6663"/></marker>
+<g id="ring"><circle cx="20" cy="5" r="4.2"/><circle cx="30.607" cy="9.393" r="4.2"/><circle cx="35" cy="20" r="4.2"/><circle cx="30.607" cy="30.607" r="4.2"/><circle cx="20" cy="35" r="4.2"/><circle cx="9.393" cy="30.607" r="4.2"/><circle cx="5" cy="20" r="4.2"/><circle cx="9.393" cy="9.393" r="4.2"/></g>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="20" y="28" class="lane">APPLICANT</text><text x="202" y="28" class="lane">DATA ACCESS OFFICER</text>
+<line x1="180" y1="12" x2="180" y2="345" class="div"/>
+<path d="M300,104 C300,44 80,44 80,103" class="e" marker-end="url(#a)"/>
+<path d="M106,130 H272" class="e" marker-end="url(#a)"/>
+<path d="M80,244 C80,180 190,150 275,142" class="e" marker-end="url(#a)"/>
+<path d="M300,156 C300,240 200,270 108,270" class="e" marker-end="url(#a)"/>
+<path d="M326,130 H472" class="e" marker-end="url(#a)"/>
+<path d="M326,130 C410,130 390,250 472,250" class="e" marker-end="url(#a)"/>
+<circle cx="80" cy="130" r="26" class="s0"/><text x="80" y="182" class="c">Opened</text>
+<circle cx="300" cy="130" r="26" class="s1"/><circle cx="300" cy="130" r="20" class="s1i"/><text x="300" y="182" class="c">Submitted</text>
+<circle cx="80" cy="270" r="26" class="s1"/><circle cx="80" cy="270" r="20" class="s1i"/><text x="80" y="322" class="c">Conditionally</text><text x="80" y="340" class="c">Approved</text>
+<circle cx="500" cy="130" r="26" class="s2"/><text x="500" y="182" class="c">Approved</text>
+<circle cx="500" cy="250" r="26" class="s2"/><text x="500" y="302" class="c">Rejected</text>
+</svg>

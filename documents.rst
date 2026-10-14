@@ -95,6 +95,7 @@ Associations
 The following diagram describes the various documents that can be published in the Mica web portal. Each of them can be edited individually in the Mica Web Application administration interface (except variables, defined in the Opal servers).
 
 .. image:: images/mica-associations.png
+   :scale: 50%
 
 
 Annotations
