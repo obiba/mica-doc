@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="730" height="380" viewBox="0 0 730 380">
+<style>
+@font-face{font-family:Sora;src:url(../_static/fonts/Sora-Variable.ttf)}
+@font-face{font-family:Inst;src:url(../_static/fonts/InstrumentSans-Variable.ttf)}
+text{font-family:Inst,sans-serif;font-size:15px;font-weight:500;fill:#0D2321}
+.h{font-family:Sora,sans-serif;font-weight:600;letter-spacing:-.02em}
+.lane{font-family:Sora,sans-serif;font-weight:600;font-size:13px;letter-spacing:.06em;fill:#2F5DA8}
+.m{fill:#4F6663}
+.l{font-size:13.5px;fill:#4F6663;paint-order:stroke;stroke:#fff;stroke-width:6px;stroke-linejoin:round}
+.e{fill:none;stroke:#4F6663;stroke-width:1.5}
+.div{stroke:#8EAEE3;stroke-width:2;stroke-dasharray:8 6}
+.s0{fill:#fff;stroke:#4F6663;stroke-width:1.5}
+.s1{fill:#fff;stroke:#2F5DA8;stroke-width:1.5}
+.s1i{fill:#C3D3EE}
+.s2{fill:#fff;stroke:#2F5DA8;stroke-width:5}
+.c{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#4F6663"/></marker>
+<g id="ring"><circle cx="20" cy="5" r="4.2"/><circle cx="30.607" cy="9.393" r="4.2"/><circle cx="35" cy="20" r="4.2"/><circle cx="30.607" cy="30.607" r="4.2"/><circle cx="20" cy="35" r="4.2"/><circle cx="9.393" cy="30.607" r="4.2"/><circle cx="5" cy="20" r="4.2"/><circle cx="9.393" cy="9.393" r="4.2"/></g>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="20" y="28" class="lane">EDITOR</text><text x="242" y="28" class="lane">REVIEWER</text>
+<line x1="220" y1="12" x2="220" y2="365" class="div"/>
+<path d="M440,124 V70 H110 V123" class="e" marker-end="url(#a)"/>
+<text x="300" y="75" class="l c">Publish or To Draft</text>
+<path d="M136,150 H412" class="e" marker-end="url(#a)"/>
+<text x="320" y="140" class="l c">To Under Review</text><text x="320" y="168" class="l c">(if modified)</text>
+<path d="M440,176 V273" class="e" marker-end="url(#a)"/>
+<text x="452" y="230" class="l">To Deleted</text>
+<path d="M110,177 V300 H413" class="e" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="300" y="305" class="l c">To Deleted / To Draft</text>
+<path d="M466,300 H612" class="e" marker-end="url(#a)"/>
+<text x="539" y="290" class="l c">Delete</text>
+<circle cx="110" cy="150" r="26" class="s0"/><text x="74" y="155" class="end">Draft</text>
+<circle cx="440" cy="150" r="26" class="s1"/><circle cx="440" cy="150" r="20" class="s1i"/><text x="476" y="155">Under Review</text>
+<circle cx="440" cy="300" r="26" class="s1"/><circle cx="440" cy="300" r="20" class="s1i"/><text x="440" y="352" class="c">Deleted</text>
+<circle cx="640" cy="300" r="26" class="s2"/><circle cx="640" cy="300" r="14" fill="#2F5DA8"/><text x="640" y="352" class="c">Permanently Deleted</text>
+</svg>

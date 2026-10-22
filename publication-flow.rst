@@ -8,6 +8,7 @@ Publication Flow
 The publication flow refers to the work flow from a draft document to its publication. The following diagram represent the life cycle of a document with its :ref:`revision-status` and :ref:`transitions`:
 
 .. image:: images/mica-publication-flow.png
+   :scale: 50%
 
 .. _revision-status:
 
